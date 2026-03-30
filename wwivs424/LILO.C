@@ -481,17 +481,17 @@ void logon(void)
 	  if ((s1[0]) && live_user) {
 		if (i) {
 		  nln(2);
-		  if (color) outstr("\x1b[1;36m");
+		  if (okansi()) outstr("\x1b[1;36m");
 		  pl("  RECENT CALLERS");
-		  if (color) outstr("\x1b[0m");
+		  if (okansi()) outstr("\x1b[0m");
 		  nl();
-		  if (color) outstr("\x1b[1;33m");
+		  if (okansi()) outstr("\x1b[1;33m");
 		  if ((sysinfo.flags & OP_FLAGS_SHOW_CITY_ST) &&
 		      (syscfg.sysconfig & sysconfig_extended_info))
 			pl("#      Name                      Time  Date  City            St  Speed   #T");
 		  else
 			pl("#      Name                      Lang       Time  Date  Speed                #T");
-		  if (color) outstr("\x1b[0m");
+		  if (okansi()) outstr("\x1b[0m");
 		  i=(okansi())?205:'=';
 		  pl(charstr(79,i));
 		  i=0;
