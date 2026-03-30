@@ -1743,7 +1743,9 @@ void read_message1(messagerec *m1, char an, int readit, int *next, char *fn)
             if ((topline) && (screenbottom==24) && (!ansi))
               set_protect(0);
             ansi=1;
-            lines_listed=0;
+            /* lines_listed reset removed: color ANSI sequences (ESC[...m)
+             * were resetting the page counter on every line, preventing
+             * pause-on-page from ever triggering in ANSI feed files.     */
           }
           s[p++]=ch;
           if ((ch==3) || (ch==8))
