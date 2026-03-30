@@ -31,7 +31,7 @@ void bbslist(void)
 {
   int i,f,done,ok;
   char s[150],s1[150],ch,ch1,*ss;
-  char phone[13], name[51], speed[5], type[5];
+  char phone[51], name[51], speed[5], type[5];
   long l,l1;
 
   done=0;
@@ -65,18 +65,11 @@ void bbslist(void)
           break;
         }
         nl();
-        pl(get_string(492));
-        pl(get_string(493));
+        pl("Enter telnet address (e.g., bbs.example.com:2323):");
         outstr(":");
-        mpl(12);
-        input(phone,12);
-        if ((phone[3]!='-') || (phone[7]!='-'))
-          phone[0]=0;
-        for (i=0; i<12; i++) {
-          if (strchr("0123456789-",phone[i])==0)
-            phone[0]=0;
-        }
-        if (strlen(phone)==12) {
+        mpl(50);
+        input(phone,50);
+        if (strlen(phone)>0) {
           ok=1;
           sprintf(s1,"%sBBSLIST.MSG",syscfg.gfilesdir);
           f=sh_open1(s1,O_RDONLY | O_BINARY);
@@ -100,8 +93,6 @@ void bbslist(void)
               } while ((ch!=10) && (i<120) && (l1<l));
               if (strstr(s1,phone)!=NULL)
                 ok=0;
-              if (strncmp(s1,phone,12)==0)
-                ok=0;
             }
             bbsfree(ss);
             sh_close(f);
@@ -124,7 +115,7 @@ void bbslist(void)
             outstr(":");
             mpl(4);
             input(type,4);
-            sprintf(s,"%12s  %-50s  [%4s] (%4s)\r\n",
+            sprintf(s,"%-50.50s  %-50s  [%4s] (%4s)\r\n",
               phone, name, speed, type);
             nln(2);
             pl(s);
@@ -319,23 +310,23 @@ void list_users(int mode)
   strcpy(s1,get_string(1175));
   if (mode==0) {
     s=subboards[usub[cursub].subnum];
-    npr("\r\n2%s 1%s 2%s.\r\n", s1, subboards[usub[cursub].subnum].name,
+    npr("\r\n\x1b[1;32m%s \x1b[1;33m%s\x1b[1;32m %s.\r\n", s1, subboards[usub[cursub].subnum].name,
         get_string(1628));
   }
   if (mode==1) {
     d=directories[udir[curdir].subnum];
-    npr("\r\n2%s 1%s 2%s.\r\n", s1, directories[udir[curdir].subnum].name,
+    npr("\r\n\x1b[1;32m%s \x1b[1;33m%s\x1b[1;32m %s.\r\n", s1, directories[udir[curdir].subnum].name,
         get_string(1629));
   }
   nl();
   if (okansi()) {
     if (syscfg.sysconfig & sysconfig_extended_info) {
-      pla(get_string(1176),&abort);
-      sprintf(s1,"%d%s",FRAME,get_string(1177));
+      pla("\x1b[1;33m #    Name                           City/State\x1b[0m",&abort);
+      sprintf(s1,"\x1b[37m%s\x1b[0m", charstr(66, '\xcd'));
       pla(s1,&abort);
     } else {
-      pla(get_string(1178),&abort);
-      sprintf(s1,"%d%s",FRAME,get_string(1179));
+      pla("\x1b[1;33m #    Name\x1b[0m",&abort);
+      sprintf(s1,"\x1b[37m%s\x1b[0m", charstr(36, '\xcd'));
       pla(s1,&abort);
     }
   } else {
@@ -390,11 +381,11 @@ void list_users(int mode)
       sprintf(s2,"%s, %s",u.city,u.state);
       if (okansi()) {
         if (syscfg.sysconfig & sysconfig_extended_info) {
-          sprintf(s1,"\r%d�7%-4d%d�1%-30.30s%d�2%-30.30s%d�",
-            FRAME, smallist[i].number, FRAME, u.name, FRAME, s2, FRAME );
+          sprintf(s1,"\r\x1b[37m\xb3\x1b[1;33m%-4d\x1b[37m\xb3\x1b[1;32m%-30.30s\x1b[37m\xb3\x1b[1;32m%-30.30s\x1b[37m\xb3\x1b[0m",
+            smallist[i].number, u.name, s2);
         } else {
-          sprintf(s1,"\r%d�7%-4d%d�1%-30.30s%d�",
-            FRAME, smallist[i].number, FRAME, u.name, FRAME);
+          sprintf(s1,"\r\x1b[37m\xb3\x1b[1;33m%-4d\x1b[37m\xb3\x1b[1;32m%-30.30s\x1b[37m\xb3\x1b[0m",
+            smallist[i].number, u.name);
         }
       } else {
         if (syscfg.sysconfig & sysconfig_extended_info) {
@@ -412,9 +403,9 @@ void list_users(int mode)
   }
   if (okansi()) {
     if (syscfg.sysconfig & sysconfig_extended_info) {
-      sprintf(s1,"\r%d%s",FRAME,get_string(1185));
+      sprintf(s1,"\r\x1b[37m%s\x1b[0m", charstr(66, '\xcd'));
     } else {
-      sprintf(s1,"\r%d%s",FRAME,get_string(1186));
+      sprintf(s1,"\r\x1b[37m%s\x1b[0m", charstr(36, '\xcd'));
     }
   } else {
     if (syscfg.sysconfig & sysconfig_extended_info) {
@@ -429,7 +420,7 @@ void list_users(int mode)
       num--;
     nln(2);
   }
-  npr("1%d 2%s.\r\n",num,(num==1) ? get_string(1630) : get_string(1631));
+  npr("\x1b[1;33m%d\x1b[0m %s.\r\n",num,(num==1) ? get_string(1630) : get_string(1631));
 }
 
 

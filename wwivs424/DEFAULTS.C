@@ -111,12 +111,7 @@ void print_cur_stat(void)
   ansic_x(2); npr("%d\r\n",thisuser.optional_val);
   ansic_x(1); outstr(get_string(1149));
   ansic_x(2); pl((thisuser.sysstatus & sysstatus_conference)?str_yes:str_no);
-  ansic_x(1); outstr(get_string(401));
-  ansic_x(2);
-  if (thisuser.wwiv_regnum)
-    npr("%ld\r\n",thisuser.wwiv_regnum);
-  else
-    pl(get_string(402));
+  /* wwiv_regnum display removed in OrbitBBS */
   if (num_languages>1) {
     ansic_x(1); outstr(get_string(936));
     ansic_x(2); pl(cur_lang_name);
@@ -730,13 +725,13 @@ void defaults(void)
             comstr("|@AQ53X\r\r");
       if ((thisuser.sysstatus & sysstatus_no_msgs)==0)
             comstr("|@AQ5RX\r\r");
-      ch=onek("Q?123456789ABCWLMR");
+      ch=onek("Q?123456789ABCLMR");
     } else if (okansi()) {
       prt(2,get_string(477));
-      ch=onek("Q?123456789ABCWLMR");
+      ch=onek("Q?123456789ABCLMR");
     } else {
       prt(2,get_string(478));
-      ch=onek("Q?1234567BCWLMR");
+      ch=onek("Q?1234567BCLMR");
     }
     if (menu_on()) {
       comr("|*");
@@ -799,9 +794,7 @@ void defaults(void)
         if (menu_on()==0)
           print_cur_stat();
         break;
-      case 'W':
-        enter_regnum();
-        break;
+      /* case 'W': enter_regnum() removed in OrbitBBS */
       case 'L':
         if (num_languages>1)
           input_language();
