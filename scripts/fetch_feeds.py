@@ -64,37 +64,35 @@ FEEDS = [
     },
     {
         "filename": "TILDES.ANS",
-        "description": "Tildes.net - Community",
-        # Tildes groups have per-group RSS: https://tildes.net/~GROUPNAME.rss
-        # The front page aggregate requires login. Use a public group instead.
-        "url": "https://tildes.net/~tech.rss",
+        "description": "Drew DeVault's Blog",
+        # tildes.net ~tech RSS was returning 404/422 as of 2026-03-30.
+        # Replaced with Drew DeVault's blog: free software, opinionated tech writing.
+        "url": "https://drewdevault.com/blog/index.xml",
         "type": "rss",
-        "title": "TILDES.NET",
-        "subtitle": "community discussions",
+        "title": "DREW DEVAULT",
+        "subtitle": "free software & systems programming",
         "max_items": 20,
     },
     {
         "filename": "GEMINI.ANS",
-        "description": "Geminispace - Feed Aggregator",
-        # Gemini content via HTTP proxy.
-        # geminispace.info/search is their main search/aggregator page.
-        # The /new path lists recently updated capsules.
-        "url": "https://portal.mozz.us/gemini/geminispace.info/new",
-        "type": "gemini",
-        "title": "GEMINISPACE",
-        "subtitle": "via portal.mozz.us  |  native: gemini://geminispace.info/feeds",
+        "description": "Hundred Rabbits - Project Updates",
+        # portal.mozz.us Gemini proxy was returning 500 and serving HTML (not gemtext).
+        # Replaced with Hundred Rabbits: off-grid solar-powered boat computing collective.
+        "url": "https://100r.co/links/rss.xml",
+        "type": "rss",
+        "title": "HUNDRED RABBITS",
+        "subtitle": "off-grid computing  |  100r.co",
         "max_items": 20,
     },
     {
         "filename": "512KB.ANS",
-        "description": "512KB Club - Small Web",
-        # 512KB Club does not publish a traditional RSS feed.
-        # Using their GitHub releases Atom feed as a proxy for site news.
-        "url": "https://github.com/kevquirk/512kb.club/releases.atom",
-        "type": "atom",
+        "description": "Low-tech Magazine",
+        # 512KB Club has no GitHub releases (feed was always empty).
+        # Replaced with Low-tech Magazine: sustainable tech, runs on solar power.
+        "url": "https://solar.lowtechmagazine.com/posts/index.xml",
         "type": "rss",
-        "title": "512KB CLUB",
-        "subtitle": "small web news & hall of fame",
+        "title": "LOW-TECH MAGAZINE",
+        "subtitle": "sustainable technology  |  solar.lowtechmagazine.com",
         "max_items": 15,
     },
 ]
