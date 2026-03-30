@@ -22,7 +22,8 @@ if [ -f "$FEEDS_IMG" ]; then
     exit 1
 fi
 
-if ! command -v mkfs.fat &>/dev/null; then
+MKFSFAT=$(command -v mkfs.fat 2>/dev/null || command -v /usr/sbin/mkfs.fat 2>/dev/null || echo "")
+if [ -z "$MKFSFAT" ]; then
     echo "ERROR: dosfstools not installed. Run: sudo apt install dosfstools mtools"
     exit 1
 fi
@@ -33,7 +34,7 @@ echo "Creating FAT12 image: $FEEDS_IMG (1.44MB)"
 dd if=/dev/zero of="$FEEDS_IMG" bs=512 count=2880 status=none
 
 # Format as FAT12
-mkfs.fat -F 12 -n "ORBITFEEDS" "$FEEDS_IMG"
+"$MKFSFAT" -F 12 -n "ORBITFEEDS" "$FEEDS_IMG"
 
 echo "Creating FEEDS\ directory in image..."
 

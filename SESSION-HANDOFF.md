@@ -1,15 +1,30 @@
 # OrbitBBS — Session Handoff
-**Date:** 2026-03-29
-**Session ended:** ~21:00 CDT
+**Date:** 2026-03-30
+**Session ended:** ongoing
 
 ---
 
 ## 🟢 What Was Accomplished This Session
 
-### Phase 6 — QEMU VM Setup ✅ (completed previous session)
-See previous session notes.
+### Phase 7 — Feed URL Fixes ✅ (completed this session)
 
-### Registration Cleanup ✅ (completed this session)
+Three broken feed URLs replaced in `scripts/fetch_feeds.py`:
+
+| File | Was | Now |
+|------|-----|-----|
+| TILDES.ANS | tildes.net/~tech.rss (404/422) | drewdevault.com/blog/index.xml |
+| GEMINI.ANS | portal.mozz.us Gemini proxy (500 + HTML) | 100r.co/links/rss.xml (Hundred Rabbits) |
+| 512KB.ANS | github.com/kevquirk/512kb.club/releases.atom (empty) | solar.lowtechmagazine.com/posts/index.xml |
+
+Also fixed duplicate `"type"` key bug on the 512KB entry.
+
+All 5 feeds confirmed live: HN (30), Lobsters (25), DeVault (383 total, capped at 20), Hundred Rabbits (84 total, capped at 20), Low-tech Mag (3 — slow publisher, normal).
+
+Commit: `107931e`
+
+---
+
+### Registration Cleanup ✅ (completed previous session)
 
 **NEWUSER.C changes (recompiled + deployed):**
 
@@ -110,21 +125,13 @@ Single-char commands (like `U` = user list) execute immediately; `//` is require
 | 5.5 | ✅ Complete | orbit_menu() custom main menu |
 | 6 | ✅ Complete | QEMU VM setup, OrbitBBS install, tcpser, telnet live |
 | 6.5 | ✅ Complete THIS SESSION | Registration cleanup, menu cleanup |
-| **7** | 🔲 **NEXT** | Feed URL verification (3 broken URLs) |
-| 8 | 🔲 Next | feeds.img creation + cron activation |
+| **7** | ✅ **DONE** | Feed URL verification — all 5 feeds live |
+| **8** | 🔲 **NEXT** | feeds.img creation + cron activation |
 | 9 | 🔲 Future | Doors and games |
 
 ---
 
 ## 🚀 What to Do Next (Phase 7 + 8)
-
-### Phase 7 — Fix Broken Feed URLs
-Three feeds need new URLs (see `NEXT-STEPS.md` for details):
-1. **Tildes.net** — `https://tildes.net/~tech.rss` returning 404
-2. **Geminispace** — `https://portal.mozz.us/gemini/geminispace.info/new` returning 500
-3. **512KB Club** — no GitHub releases feed; needs replacement
-
-Script to update: `scripts/fetch_feeds.py`
 
 ### Phase 8 — Feeds Infrastructure
 1. Create `feeds.img` (one-time): `scripts/create_feeds_img.sh`
