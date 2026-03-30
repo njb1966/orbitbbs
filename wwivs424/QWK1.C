@@ -416,7 +416,7 @@ void ready_reply_packet(char *name)
 }
 
 
-// Takes reply packet and converts '227' (ã) to '13'
+// Takes reply packet and converts '227' (ï¿½) to '13'
 void make_text_ready(char *text, long len)
 {
   int pos=0;
@@ -1013,7 +1013,7 @@ void qwk_post_text(char *text, long size, char *title, int sub)
     p.qscan=status.qscanptr++;
     save_status();
     time((long *)(&p.daten));
-    if (thisuser.restrict & restrict_validate)
+    if ((thisuser.restrict & restrict_validate) && (actsl < 20))
       p.status=status_unvalidated;
     else
       p.status=0;

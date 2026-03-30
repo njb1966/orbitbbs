@@ -630,8 +630,9 @@ int checkpw(void)
   echo=1;
   if (strcmp(s,(syscfg.systempw))==0)
     return(1);
-  else
-    return(0);
+  nl();
+  pl("Incorrect password.");
+  return(0);
 }
 
 /****************************************************************************/

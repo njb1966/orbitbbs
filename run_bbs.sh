@@ -27,8 +27,7 @@ case "$cmd" in
     fi
 
     if [ "$cmd" = "setup" ]; then
-      echo "Starting OrbitBBS VM in SETUP mode (interactive display)..."
-      echo "Close the QEMU window when done."
+      echo "Starting OrbitBBS VM in SETUP mode (GTK display — run with DISPLAY=:1)..."
       QEMU_ARGS=(
         -hda "$HDA"
         -m 16
@@ -39,8 +38,8 @@ case "$cmd" in
       if [ -f "$INSTALL_IMG" ]; then
         QEMU_ARGS+=(-hdb "$INSTALL_IMG")
       fi
+      echo "Close the SDL window when done."
       qemu-system-i386 "${QEMU_ARGS[@]}"
-      echo "Setup session ended."
       exit 0
     fi
 

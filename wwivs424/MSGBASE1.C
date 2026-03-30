@@ -241,7 +241,7 @@ void post(void)
     p.qscan=status.qscanptr++;
     save_status();
     time((long *)(&p.daten));
-    if (thisuser.restrict & restrict_validate)
+    if ((thisuser.restrict & restrict_validate) && (actsl < 20))
       p.status=status_unvalidated;
     else
       p.status=0;
@@ -835,7 +835,7 @@ void scan(int msgnum, int optype, int *nextsub)
                 s[strlen(s)-1]=0;
             strcat(s,charstr(51-strlen(stripcolors(s)),' '));
             if (okansi())
-              strcat(s,"7³1");
+              strcat(s,"7ï¿½1");
             else
               strcat(s,"|");
             strcat(s," ");
