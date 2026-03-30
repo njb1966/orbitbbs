@@ -1,7 +1,12 @@
 # OrbitBBS
 
-A fork of WWIV BBS v4.24a targeting MS-DOS 6.22, designed for the small web and
-Geminispace community. Single-instance, retro feel, no file transfers.
+A fork of WWIV BBS v4.24a targeting MS-DOS 6.22, designed for the small web
+and Geminispace community. Single-instance, retro feel, no file transfers.
+
+**Live at:** `telnet bbs.deadparrotbbs.com 2323` (after VPS migration)
+**Dev:** `telnet localhost 2323`
+
+---
 
 ## What It Is
 
@@ -13,98 +18,139 @@ trading or large-scale multi-node operation.
 **Target audience:** Small web enthusiasts, Gemini capsule operators, retro
 computing hobbyists. Intimacy over scale.
 
+---
+
 ## Runtime Architecture
 
 ```
-Internet (Telnet)
+Internet (Telnet :2323)
        │
        ▼
  Debian 12 Linux host
- ├─ tcpser        — TCP-to-serial bridge (presents virtual COM ports)
- └─ cron jobs     — Feed fetcher, maintenance scripts
+ ├─ tcpser        — TCP-to-serial bridge (virtual COM port)
+ ├─ cron          — Feed fetcher every 6h → feeds.img
+ └─ run_bbs.sh    — QEMU + tcpser lifecycle management
        │
        ▼ (virtual serial / FOSSIL)
  QEMU VM — MS-DOS 6.22
  ├─ BNU.COM       — FOSSIL driver (BNU v1.70)
- ├─ SHARE.EXE     — DOS file locking (loaded in CONFIG.SYS)
- └─ BBS.EXE       — OrbitBBS (single instance)
+ ├─ SHARE.EXE     — DOS file locking
+ └─ BBS.EXE       — OrbitBBS (C:\ORBIT\)
+
+ Second drive (D:) = feeds.img (FAT12, 1.44MB)
+ ├─ FEEDS\HN.ANS, LOBSTERS.ANS, etc.   — ANSI feed files
+ └─ FEEDS.GFL                          — BBS file index
 ```
+
+---
 
 ## What Was Removed from WWIV
 
-| Feature           | Status    | Notes |
-|-------------------|-----------|-------|
-| File transfers    | Removed   | All xfer menus, upload/download, batch DL |
-| AutoMessage       | Removed   | Login display and post option gone |
-| Chat with Sysop   | Removed   | reqchat, chat_room, WWIVCHAT support gone |
-| DIREDIT sysop cmd | Removed   | File directory editor gone with xfer |
+| Feature | Status | Notes |
+|---------|--------|-------|
+| File transfers | Removed | All xfer menus, upload/download, batch DL |
+| AutoMessage | Removed | Login display and post option gone |
+| Chat with Sysop | Removed | reqchat, chat_room, WWIVCHAT support gone |
+| QWK offline reader | Removed | Blocked at menu level |
+| WWIV reg number display | Removed | Logon no longer shows (Unregistered) |
+
+---
 
 ## What Was Changed
 
-| Item              | Change |
-|-------------------|--------|
-| Version string    | `OrbitBBS v1.0` |
-| Env vars          | `WWIV_DIR` → `ORBIT_DIR`, `WWIV_INSTANCE` → `ORBIT_INSTANCE` |
-| Function pointer  | `WWIV_FP` → `ORBIT_FP` (external program handshake) |
-| Net DAT file      | `WWIV_NET.DAT` → `ORBIT_NET.DAT` |
-| Contact screen    | Wayne Bell / WWIV Software Services → OrbitBBS attribution |
-| Batch file hint   | `wwiv.bat` → `orbit.bat` |
-| General Files     | Repurposed as feed reader section (see below) |
+| Item | Change |
+|------|--------|
+| Version string | `OrbitBBS v1.0` |
+| Env vars (BBS.C) | `WWIV_DIR` → `ORBIT_DIR`, `WWIV_INSTANCE` → `ORBIT_INSTANCE` |
+| WWIV_FP / WWIV_NET.* | Kept — internal door IPC and network processing |
+| WWIV.INI section names | Kept — pre-compiled INIT.EXE writes these |
+| Main menu | File-driven: drop `MAINMENU.ANS` in GFILES, no recompile needed |
+| Last Callers header | ANSI-colored, replaces garbled WWIV color codes |
+| DOS prompt | `OrbitBBS: ` (shown on local console / DOS shell) |
+
+---
 
 ## What Was Added
 
-**Feed Reader** — The General Files (G) section hosts pre-fetched ANSI-formatted
-news feeds. A Linux-side cron script fetches content and writes it to a shared
-DOS-accessible disk image.
+**Feed Reader** — The General Files (`G`) section hosts pre-fetched
+ANSI-formatted news feeds from a Linux-side cron script.
 
-Feed sources (configured in `scripts/fetch_feeds.py`):
-- Hacker News top stories
-- Lobste.rs
-- Tildes.net `~tech` group (URL needs verification — see NEXT-STEPS.md)
-- Geminispace aggregator via portal.mozz.us proxy (URL needs verification)
-- 512KB Club (URL needs verification)
+| Feed file | Source |
+|-----------|--------|
+| `HN.ANS` | Hacker News top stories |
+| `LOBSTERS.ANS` | Lobste.rs |
+| `TILDES.ANS` | Drew DeVault's blog |
+| `GEMINI.ANS` | Hundred Rabbits (100r.co) |
+| `512KB.ANS` | Low-tech Magazine |
+
+Configured in `scripts/fetch_feeds.py`. Runs every 6 hours via cron.
+
+**File-Driven Screens** — All display screens (welcome, logon, menu, etc.)
+are plain files in `C:\ORBIT\GFILES\`. Create in Moebius/PabloDraw (CP437),
+inject via guestfish. No recompile needed.
+
+---
 
 ## How to Build
 
-Requires Borland C++ 3.1 (already in `BCPP31/`) and DOSBox.
+Requires DOSBox and xvfb (headless display for CLI):
 
 ```bash
-dosbox -conf build.conf
-# Inside DOSBox:
-make -f makefile.mak > build.log
-exit
+sudo apt install xvfb   # one-time
+xvfb-run dosbox -conf build-auto.conf -exit
+grep -c "Error" wwivs424/BUILD.LOG   # should be 0
 ```
 
-Output binaries: `wwivs424/exe/BBS.EXE`, `RETURN.EXE`, `MINIESM.EXE`, `FIX.EXE`
+Output: `wwivs424/exe/BBS.EXE`
+
+Deploy to VM (stop first):
+```bash
+./run_bbs.sh stop
+guestfish -a base-dos.qcow2 <<'EOF'
+run
+mount /dev/sda1 /
+copy-in wwivs424/exe/BBS.EXE /ORBIT/
+EOF
+./run_bbs.sh start
+```
+
+See `OPERATIONS.md` for the full operations reference.
+
+---
 
 ## Directory Layout
 
 ```
 orbitbbs/
-├─ wwivs424/        Source code (Borland C, DOS target)
-│   ├─ exe/         Compiled output
-│   └─ obj/         Object files
-├─ BCPP31/          Borland C++ 3.1 compiler (DOS executables, run in DOSBox)
-├─ BNU170/          BNU FOSSIL driver
-├─ tcpser/          tcpser source/binary
-├─ feeds/           Feed staging directory (ANSI files + GFL index)
-├─ scripts/         Linux-side maintenance scripts
-│   ├─ fetch_feeds.py       Fetches RSS/Gemini, generates ANSI files + GFL
-│   ├─ deploy_feeds.sh      Copies staging files to DOS FAT image via mtools
-│   ├─ create_feeds_img.sh  One-time: creates feeds.img FAT12 disk image
-│   └─ mtoolsrc             mtools config
-├─ base-dos.qcow2   MS-DOS 6.22 QEMU disk image (BBS not yet installed)
-├─ feeds.img        (created by create_feeds_img.sh — does not exist yet)
-├─ build.conf       DOSBox config for compilation
-└─ doors/           Doors/games staging
+├─ run_bbs.sh              VM lifecycle (start/stop/status/setup)
+├─ build-auto.conf         Unattended DOSBox build
+├─ base-dos.qcow2          MS-DOS 6.22 QEMU disk (C: drive, OrbitBBS installed)
+├─ feeds.img               FAT12 feed image (D: drive)
+├─ logs/feeds.log          Cron feed log
+├─ feeds/                  Feed staging — generated, gitignored
+├─ scripts/
+│   ├─ fetch_feeds.py      Fetch RSS feeds, generate ANSI + GFL
+│   ├─ deploy_feeds.sh     Copy staging → feeds.img via mtools
+│   └─ create_feeds_img.sh One-time: create feeds.img
+├─ wwivs424/               Source code (Borland C, DOS target)
+│   ├─ exe/BBS.EXE         Current compiled binary
+│   └─ BUILD.LOG           Last build output
+├─ BCPP31/                 Borland C++ 3.1 compiler (runs in DOSBox)
+├─ BNU170/                 BNU FOSSIL driver
+├─ tcpser/                 tcpser source + binary
+└─ doors/                  Doors/games staging
 ```
+
+---
 
 ## Important Notes
 
-- `WWIV.INI` filename and INI section names (`[WWIV]`, `[WWIV-1]`) are kept
-  as-is because `INIT.EXE` is a pre-compiled binary that writes those names.
-  Renaming them requires replacing INIT.EXE with a custom version.
-- The `wwiv_version`, `wwiv_date`, `wwiv_num_version` variable names in `.H`
-  files are internal only and were not renamed (not user-visible).
-- Single-instance deployment. Multi-node support was intentionally deferred —
-  the target audience does not warrant the added complexity.
+- `WWIV.INI` and its section names `[WWIV]` / `[WWIV-1]` are kept as-is.
+  The pre-compiled `INIT.EXE` binary writes those names — renaming requires
+  replacing INIT.EXE entirely.
+- `WWIV_FP` env var and `WWIV_NET.*` temp files are kept — they are internal
+  IPC used by door programs and network processing. Renaming breaks doors.
+- Screen `.ANS` files use CP437 encoding, not UTF-8. SyncTerm and other BBS
+  terminals expect CP437.
+- Single-instance deployment. Multi-node deferred — target audience doesn't
+  warrant the complexity.
