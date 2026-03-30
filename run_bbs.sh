@@ -37,11 +37,7 @@ case "$cmd" in
       )
       INSTALL_IMG="$PROJ/install.img"
       if [ -f "$INSTALL_IMG" ]; then
-        echo "  D: = install.img"
         QEMU_ARGS+=(-hdb "$INSTALL_IMG")
-      elif [ -f "$HDB" ]; then
-        echo "  D: = feeds.img"
-        QEMU_ARGS+=(-hdb "$HDB")
       fi
       qemu-system-i386 "${QEMU_ARGS[@]}"
       echo "Setup session ended."
@@ -57,13 +53,6 @@ case "$cmd" in
       -pidfile "$PIDFILE"
       -daemonize
     )
-
-    if [ -f "$HDB" ]; then
-      QEMU_ARGS+=(-hdb "$HDB")
-    else
-      echo "NOTE: feeds.img not found — starting without second drive (D:)."
-      echo "      Run scripts/create_feeds_img.sh to create it before Phase 8."
-    fi
 
     echo "Starting OrbitBBS QEMU VM..."
     qemu-system-i386 "${QEMU_ARGS[@]}" > "$LOGFILE" 2>&1
