@@ -1,79 +1,84 @@
 # OrbitBBS — Session Handoff
 **Date:** 2026-03-29
-**Session ended:** ~19:30 CDT
+**Session ended:** ~21:00 CDT
 
 ---
 
 ## 🟢 What Was Accomplished This Session
 
-### Phase 5.5 — Custom Main Menu (`orbit_menu`) ✅
-See previous session notes — completed before this session.
+### Phase 6 — QEMU VM Setup ✅ (completed previous session)
+See previous session notes.
 
-### Phase 6 — QEMU VM Setup ✅ (completed this session)
+### Registration Cleanup ✅ (completed this session)
 
-**6a — `run_bbs.sh`**
-- Launches QEMU headless with `-serial pty`
-- Auto-starts tcpser after detecting PTY
-- `start` / `stop` / `status` / `setup` subcommands
-- `setup` mode opens a GTK window with VGA display for sysop work
+**NEWUSER.C changes (recompiled + deployed):**
 
-**6b — DOS CONFIG.SYS / AUTOEXEC.BAT**
-- `CONFIG.SYS`: HIMEM.SYS, DOS=HIGH, FILES=40, BUFFERS=20, SHELL
-- `AUTOEXEC.BAT`: SHARE → BNU.COM → `BBS.EXE /N1` → restart loop
-- D: drive feed copy lines REM'd out (re-enable in Phase 8)
+1. **Birth year — 4-digit YYYY**
+   - Was: `input(ag,2)` + `y=atoi(ag)+1900` (2-digit, 1900-based)
+   - Now: `input(ag,4)` + `y=atoi(ag)` (full 4-digit year)
+   - Prompt changed to `"Year you were born (YYYY): "`
+   - Removed the 1919 sentinel check (artifact of 2-digit input)
+   - Review screen now shows `month/day/year+1900` for 4-digit display
+   - Storage unchanged: `u->year = (unsigned char)(y-1900)` — `years_old()` still works
 
-**6c — OrbitBBS installed on DOS VM**
-- Files transferred via `qemu-nbd` mount (no floppy needed)
-- Script: `scripts/make_install_img.sh` (creates FAT install disk — backup method)
-- Directories created by INIT.EXE: `C:\ORBIT\DATA\`, `MSGS\`, `GFILES\`
-- Sysop account created (Nick B, SL=255)
+2. **Computer type — removed**
+   - Removed `input_comptype()` call from registration flow
+   - Removed comp_type display from review screen
+   - Removed `case '7': input_comptype()` from edit menu
 
-**6d — tcpser + telnet working**
-- tcpser patched to not FATAL on PTY `TIOCMGET` (virtual devices have no modem lines)
-  - `tcpser/src/serial.c`: FATAL → WARN, returns -1
-  - `tcpser/src/bridge.c`: `ctrl_thread` exits gracefully instead of `exit(-1)`
-- Key bug fixed: `BBS.EXE /N1 /M` — `/M` = **no modem** flag (opposite of intended)
-  - Fixed to `BBS.EXE /N1` in AUTOEXEC.BAT
-- tcpser runs with `-i "s0=1"` (auto-answer after 1 RING)
-- `telnet localhost 2323` → OrbitBBS login screen ✅
+3. **Default transfer protocol — removed**
+   - Removed `get_protocol(xf_down)` block entirely
+   - File transfers were removed in Phase 4; this question was irrelevant
 
-**WELCOME.MSG**
-- Block-letter ORBITBBS logo in yellow ANSI
-- Cyan borders, green welcome text
-- Stored as UTF-8 (works with modern telnet clients)
-- Location: `C:\ORBIT\GFILES\WELCOME.MSG`
+4. **Callsign — marked optional**
+   - Added `"(Optional -- press Enter to skip)"` line before input prompt
+   - HAM operators can still use the field; others skip it
+
+### Menu Cleanup ✅
+
+**MMENU.C changes (recompiled + deployed):**
+- Removed `CLS` and `VER` from the orbit_menu display (OTHER section)
+- Fixed `CLS` handler: `\f` → `\x1b[2J\x1b[H` (proper ANSI clear screen)
+- `CLS` and `VER` still work as hidden typed commands
+
+### build-auto.conf ✅
+- Added unattended DOSBox build config (`build-auto.conf`)
+- Runs `make -f makefile.mak > BUILD.LOG` then exits automatically
+- Use: `dosbox -conf build-auto.conf -exit &`
 
 ---
 
 ## 🔧 Key Technical Details
 
-### tcpser PTY Patch
-PTYs (`/dev/pts/N`) don't support `TIOCMGET`/`TIOCMSET` hardware modem ioctls.
-Original tcpser called `exit(-1)` on failure. Patched to:
-1. `serial.c` `ser_get_control_lines()`: WARN + return -1 (not FATAL)
-2. `bridge.c` `ctrl_thread()`: return NULL instead of `exit(-1)`
+### Sysop Commands (via telnet)
+Log in as sysop (SL=255), then at the main menu prompt type `//` followed by the command:
 
-DTR monitoring disabled (acceptable — tcpser still handles RING/CONNECT).
+| Command | What it does |
+|---------|-------------|
+| `//UE` or `//UEDIT` | User editor — edit SL, name, flags, validate accounts |
+| `//CU` or `//CHUSER` | Change user context |
+| `//YLOG` | Yesterday's activity log |
+| `//DOS` | DOS shell (requires sysop password) |
+| `//BE` | Board (sub) editor |
+| `//CE` | Chain (door) editor |
 
-### `/M` Flag
-In WWIV 4.24 BBS.EXE: `/M` = `ok_modem_stuff=0` (disables ALL modem/COM processing).
-NOT "modem mode" as assumed. Remove it. BBS must run as just `BBS.EXE /N1`.
+The `//` prefix works because `mmkey()` detects the second `/` and switches to reading a full 50-char line, bypassing the single-char command dispatch.
 
-### QEMU Serial → tcpser → telnet Chain
-```
-BBS.EXE → BNU FOSSIL → COM1 UART → QEMU virtual UART → /dev/pts/N → tcpser → TCP:2323 → telnet
-```
-tcpser emulates Hayes modem (RING → ATA → CONNECT 38400) with `s0=1` auto-answer.
+Single-char commands (like `U` = user list) execute immediately; `//` is required for multi-char sysop commands.
 
-### File Transfer Method (Linux → DOS VM)
-```bash
-sudo qemu-nbd --connect=/dev/nbd0 base-dos.qcow2
-sudo mount /dev/nbd0p1 /mnt/dos
-# copy files
-sudo umount /mnt/dos
-sudo qemu-nbd --disconnect /dev/nbd0
-```
-VM must be STOPPED before mounting.
+### Birth Year Storage
+`thisuser.year` is stored as `year - 1900` (unsigned char).
+- 1985 stored as 85
+- 2001 stored as 101
+`years_old()` uses `today.da_year - 1900 - y` arithmetic — works correctly for 2000+ years.
+4-digit input is just parsed directly; storage is unchanged.
+
+### BBS.EXE Sizes (history)
+| Date | Size | Notes |
+|------|------|-------|
+| Mar 29 16:41 | 558,016 | Phase 6 complete, orbit_menu |
+| Mar 29 19:38 | 557,856 | Registration cleanup |
+| Mar 29 19:53 | 557,680 | Menu cleanup (CLS/VER) |
 
 ---
 
@@ -81,11 +86,12 @@ VM must be STOPPED before mounting.
 
 | Artifact | Status |
 |----------|--------|
-| `wwivs424/exe/BBS.EXE` | Mar 29 16:41, 558,016 bytes — orbit_menu compiled in |
-| `base-dos.qcow2` | OrbitBBS installed, sysop account created |
+| `wwivs424/exe/BBS.EXE` | Mar 29 19:53, 557,680 bytes — all session changes compiled in |
+| `base-dos.qcow2` | Updated with latest BBS.EXE |
 | `tcpser/tcpser` | Patched + rebuilt for PTY support |
 | `run_bbs.sh` | Integrated QEMU + tcpser launch |
 | `WELCOME.MSG` | Block-letter logo, ANSI colors |
+| `build-auto.conf` | Unattended build config |
 
 **Test:** `./run_bbs.sh start && telnet localhost 2323` → login screen ✅
 
@@ -102,8 +108,9 @@ VM must be STOPPED before mounting.
 | 4 | ✅ Complete | File transfers removed |
 | 5 | ✅ Complete | Feed reader (Linux scripts, ANSI formatter) |
 | 5.5 | ✅ Complete | orbit_menu() custom main menu |
-| **6** | **✅ Complete THIS SESSION** | **QEMU VM setup, OrbitBBS install, tcpser, telnet live** |
-| 7 | 🔲 **NEXT** | Feed URL verification (3 broken URLs) |
+| 6 | ✅ Complete | QEMU VM setup, OrbitBBS install, tcpser, telnet live |
+| 6.5 | ✅ Complete THIS SESSION | Registration cleanup, menu cleanup |
+| **7** | 🔲 **NEXT** | Feed URL verification (3 broken URLs) |
 | 8 | 🔲 Next | feeds.img creation + cron activation |
 | 9 | 🔲 Future | Doors and games |
 
@@ -131,16 +138,16 @@ Script to update: `scripts/fetch_feeds.py`
 | File | Purpose |
 |------|---------|
 | `run_bbs.sh` | Start/stop/status/setup — integrated QEMU + tcpser |
+| `build-auto.conf` | Unattended DOSBox build (runs make then exits) |
 | `tcpser/tcpser` | Patched tcpser binary |
-| `tcpser/src/serial.c` | PTY patch: TIOCMGET FATAL → WARN |
-| `tcpser/src/bridge.c` | PTY patch: ctrl_thread graceful exit |
-| `wwivs424/exe/BBS.EXE` | Current BBS binary (orbit_menu, no file xfer, no chat) |
-| `wwivs424/MAKEFILE.MAK` | Build: `dosbox -conf build.conf` then `make -f makefile.mak` |
-| `WELCOME.MSG` | Login welcome screen source (copy to `C:\ORBIT\GFILES\`) |
+| `wwivs424/NEWUSER.C` | Registration flow (4-digit year, no comptype, no defprot, optional callsign) |
+| `wwivs424/MMENU.C` | Main menu display + command dispatch; orbit_menu() |
+| `wwivs424/exe/BBS.EXE` | Current BBS binary |
+| `wwivs424/MAKEFILE.MAK` | Build: `dosbox -conf build-auto.conf -exit` |
+| `WELCOME.MSG` | Login welcome screen source |
 | `base-dos.qcow2` | MS-DOS 6.22 QEMU disk — OrbitBBS installed |
 | `scripts/fetch_feeds.py` | RSS/Gemini feed fetcher |
 | `scripts/deploy_feeds.sh` | Copies feeds to DOS FAT image |
-| `scripts/make_install_img.sh` | Creates FAT install disk (backup transfer method) |
 | `NEXT-STEPS.md` | Full Phase 7–9 specs |
 | `PROJECT.md` | Architecture overview |
 
@@ -148,4 +155,4 @@ Script to update: `scripts/fetch_feeds.py`
 
 ## 💬 Resuming Next Session
 
-Say: **"Continuing OrbitBBS. Phase 6 complete and live. See SESSION-HANDOFF.md."**
+Say: **"Continuing OrbitBBS. Phase 6.5 complete. See SESSION-HANDOFF.md."**
