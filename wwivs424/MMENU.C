@@ -204,15 +204,6 @@ static void orbit_menu(void)
   outstr("/O");
   if (color) outstr("\x1b[0m");
   pl("  Instant logoff");
-  outstr("  ");
-  if (color) outstr("\x1b[1;33m");
-  outstr("CLS");
-  if (color) outstr("\x1b[0m");
-  outstr("  Clear screen          ");
-  if (color) outstr("\x1b[1;33m");
-  outstr("VER");
-  if (color) outstr("\x1b[0m");
-  pl("  Version info");
   nl();
 
   if (color) outstr("\x1b[1;36m");
@@ -601,12 +592,7 @@ void mainmenu(void)
   if (strcmp(s,"QWK")==0)
     qwk_menu();
   if (strcmp(s,"CLS")==0) {
-    outstr("\f");
-    if (rip_on()) {
-      //comstr("\r!|*\r");
-      rmenu = 300;
-      cleared = NEEDCLEAR;
-    }
+    outstr("\x1b[2J\x1b[H");
   }
   if ((strcmp(s,"NET")==0) || (strncmp(s,"NET=",4)==0))
     print_net_listing(0);
