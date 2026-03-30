@@ -1,6 +1,6 @@
 # OrbitBBS — Session Handoff
 **Date:** 2026-03-30
-**Session ended:** ongoing
+**Session ended:** ~08:30 CDT
 
 ---
 
@@ -126,14 +126,25 @@ Single-char commands (like `U` = user list) execute immediately; `//` is require
 | 6 | ✅ Complete | QEMU VM setup, OrbitBBS install, tcpser, telnet live |
 | 6.5 | ✅ Complete THIS SESSION | Registration cleanup, menu cleanup |
 | **7** | ✅ **DONE** | Feed URL verification — all 5 feeds live |
-| **8** | 🔲 **NEXT** | feeds.img creation + cron activation |
+| **8** | ✅ **DONE** | feeds.img, AUTOEXEC.BAT D: drive, cron active |
 | 9 | 🔲 Future | Doors and games |
+| **9.5** | 🔲 **NEXT** | Custom ANSI screens (welcome, last callers header) |
 
 ---
 
 ## 🚀 What to Do Next (Phase 7 + 8)
 
-### Phase 8 — Feeds Infrastructure
+### Phase 8 — Feeds Infrastructure ✅ (completed this session)
+
+- `feeds.img` created (1.44MB FAT12, populated with all 5 feeds)
+- `AUTOEXEC.BAT` updated: D: drive COPY lines un-REM'd
+- `C:\ORBIT\GFILES\FEEDS\` directory created in qcow2
+- Cron active: fetch every 6h, deploy 5min later → `logs/feeds.log`
+- VM restarted with D: drive attached — confirmed no warnings
+- `xvfb-run` confirmed working for headless DOSBox builds (CLI-safe)
+- guestfish confirmed working for file injection (CLI-safe, no GTK needed)
+
+### Phase 8 — Original notes
 1. Create `feeds.img` (one-time): `scripts/create_feeds_img.sh`
 2. Re-enable D: drive lines in `AUTOEXEC.BAT` (currently REM'd out)
 3. Activate cron (see `NEXT-STEPS.md` for exact crontab entries)
