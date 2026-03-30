@@ -849,14 +849,13 @@ void mainmenu(void)
         break;
       case 'L':
         if (status.callstoday>0) {
-          if (sysinfo.flags & OP_FLAGS_SHOW_CITY_ST) {
-            if (syscfg.sysconfig & sysconfig_extended_info)
-              pl(get_string(1429));
-            else
-              pl(get_string(972));
-          } else {
-            pl(get_string(972));
-          }
+          if (color) outstr("\x1b[1;33m");
+          if ((sysinfo.flags & OP_FLAGS_SHOW_CITY_ST) &&
+              (syscfg.sysconfig & sysconfig_extended_info))
+            pl("#      Name                      Time  Date  City            St  Speed   #T");
+          else
+            pl("#      Name                      Lang       Time  Date  Speed                #T");
+          if (color) outstr("\x1b[0m");
           i=okansi()?205:'=';
           npr(charstr(79,i));
         }
