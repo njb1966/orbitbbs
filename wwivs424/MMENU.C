@@ -24,15 +24,21 @@ is expressly prohibited.
 
 
 /*
- * orbit_menu -- clean text command listing for OrbitBBS.
- * Colours: cyan borders, yellow title+keys, green section headers.
- * All colour gated on okansi().  No sprintf, no ternary strings.
+ * orbit_menu -- display the OrbitBBS main menu.
+ *
+ * Looks for MAINMENU.ANS (ANSI users) or MAINMENU.MSG (plain) in gfilesdir.
+ * Drop either file into C:\ORBIT\GFILES\ and it is used automatically;
+ * no recompile needed.  Falls back to the hardcoded menu if neither exists.
  */
 #pragma option -O-
 static void orbit_menu(void)
 {
   int color = okansi();
 
+  if (existprint("MAINMENU"))
+    return;
+
+  /* Fallback: hardcoded menu (active until MAINMENU.ANS is installed) */
   nl();
   if (color) outstr("\x1b[1;36m");
   pl("==============================================================================");
