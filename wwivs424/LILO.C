@@ -607,19 +607,7 @@ void logon(void)
 	  outstr(get_string(112));
 	pl(get_string(315));
 
-/****************************************************************************/
-/*
- * Do NOT remove or modify this part of the code.  If the registration number
- * (or an indicator that it is unregistered) is not printed out, it will
- * be plainly obvious that this is a 'pirated' version of the source code.
- */
-	if (syscfg.wwiv_reg_number)
-	  sprintf(s,"(Reg #%ld)",syscfg.wwiv_reg_number);
-	else
-	  strcpy(s,"(Unregistered)");
-	outstr(get_string(369));
-	npr("%s   %s\r\n",wwiv_version,s);
-/****************************************************************************/
+/* OrbitBBS: removed WWIV registration number display */
 
 	read_status();
 	for (i=0; i<net_num_max; i++) {

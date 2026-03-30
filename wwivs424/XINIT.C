@@ -1289,7 +1289,7 @@ void init(void)
   else
     topdata=2;
   ss=getenv("PROMPT");
-  strcpy(newprompt,"PROMPT=WWIV: ");
+  strcpy(newprompt,"PROMPT=OrbitBBS: ");
   if (ss)
     strcat(newprompt,ss);
   else
@@ -1352,7 +1352,7 @@ void init(void)
   qsc_q=qsc_n+(max_dirs+31)/32;
   qsc_p=qsc_q+(max_subs+31)/32;
 
-  ss=getenv("WWIV_INSTANCE");
+  ss=getenv("ORBIT_INSTANCE");
   if (ss) {
     i=atoi(ss);
     if (i>0)

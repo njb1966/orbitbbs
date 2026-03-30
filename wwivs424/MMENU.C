@@ -595,8 +595,7 @@ void mainmenu(void)
 /*************************************************/
 
   /* UPLOAD slash command removed in OrbitBBS */
-  if (strcmp(s,"QWK")==0)
-    qwk_menu();
+  /* QWK offline reader removed from OrbitBBS */
   if (strcmp(s,"CLS")==0) {
     outstr("\x1b[2J\x1b[H");
   }
@@ -615,16 +614,10 @@ void mainmenu(void)
     }
   }
   if (strcmp(s,"VER")==0) {
-    if (menu_on()) {
-      printmenu(322);
-      getkey();
-      cleared = NEEDCLEAR;
-      rip_cls();
-    }
     nl();
     npr("%s   (%s)\r\n",wwiv_version, wwiv_date);
-    nln(3);
-    pl("OrbitBBS - A fork of WWIV 4.24a");
+    nl();
+    pl("OrbitBBS  --  The Small-Web BBS");
     nl();
     if (menu_on())
       pausescr();
@@ -834,11 +827,6 @@ void mainmenu(void)
         break;
       case 'I':
         nl();
-        if (menu_on()) {
-          printmenu(328);
-          getkey();
-          rip_pcb();
-        }
         npr("%s   (%s)\r\n",wwiv_version, wwiv_date);
         nl();
         existprint(get_string(1033));
