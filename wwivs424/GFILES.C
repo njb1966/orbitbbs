@@ -193,8 +193,14 @@ void gfile_sec(int sn)
               printmenu(321);
             }
             if ((i>0) && (i<=nf)) {
+              int save_pause;
               sprintf(s,"%s\\%s",gfilesec[sn].filename,g[i-1].filename);
+              /* Always page feed/gfile content regardless of user setting */
+              save_pause = (thisuser.sysstatus & sysstatus_pause_on_page);
+              thisuser.sysstatus |= sysstatus_pause_on_page;
 	      i1=printfile(s);
+              if (!save_pause)
+                thisuser.sysstatus &= ~sysstatus_pause_on_page;
               thisuser.gfilesread++;
 	      if (i1==0) {
                 sprintf(s,get_stringx(1,15),g[i-1].filename);
