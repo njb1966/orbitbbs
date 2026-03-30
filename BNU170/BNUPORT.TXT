@@ -1,0 +1,66 @@
+
+
+                                   BNUPORT Change BNU Port Assignments
+                                                          Version 1.70
+
+
+
+                         THE BNUPORT UTILITY
+
+
+    BNUPORT allows changing  port  assignments  used  by  the BNU
+    communications driver.  It directly  reads  and  patches  the
+    existing driver file "BNU.COM" or "BNU.SYS" to  use  specific
+    interrupt and/or IO  port  base  addresses  for up to 16 port
+    configurations.
+
+    Usage:
+
+         BNUPORT [/H] [/C] [/M] [/P [patchfile]]
+
+              /H   Displays help
+              /C   Forces colour screen pallette
+              /M   Forces monochrome screen pallette
+              /S   Search for and patch BNU.SYS
+              /P   Use previously generated patchfile
+
+
+    BNUPORT searchs first  the  current   directory,   then   all
+    directories in the  PATH for BNU.COM (or BNU.SYS  if  the  /S
+    argument is given)  and  uses  the  first  one  located.   It
+    presents a form which may be  used  to  change  communcations
+    parameters.
+
+    It is advisable  NOT to change these values unless  you  know
+    precisely what you're  doing.  You may find a hardware manual
+    supplied with a  serial  adaptor   useful   in  locating  the
+    required values.
+
+    It is possible to generate a "patchfile" to keep  a permanant
+    record of your system's communications port parameters.  Once
+    set up, press  F9  to  save into the driver and also generate
+    BNUPORT.PAT.  This patch file  may  be used to "import" these
+    settings on upgrading to a new version of BNU  by  specifying
+    the "/P" switch on the command line (and optionally the patch
+    file name if you renamed it).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

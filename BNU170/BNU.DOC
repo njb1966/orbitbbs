@@ -1,0 +1,1716 @@
+
+
+
+
+
+
+
+
+
+
+
+    ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³     BNU Rev 5 FOSSIL Compatible Communications Driver     ³
+    ³                        Release 1.70                       ³
+    ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+
+
+
+                          26th October, 1989
+
+
+
+
+
+
+
+
+                          Copyright (C) 1989
+
+            David Nugent and Unique Computing Pty Limited
+
+                        Melbourne, Australia.
+
+
+
+                         FidoNet  3:632/348.0
+                        AlterNet  7:833/387.0
+                         FreeNet  23:2/3.0
+
+
+
+
+
+
+
+
+
+
+
+    BNU is 'freely'  available copyrighted software, and supplied
+    no charge to system operators  of  Fidonet(tm) and 'Othernet'
+    public access amateur network systems.  It is  NOT  available
+    in this form  for  commercial  use  or use outside of amateur
+    EMail systems.
+
+    Please read the License details  at  the end of this document
+    on contacting the author regarding commercial  application of
+    BNU and associated products.
+
+
+
+
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+
+    BNU is a  FOSSIL  compatible  Communications driver, suitable
+    for use with the following (among  others) bulletin board and
+    FidoNet(tm) mailer software:
+
+
+     Fido v11,12  Tom Jennings, Fido Software
+     BinkleyTerm  Vince Perriello, Bob Hartman, Alan Applegate,
+                  & Bit Bucket Software
+     Opus-CBCS    Wynn Wagner III, The POLE of Dallas
+     QuickBBS     Adam Hudson
+     TPBoard      John Schnieder & Rick Peterson
+     SEAdog       Thom  Henderson, System Enhancement Associates
+     D'Bridge     Chris Irwin
+     FrontDoor    Joaquim Homrighausen, Interzone Software, Inc.
+
+
+    It handles hardware  specific  aspects  of communications, to
+    enable the above applications to run in multiple environments
+    which are supported by a FOSSIL  compatible  driver.   BNU is
+    designed for the IBM PC, XT, AT, AT/386 and PS/2  range under
+    the MS-DOS operating  system  version 2.10 and above, OS/2 in
+    'DOS compatibility' mode and under  PC-MOS/386.   It may also
+    be compatible with other environments which emulate MS-DOS.
+
+    The term 'FOSSIL'  is  short  for "Fido Opus SEAdog  Standard
+    Interface Layer".  It  is  a  generic hardware interface used
+    mainly by bulletin board systems  and Fidonet compatible mail
+    software which evolved from the efforts of Wynn  Wagner,  Bob
+    Hartman and Vince   Perriello.    The  current  "Revision  5"
+    standard makes it possible for  a lot of software to run on a
+    wide variety of hardware platforms capable of  running MS-DOS
+    but with distinct and incompatible hardware.
+
+    BNU's main task  is  communications  handling.  It is a fully
+    interrupt driven communications   driver   which  effectively
+    handles communications "in  background",  and   continues  to
+    receive and transmit   characters   asynchronously  with  any
+    program or application running.   The application itself need
+    not be concerned   about   the  time  critical   aspects   of
+    communications, nor the capabilities, limitations or features
+    of the hardware itself.  These are all handled by BNU itself.
+
+    BNU is one  of many FOSSIL drivers available.  BNU implements
+    many features found in other(tm) FOSSIL drivers, sometimes in
+    a slightly different  way.    Known   differences   will   be
+    highlighted.
+
+    This package contains BNU.COM, with the driver itself being a
+    TSR program (Terminate and Stay Resident) which may be loaded
+    and unloaded, activated  or  made  dormant "on-the-fly";  and
+    also BNU.SYS, a  device  driver  implementation  loaded  from
+    CONFIG.SYS.  This is not as 'flexible'  as using BNU.COM, but
+    in general conserves some memory and allows loading  in  some
+    environments where the TSR implementation cannot be used.
+
+
+
+
+                                - 1 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    Some of BNU's unique and more interesting features are:
+
+         o    BNU  has  been  built  to  handle up to 4 COM ports
+              concurrently in up to 16 different configurations,
+
+         o    It has an "open architecture"  which  will allow is
+              adaptation later  in  its  development  to  support
+              multiport shared    interrupt    and    intelligent
+              asynchronous IO boards,
+
+         o    It supports the 16550 USART in fully buffered mode,
+              providing the capability of much higher baud rates,
+              performance and  significantly  less  CPU  overhead
+              especially in multitasking environments,
+
+         o    The driver is extremely FAST, optimised  for speed,
+              and takes up very little memory,
+
+         o    Incorporates  an optional "diagnostic" mode, so you
+              (the user) can inspect  the  state  of  the  FOSSIL
+              driver itself;    assisting   in   debugging    and
+              optimisation of   software  being  written  to  use
+              FOSSIL calls,  and   in   attempting  to  determine
+              problems in  software  using a FOSSIL,  such  as  a
+              mailer, BBS or BBS 'door',
+
+         o    Has  'hooks'  for  an installable driver to support
+              network and  multitasking  software,  forcing  ill-
+              behaved processor intensive programs  to  give more
+              of their  time-slice to the system when inactive or
+              when simply "polling"  communications  or  keyboard
+              functions for activity or status reports,
+
+         o    Allows 'fast' routing of screen output directly via
+              the ANSI  driver,  making  "FOSSIL"  screen  output
+              calls significantly   faster  than  going  via  DOS
+              itself,
+
+         o    Allows for problems  in  some  XT  &  AT BIOS' when
+              16550AN's are installed:  very often  a  BIOS  will
+              not 'see'  the  communications  chip during startup
+              diagnostics -  so   BNU  will  force  the  BIOS  to
+              recognise it automatically,
+
+         o    Provides a full range of utility functions  in  the
+              same .COM  file,  including built-in carrier watch,
+              system reboot, lock baud rate and/or communications
+              parameters and allowing  some  PC  BIOS  compatible
+              non-FOSSIL aware  software to take advantage  of  a
+              interrupt driven communications,
+
+         o    Allows   resizing  of  communications  buffers  and
+              locking/unlocking   of   baud   rates   and   other
+              communications parameters "on-the-fly",
+
+         o    Provides a means of displaying the currently loaded
+              driver's "status" and active parameters.
+
+
+
+                                - 2 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    BNU.COM is both a FOSSIL driver (TSR) and a utility which can
+    manipulate the resident   version   of   itself.    On  first
+    successful loading, it will terminate  and  leave  the driver
+    portion of itself   (only   about  5K  or  so   plus   buffer
+    requirements) resident, and  allocate  communication  buffers
+    for each of the enabled ports (typically  using 14K for a one
+    port install when  'diagnostics' mode is enabled).   It  then
+    captures and utilises  the  system's  INT 14H (communications
+    services) vector and services  requests  for  all  FOSSIL and
+    non-FOSSIL aware programs using the INT 14H interface.
+
+    BNU will NEVER  load  itself  more than once,  unless  within
+    different tasks when    using    a   multitasker,   such   as
+    PC-MOS/386(tm), DESQview(tm), DoubleDOS(tm) or VM/386(tm).
+
+    This documentation assumes a working knowledge of MS-DOS, and
+    no effort is made to explain MS-DOS  functions,  commands  or
+    setup.  Some familiarity  with  BBS or mail capable  software
+    and other FOSSIL drivers will definitely be an advantage, but
+    not required.
+
+
+
+
+                              USING BNU
+
+
+
+    When running BNU,   avoid  using  any  other  software  which
+    purports to enhance   communications    products   (such   as
+    16550.EXE).  These WILL NOT work, and could cause your system
+    to crash or work unreliably.  BNU already uses  the 16550 and
+    16550AN to full advantage.
+
+    Avoid loading DOS's   MODE   command   with   BNU.    BNU  is
+    incompatible with it's communications  handling  -  if loaded
+    after BNU, then  both may fail to operate reliably.   Printer
+    redirection is usually  ok,  provided  MODE  is loaded before
+    BNU.
+
+    If you need to set a COM port's  baud rate (which is why MODE
+    is most often  used),  then you can get BNU  to  do  that  by
+    "locking" the baud  rate  (using  BNU /L as documented below)
+    which sets the COM port immediately  to  that rate.  Remember
+    to "unlock" the  baud  rate  if  not  using a constant  speed
+    between computer and modem.
+
+    BNU.COM would normally  be  loaded  in your AUTOEXEC.BAT, and
+    installed as part of your normal  system  startup.  A typical
+    command line might be:
+
+         BNU /F
+         [Loads BNU.COM with default settings and fast ANSI]
+
+    BNU will respond  with  a  short  copyright   notice  and  an
+    indication that it  has been successfully loaded.  The number
+    of ports installed for will also be shown.
+
+
+
+                                - 3 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    BNU.SYS must be  loaded  from CONFIG.SYS (and probably can be
+    using QuarterDeck's DEVICE.COM under DESQview but I have only
+    run it this way for short periods)  using  a  "device"  line,
+    such as:
+
+         device = C:\BNU.SYS /P2 /L0:19200,8N1 /F
+         [Loads BNU.SYS  for  2  ports, port 0 (COM1)  locked  at
+         19200 baud  8  data  bits 1 stop bit normal parity, fast
+         ANSI]
+
+    A similar copyright message is  displayed  as  an  indication
+    that the driver has been installed.
+
+    If BNU encounters  an error in the command line,  the  driver
+    will NOT be  installed.   The  device driver version displays
+    the command line parameter in error.
+
+    BNU has been successfully run  loaded  "high"  above the 640K
+    mark using both   QuarterDeck's   QEMM(tm)   and    Qualitas'
+    386^MAX(tm) 386 memory  management  products.   It  should be
+    noted that there may be performance  differences  as a result
+    of either 386i  virtual  mode  switching  or  differences  in
+    hardware RAM access  speeds between mother-board RAM and that
+    used on an extended RAM card.  You should test the results on
+    your own hardware before deciding  which  method  is  better,
+    since generalisations without  considering  all  the  factors
+    involved can be misleading.
+
+    Other enhanced memory  products may or may not work, but I am
+    either not familiar with them  or  do  not  know enough about
+    them to comment.
+
+    Since BNU.COM can  be  unloaded  at  any  time   (unless  BNU
+    considers it unsafe to do so for various reasons), you should
+    be aware that  doing  so sometimes creates "holes" in memory.
+    This is not  a  problem  so   far   as   MS-DOS   or  various
+    applications running in it are concerned, but  the  effect of
+    releasing more memory  for  DOS  to use may be lost.  This is
+    almost always the  case when unloaded  from  within  a  batch
+    file: the memory freed will not be available until  after the
+    batch file terminates.
+
+    If the desired  effect  is to "disable" BNU completely, refer
+    to the /Q and /C command line  switches  below.   This leaves
+    BNU loaded, but  provides  a  means of disabling  the  driver
+    completely and forces  use of the BIOS INT 14H functions or a
+    previously installed driver.
+
+    One note regarding PS/2 hardware  and  applications which use
+    its specific INT  14H  functions  (though I haven't  actually
+    seen any).  A PS/2's extended BIOS contains a superset of INT
+    14H services, which  were designed after FOSSILs first become
+    available for PC's.    The  additional   services   are   NOT
+    compatible with the extended functions supported  by  FOSSIL,
+    and you should  therefore  either  unload  (/U) or deactivate
+    (/Q) BNU prior running such software.
+
+
+
+
+                                - 4 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+                           DEFAULT SETTINGS
+
+
+    By default, BNU  uses  1K  (1024 byte) communications buffers
+    for both transmit and receive.  This should be sufficient, if
+    not excessive, for most applications.   This  may  need to be
+    varied for systems  running  at slow (less than  6MHZ)  clock
+    speeds, use modems  with  higher  baud  rates,  make  use  of
+    special modem technology, run under  multitasking software or
+    run on a  network.   Some applications (for example  terminal
+    emulation systems and bulletin boards) require more buffering
+    because of the nature of how they communicate.
+
+    The fast 'ANSI' output is DISabled by default.  The option to
+    use the faster  output  method  will normally work well under
+    standard MS-DOS, DESQview  or  most  DOS-based  environments.
+    This will NOT  work under PC-MOS/386 as it makes  use  of  an
+    undocumented MS-DOS feature  not  supported by that operating
+    system.
+
+    After installation (only the first  successful  invocation of
+    BNU.COM actually loads the TSR portion), the FOSSIL  driver's
+    extended interrupt driven  functions  are  inactive, and only
+    the basic BIOS   services  are   provided   (by   BNU).    An
+    application must specifically   "initialise"   a   port   for
+    communications to make it become active and use the interrupt
+    driven functions.
+
+    When BNU is  installed,  it  does a brief and simple hardware
+    diagnostic to detect what communications ports are valid.  If
+    errors are found  (most  PC BIOS'  miss  detection  of  16550
+    USARTS, cannot detect  non-standard  communications  hardware
+    and do not  look  for  anything  above COM2), the appropriate
+    BIOS tables and hardware bits  are  patched.  This means that
+    if you install and use non-standard port and IRQ settings for
+    a communications card,  and  tell  BNU about these  (via  the
+    BNUPORT utility) your  BIOS  will be changed to reflect this,
+    allowing other BIOS-compatible    programs    to    use   the
+    communications port (COM1 through COM4 only since the PC BIOS
+    can only support up to 4 ports).
+
+
+
+
+                         COMMAND LINE OPTIONS
+
+
+    Following is a  list  of  command line options  available  in
+    either or both   BNU.COM  and  BNU.SYS.   These  allow  "fine
+    tuning", setup and utility functions.
+
+    Command line switches can be given  with a preceding dash (-)
+    or forward slash   (/).   Some  parameters   show   a   colon
+    separating the switch itself and a numeric parameter: this is
+    optional, and is  included  only  for readability.  An equals
+    (=) or comma (,) are NOT optional  and must be included since
+    these separate different parts of a command line switch.
+
+
+
+                                - 5 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    There are basically  two  "groups"  of command line switches.
+    The first are  configuration   switches,   which  affect  the
+    tuning, performance   and  behaviour  of  the  communications
+    driver.  These can  generally be combined on the same command
+    line (and invocation) without problems.   Exceptions (if any)
+    are noted where relevant.
+
+    The second group are "utility" functions.  These switches are
+    normally used EXCLUSIVELY of all other switches.  That is, if
+    you use them, they must appear SEPARATELY on a  command line.
+    The switches in this group are:
+
+         /C        Recapture INT 14H vector
+         /B        Reboot system unconditionally
+         /S        Display driver status
+         /H        Display help for command line switches
+         /U        Unload driver from memory
+         /W        Enable/disable carrier watch
+
+    Remember that you  can  invoke BNU.COM multiple times with no
+    risk in loading the communications  driver  portion more than
+    once in any  logical  "task".   All  utilities   relating  to
+    BNU.COM are contained within the same .COM file.
+
+    The device driver  version  works  a little differently.  Its
+    command line (specified  in  CONFIG.SYS)  must  contain  only
+    configuration items, since the utilities are  not  supported.
+    These are contained   within  a  separate  executable  called
+    BNUHELP.COM, and have a similar  -  if not identical - syntax
+    to the utility   functions   in   the   .COM  version.    Any
+    differences are noted below.
+
+
+
+                                 ~~~
+
+
+
+
+    /T        Set Transmit buffer size
+              Available in .SYS and .COM versions
+
+         eg.  /T:512
+              Sets 512 byte transmit buffers
+
+         The default  transmit  buffer size is 1024 bytes.  Since
+         file transfers are "transmitter  driven" so far as speed
+         is concerned, this should be large enough to service the
+         interrupt driven transmitter without it "waiting"  to be
+         filled by the application.  These should be increased in
+         size where  multitaskers,  networks or faster baud rates
+         are being used.
+
+
+
+
+
+
+
+
+                                - 6 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    /R        Set Receive buffer size
+              Available in .SYS and .COM versions
+
+         eg.  /R:2048
+              Sets RX buffer size of 2048 (2K) bytes
+
+         The default  RX  (receive)  buffer  size  is 1K, or 1024
+         bytes.  In practice, only  a portion of this is actually
+         used on a constant basis, but this will be  dependant on
+         how fast an application can service the buffer (and keep
+         it empty).
+
+         Buffer sizes  CAN  be  changed  "on-the-fly".  But at no
+         time can  both  the  receive  and  transmit  buffers  be
+         increased in size beyond the combined amount  when first
+         installed.  For  example,  if  BNU was installed with 2K
+         transmit and 4K receive buffers, only 6K is available to
+         each port in total.  Combined  buffer size cannot exceed
+         that 6K.  An attempt to exceed this amount  will  result
+         in an error.
+
+         Changing buffer  sizes  whilst  communications tasks are
+         active will be disallowed.
+
+         When modifying the buffer  sizes,  it  is  advisable  to
+         first specify  the  one  which is to "shrink"  in  size,
+         before the  one  which  will "grow".  For example, if 1K
+         buffers were active (with  a total of 2K available), and
+         you wished  to  change  these  to .5K receive  and  1.5K
+         transmit:
+
+              BNU /T1536 /R512
+
+         would result in an error (Maximum buffer size exceeded).
+         The result  could  be  achieved by changing the order of
+         the command line arguments to:
+
+              BNU /R512 /T1536
+
+
+
+    /P        Enable concurrent ports
+              Available in .SYS and .COM versions
+
+         eg.  /P:2
+              Enables two ports for use concurrently
+
+         This sets the number of ports which can be active at the
+         same time.  Up to 4 ports  can  be used (in this current
+         release), in up to 16 different configurations.
+
+         By default, BNU enables one port for 'interrupt  driven'
+         use.  This  is the most memory conservative approach and
+         fits the requirements of the majority of installations.
+
+         The current  version  does   not   support  shared  port
+         arrangements or  multi-port  'intelligent'   serial   IO
+         controllers.
+
+
+                                - 7 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+         This switch  does  not  determine  WHICH  ports  will be
+         valid, only HOW MANY can run  FOSSIL driven at one time.
+         The driver  will  support  whichever  port   (0-15)  the
+         application selects.
+
+
+
+
+    /L        Lock ports baud rate and/or settings
+              Available in .SYS and .COM versions
+
+         eg.  /L:0=19200
+              Locks baud rate on port 0 (COM1) to 19200
+              /L:1=38400,8N1
+              Locks port 1 (COM2) to 38400, and forces 8
+              data bits, no parity and 1 stop bit.
+              /L:0=0,7E1
+              Unlocks port 0 (COM1) if previously locked,
+              or leaves it 'floating' if not, then forces
+              7 data bits, even parity and 1 stop bit.
+
+         The baud  rate given must be valid for a standard FOSSIL
+         driver, and can be one of  0  (unlock)  300,  600, 1200,
+         2400, 4800,  9600,  19200 or 38400.  High  speed  modems
+         locked at a baud rate of 9600 or above also have CTS/RTS
+         hand-shaking forced since these use the modem's internal
+         buffering which make use of CTS/RTS flow control.
+
+         A baud  rate  specification  of  zero "unlocks" the baud
+         rate and resets handshaking  to  default  (whatever  the
+         application sets).
+
+         When using  this  switch,  your  modem  MUST  support  a
+         constant modem  to  computer  speed,  otherwise any baud
+         rate change requested by an application will be ignored,
+         resulting in an incorrect  setting  between  your system
+         and remote.  The result will normally be  garbled  input
+         and output.
+
+         When the  baud  rate  is locked, the port's baud rate is
+         set IMMEDIATELY.  The baud  rate  is  maintained  at the
+         locked rate  even  though  FOSSIL  is   not   active   -
+         applications making  use  of  BIOS  calls to change baud
+         rate will not succeed.   This  allows  non-FOSSIL  aware
+         applications to  be run without fear of  the  baud  rate
+         being changed   even  though  these  do  not  explicitly
+         support higher baud rates.
+
+
+
+
+    /F        Enables/disable 'fast' screen writes
+              Available in .SYS and .COM versions
+
+         eg.  /F+       Enables 'fast' screen writes
+              /F-       Disables 'fast' screen writes
+
+
+
+                                - 8 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+         This switch  is  used  for versions of DOS which support
+         faster character output  via  the  undocumented  INT 29H
+         method (used to call the ANSI driver directly).   To  my
+         knowledge, this  will  work  on  all  DOS  versions 2.00
+         through 4.01, but since it  is  "undocumented", there is
+         no guarantee that it will work.
+
+         This should NOT be enabled under PC-MOS/386  version 4.0
+         or below.
+
+
+
+
+    /O        Enable function 0x1c compatibility
+              Available in .SYS and .COM versions
+
+         eg.  /O
+
+         This switch  is used to enable "compatible" operation of
+         BNU in situations where either  X00  or Opus!Com worked,
+         but BNU  doesn't.   Due  to  a misunderstanding  of  the
+         FOSSIL specification,  X00 and Opus!Com return 0x1c (28)
+         whenever the highest function  number is requested by an
+         application instead  of  0x1b  (27)  as   required   the
+         Revision 5 specification (FSC-0015).
+
+         Several applications  rely  on  the  'feature'  of these
+         drivers and require a 0x1c  return  to  verify  that the
+         functions used by the application are present.   At this
+         time, a  function  0x1c  is  not actually implemented by
+         X00.SYS, Opus!Com or BNU.
+
+         When given, this switch tells BNU to return 0x1c, and so
+         allows applications relying  on  0x1c  to  work with it.
+         Typically, such  programs will return with  "FOSSIL  not
+         present" or  "FOSSIL  version too old" (or words to that
+         effect) when BNU is loaded without using '/O'.
+
+
+
+    /Z        Sets 16550 FIFO size/trigger levels
+              Available in .SYS and .COM versions
+
+         eg.  BNU /Z0
+              Enables full 16550 FIFO buffering (16/14)
+              BNU /Z5
+              Disables 16550 FIFO buffers
+
+         This switch provides the ability to 'fine tune' a system
+         equipped with  a National  Semiconductor  16550AN  UART.
+         The UART  is  the  device used in PC's for  asynchronous
+         communications handling,  and  the 16550AN is a superior
+         form of these (as compared  to  an  8250  or  16450 with
+         which it is pin-compatible), since it provides  on-board
+         FIFO (first-in   first-out)   buffers   or   queues  for
+         receiving and transmitting.
+
+
+
+                                - 9 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+         Software must be built to specifically take advantage of
+         this UART's  features in order to gain any real benefit.
+         Normally, the  16550's  FIFO  buffers  are  disabled  on
+         power-up, and   remain  that  way  unless   specifically
+         enabled.  The software itself must service interrupts by
+         emptying and  filling  "queues"  rather  than the normal
+         single character receive and transmit holding registers.
+         Having this  ability  to   service   multiple  character
+         requests in  one  hardware  interrupt   call   makes  it
+         possible to   SIGNIFICANTLY   reduce  interrupt  service
+         overhead and thus CPU usage  on  any  machine.  This has
+         very obvious   advantages   when   operating   under   a
+         multitasker, on   a  network,  concurrently  with  other
+         heavily interrupt-driven devices or with modems or other
+         communications devices running at high baud rates.
+
+         The /Z switch takes a single  digit parameter - a number
+         between 0  and  5.   This  number affects  the  internal
+         settings of both the UART itself (its internal 'trigger'
+         levels, which  define  how  "full"  the  FIFO's  will be
+         allowed to get before triggering an interrupt to the CPU
+         for service) and how full BNU will let the transmit FIFO
+         be queue on each transmit 'request'.
+
+         Valid numeric parameters to the /Z switch are:
+
+              /Z0            16 bytes       14 bytes (max)
+              /Z1            14 bytes       14 bytes (max)
+              /Z2            08 bytes       08 bytes
+              /Z3            04 bytes       04 bytes
+              /Z4            01 byte        01 byte
+              /Z5                - FIFOs disabled -
+
+         Where 16550AN's  are  not   present,  BNU  automatically
+         ignores this switch completely.   The default  value  is
+         '/Z0', which activates the full 16550AN capability.
+
+
+
+    /M        Enable/disable initialisation message
+              Available in .SYS and .COM versions
+
+         eg.  /M+  Enable init message
+              /M-  Disables init message
+
+         Normally the   driver   outputs   a   message   when  an
+         applications initialises  the  driver for its use.  This
+         may be suppressed or reenabled by using this switch.
+
+
+
+
+    /U        Unload driver from memory
+              Available in .COM version only
+
+         eg.  BNU /U
+              Attempts unloading resident driver from memory
+
+
+
+                                - 10 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+         This switch  tells BNU.COM to unload itself from memory.
+         This forces all ports to  be  deactivated  (if  any  are
+         active).  This  will fail if programs loaded  after  BNU
+         have "captured"  interrupt vectors which are used by BNU
+         (and which BNU cannot restore  as  a  result).   In this
+         case, BNU will not load, but will indicate  this  in  an
+         error message.    You  will  have to either unload these
+         later programs (such as FOSSIL  appendages),  or  reboot
+         your system.
+
+         Since BNU.SYS is a device driver, it cannot  be disabled
+         or unloaded from memory.
+
+
+
+    /Q        Disable communications driver interface
+              Available in .SYS and .COM versions
+
+         eg.  BNU /Q
+              Disables resident driver
+
+         This switch  is normally given when BNU installs itself,
+         and the effect is to "delay"  capturing  of  the INT 14H
+         vector until  a  '/C' command is issued.   This  may  be
+         useful if  loading  with  a  multitasker and using other
+         incompatible communications drivers in other tasks.
+
+         If issued while BNU is already  loaded,  the  previously
+         active INT   14H  communications  services   vector   is
+         restored.  BNU's    extended    FOSSIL    services   are
+         effectively "dropped" out of the chain.
+
+
+
+    /B        System reboot
+
+         eg.  BNU /B0
+              Select default reboot method
+              BNU /B
+              Reboot (warm)
+
+         This switch has two uses.   When  a digit is given after
+         the 'B', the reboot method is selected.  Only two values
+         are valid 0 or 1.
+
+         Method 0 selects a standard BIOS method  of  jumping  to
+         the system's  reset  vector.  This should work with most
+         DOS environments on a wide  range of hardware, including
+         PC/XT/AT and 386 compatibles.
+
+         Method 1 makes use of the AT's keyboard  reset  line  to
+         cause a  system  reboot.   It  will  work only on AT and
+         386AT systems.  However,  this  method  will  work under
+         some 386 specific software where the first  method  does
+         not.  (for  example,  PC-MOS/386).   In short, it "plays
+         rough".  Some 386 machines  and almost all PC/XT systems
+         cannot and should not use this method.
+
+
+
+                                - 11 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+         If no  digit  is  given  after  the 'B', BNU proceeds to
+         reboot the machine - unconditionally.
+
+
+
+    /H or /?  Display help information
+              Available in .COM version only
+
+         This switch  displays  information  about  command  line
+         switches and  usage  for  those who don't  believe  that
+         reading manuals is a very useful exercise.  Pity they'll
+         probably never discover or know about this switch unless
+         told....
+
+         This switch  much  be  used  alone,  and  will  not load
+         BNU.COM into memory.  The  help  screen  displayed  will
+         look like:
+
+ BNU Revision 5 FOSSIL Compatible Asynchronous Communications Driver vX.XX
+ Copyright (C)1989, David Nugent & Unique Computing Pty Ltd FidoNet 3:632/348
+  þ  Usage: BNU [options]     ú accepts / or - as switch character
+     /U          ù Uninstall (if already resident)
+     /T=nnnn     ù Set TX buffer size to <nnnn> (decimal)
+     /R=nnnn     ù Set RX buffer size to <nnnn> (decimal)
+     /P=nn       ù Enable nn concurrent ports (1-16 decimal)
+     /D[=n+|-]   ù Enable or install diagnostics panel
+     /N          ù Disable diagnostics panel (may be reenabled)
+     /A=nn       ù Set screen attribute for diagnostics window
+     /Lp=n[,lps] ù Lock port <p> (0=COM1) baud rate to <n> (0=Unlock)
+                   Optional: l=Character length, p=Parity, s=Stop Bits
+     /W=n+|-     ù Enable(+)/disable(-) carrier watch on port <n> (0=COM1)
+     /Q          ù Prevent INT 14H capture (install) or release INT 14H
+     /M+|-       ù Enable(+)/disable(-) FOSSIL "init" message
+     /I=n+|-     ù Initialise(+)/deinitialise(-) FOSSIL on port <n>
+     /F+|-       ù Enable/dssable faster screen writes via ANSI driver
+     /B[0|1]     ù Select reboot method, or perform system reboot
+     /Z[0-5]     ù Sets 16550 FIFOs [0=Max(16) 4=Min(1) 5=Disabled]
+     /O          ù Enable function 0x1c "compatibility"
+     /C          ù Recapture INT 14H vector
+     /S          ù Display driver status
+     /H or /?    ù Display this help screen
+
+
+
+    /C        Recapture INT 14H vector
+              Available in .COM version only
+
+         eg.  BNU /C
+              Recapture INT 14H
+              (must not be used with any other switches!)
+
+         This forces BNU to takes a look at the current  location
+         of INT  14H  and  makes  sure  that  it  points into the
+         resident portion of BNU.   If not, it resets the INT 14H
+         address to the correct location.
+
+         This is most often necessary when using a  multitasker -
+         such as  DESQview(tm) - which revectors the interrupt on
+
+
+                                - 12 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+         loading.  Since  one  standard  method  of detecting the
+         presence of a FOSSIL driver is to examine memory shortly
+         after the location pointed  to  by the INT 14H interrupt
+         vector, the  'stealing'  of the interrupt  in  this  way
+         causes many  applications  to  fail to locate the FOSSIL
+         driver.  Applications which  use  the  'init  signature'
+         method of detecting a FOSSIL driver will not normally be
+         affected by this behaviour, but there  is  a  risk  that
+         whatever 'stole'  the vector will unintentionally change
+         CPU registers used by the  application  for  the  FOSSIL
+         call, causing any number of complications  (and probably
+         a system crash!).
+
+         Another use  of  this switch might be to enable toggling
+         between two or more communications  drivers  which  make
+         use  of  INT  14H  (such  as packet radio communications
+         drivers).  '/Q'  can  be  used  to  switch BNU "off" and
+         restore a previous vector, and '/C' used to recapture it
+         again for FOSSIL use.  The  following  sequence  is  the
+         suggested method of doing this:
+
+           BNU /Q [other switches]
+                 (Install but don't vector INT 14H)
+           <install other communications driver>
+           BNU /C
+                 (Capture INT 14H saving previous vector)
+
+         To use the secondary driver (which could even be another
+         FOSSIL driver,  but cannot be BNU), use  "BNU  /Q",  and
+         "BNU /C" to use BNU again.
+
+
+         NOTE: This  switch  MUST NOT be combined with any others
+         (since they will be ignored)!
+
+
+
+    /W        Enable/disable carrier watchdog
+
+         eg.  BNU /W0+
+              Enables carrier watchdog on port 0 (COM1)
+              BNU /W1-
+              Disables carrier watch on port 1 (COM2)
+
+         This switch  enables or disables  carrier  watch  for  a
+         particular communications port.  If carrier detect drops
+         (the caller  hangs  up) while the watchdog  function  is
+         active, the system will be rebooted.
+
+         This feature  is most often used with programs which are
+         not "carrier smart" and do  not monitor carrier detect -
+         some of these were probably never intended  to  run with
+         output directed  to  a communications port.  If a caller
+         hangs up while such a program  requests input, it may be
+         effectively "stuck", unable to continue until  its input
+         is satisfied.    It is possible that this situation also
+         presents a security risk.
+
+
+
+                                - 13 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+         The carrier  detect watchdog is not an elegant nor ideal
+         solution to this problem,  and  especially not useful in
+         multitasking or networked computing environments,  where
+         rebooting of   a   whole   machine   could  upset  other
+         concurrently running tasks  and workstations.  There are
+         some very clever "watchdog" programs which are much more
+         suitable to do this, such as Angelo Besani's(++) WABIRD,
+         which gracefully terminates the program and restores the
+         system to the state it was in when originally invoked.
+
+         Ommission of  the  '+'  or '-' is considered  an  error.
+         This switch MUST be used exclusive of all others.
+
+
+    (++) Angelo Basani is contactable at:
+              Amnesia CBCS, Varese - Italy
+              Fidonet 2:331/101.0, +39-331-263425
+
+
+
+
+    /S        Display BNU status
+              Available in .COM version only
+
+         eg.  BNU /S
+              Displays BNU's current status
+
+         The resulting  display  will depend on the current state
+         of the resident version of  the driver in memory, but if
+         loaded will normally look similar to:
+
+         Driver Version: 1.70    Installed
+        Ports Available: 1
+           Ports Active: 0
+        FOSSIL Revision: 5
+         TX Buffer Size: 2048
+         RX Buffer Size: 2048
+        Max Buffer Size: 4096
+           Diags Module: Inactive
+           Init Message: Enabled
+            ANSI Output: Fast
+            Port Locked: 1 @ 19200
+
+         If the driver is not yet installed, only  the first line
+         will be  shown,  with  the  text  "Not  Installed".  The
+         diagnostics module (explained below) is one of "Active",
+         "Inactive" (present but disabled)  or "Not loaded".  Any
+         ports whose  baud  rate  has  been "locked"  are  listed
+         sequentially.
+
+         Note that  port  numbers are ZERO-BASED.  Port 0 is what
+         DOS refers to COM port 1  (ie.  the device COM1), port 1
+         is COM2  etc.    DOS does not define devices  for  ports
+         above port 3, though BNU can utilise them.
+
+
+
+
+
+
+                                - 14 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    /D        Enable/disable or install diagnostics module
+
+         eg.  BNU /D2+
+              On BNU install: Installs the diagnostics panel with
+                              a default 'refresh' rate of 2, and
+                              enabled (the '+' here is optional)
+              Otherwise:      Provided the diagnostics module has
+                              been installed, enables it and sets
+                              the 'refresh' rate to 2
+              BNU /D-
+              Disables diagnostics screen updating (but does not
+              deactivate them)
+
+         This is   an   advanced   option,  useful  for  software
+         development using FOSSIL  calls  as  a  means of viewing
+         what the current state of the FOSSIL driver  is in 'real
+         time'.  When  enabled  and  a  port is active for FOSSIL
+         extended calls, a panel is  continually refreshed on the
+         screen during each timer tick which displays  a  summary
+         of various FOSSIL driver states.
+
+         Information for   up   to   4  ports  can  be  displayed
+         concurrently on the screen (thought this might get a bit
+         messy!), overlaying anything currently displayed.
+
+         By default, the "refresh rate" of the panel(s) is set to
+         0, which means it is refreshed EVERY timer tick, or at a
+         rate of about 18.2 times per second.  Refresh rates of 1
+         means every second tick, 2  every third, 3 every fourth,
+         and so  on.   Since video memory is slower  than  normal
+         RAM, slowing  down  the  refresh  rate will decrease the
+         overall detrimental  effect   that  diagnostics  has  on
+         system performance.
+
+         It should  be  noted  that  running  diagnostics   quite
+         significantly impedes  system  performance  and  adds  a
+         great deal  of  CPU  overhead   in   servicing  what  is
+         effectively a "background" task.  You can therefore only
+         run diagnostics  on a system equipped with  a  fast  CPU
+         (286 or  above), running at lower baud rates and/or with
+         a 16550AN UART.  Some general 'minimal' guide-lines are:
+
+           þ 2400 baud or below
+              ù 6-8MHZ 286 class
+              ù 16450 UART or better
+
+           þ 9600 baud
+              ù 10-16MHZ 286 class  -or-   ù 20MHZ 386 class
+              ù 16550 UART                  ù 16450 UART
+
+           þ 19200 baud
+              ù 16-20MHZ 286/386 class
+              ù 16550AN UART
+
+         It takes quite a bit of  processing  power  to  drive  a
+         'background' routine  to  refresh video  RAM  (which  is
+         relatively slow)    without    impacting    on    system
+         performance.
+
+
+                                - 15 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+         If you  are  having  any  difficulties  at all using the
+         driver and have enabled the  diagnostics  panel, disable
+         them immediately and try again.  I have found this to be
+         a major cause of problems in the past.  This  feature is
+         officially 'not  supported'  under any conditions, and I
+         certainly don't need to hear that it "does" or "doesn't"
+         work on your system.  Before  ANY problem report is made
+         for any reason whatsoever, please try whatever  you  are
+         trying to achieve WITHOUT DIAGNOSTICS LOADED!
+
+         Usual symptoms  of  the diagnostics panel impacting in a
+         detrimental way on a system's ability to communicate are
+         failed handshaking   between   Fidonet   mailers,   poor
+         resilience in file transfers when "task" switching under
+         multitasking software, some spurious character loss from
+         remote during terminal sessions, failure to initialise a
+         modem and  inability  to detect incoming  calls  from  a
+         modem returning    verbose   response   codes   (amongst
+         others...).
+
+         When loaded (which must be  done  via the /D switch when
+         BNU is initially installed), you can selectively  enable
+         or disable  the diagnostics display from a keyboard "hot
+         key".  The window is in an  initial  "on" state, but can
+         be toggled  on or off by pressing LeftShift-Ctrl-5  (the
+         '5' located  on the numeric keypad).  The 'refresh rate'
+         can also  be adjusted on-the-fly  using  LeftShift-Ctrl-
+         Grey+ and LeftShift-Ctrl-Grey-.  The panel itself can be
+         shifted on the screen by holding down the LeftShift-Ctrl
+         combination and pressing Up, Down, Left and  Right arrow
+         keys.  Note  that  the background screen is NOT restored
+         (since it is never saved).
+
+         In summary:
+
+           Left-Shift     Action
+
+           Numeric 5      Toggle panel "off" and "on"
+           Grey+/Grey-    Speed up/slow down panel refresh rate
+           Arrow keys     Move diagnostics panel on screen
+
+         Note that these 'hot-keys'  work, no matter if the panel
+         is visible  or  not, but not if disabled  using  the  /N
+         switch.
+
+         Toggling the  panel  "off"  using LS-5 does not entirely
+         defeat the CPU overhead required  to  service the panel.
+         In that case, the background task is still  active,  and
+         only the  panel  is  not displayed.  To entirely disable
+         the diagnostics  panel, either  unload  and  reload  BNU
+         without the  /D  switch, or use "BNU /N" to  effectively
+         turn it off.
+
+         The following  diagram shows a typical diagnostics panel
+         display, and explains the  fields  shown.    All numeric
+         values are hexadecimal (base 16).
+
+
+
+                                - 16 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+
+      ÚÄÄ Port 0001 ¿ ÄÄÄÄÄÄÄ Port number, zero based (0=COM1)
+      ³ TX Cnt 0001 ³ ÄÄÄÄÄÄÄ Chrs currently in transmit buffer
+      ³ TX Max 003F ³ ÄÄÄÄÄÄÄ Maximum chrs found in transmit
+      ³ TX Bse 141E ³ ]       buffer (this is cleared whenever
+      ³ TX Top 241D ³ ] ÄÄ¿   the port is initialised)
+      ³ TX Nxt 144A ³ ]   ÀÄÄ Transmit buffer pointers/limits
+      ³ TX End 1449 ³ ]
+      ³ RX Cnt 0002 ³ ÄÄÄÄÄÄÄ Chrs currently in receive buffer
+      ³ RX Max 0019 ³ ÄÄÄÄÄÄÄ Maximum chrs found in receive
+      ³ RX Bse 241E ³ ]       buffered (cleared on init)
+      ³ RX Top 341D ³ ] ÄÄÄÄÄ Receive buffer pointers/limits
+      ³ RX Nxt 249A ³ ]  ÚÄÄÄ Current flow control state
+      ³ RX End 249A ³ ]  ³    highbyte=remote, lowbyte=local
+      ³ FlwFlg 0080 ³ ÄÄÄÙÚÄÄ Active flow control settings
+      ³ FlwCtl 0002 ³ ÄÄÄÄÙ   highbyte=remote, lowbyte=local
+      ³ Status 6238 ³ ÄÄÄÄÄÄÄ Current line/modem status
+      ³ FifoSz 0010 ³ ÄÄÄÄÄÄÄ 16550AN FIFO buffer (TX) size
+      ³ Errors 0000 ³ ÄÄÄÄÄÄÄ Number of FOSSIL errors registered
+      ³ ErrFun 0000 ³ ÄÄÄÄÄÄÄ Function (AX value) of error call
+      ³ LastAX 0300 ³ ÄÄÄÄÄÄÄ Last Int 14H function call (AX)
+      ³ Int14H 5F73 ³ ÄÄÄÄÄÄÄ Accumulated Int 14H calls
+      ³ ISRInt 0D4F ³ ÄÄÄÄÄÄÄ Accumulated hardware interrupts
+      ÀÄÄBNUÄvX.XXÄÄÙ
+
+
+
+         If you want to load diagnostics but have them completely
+         inactive by   default,  use  the  following  batch  file
+         sequence:
+
+              REM Load diagnostics module when installing BNU
+              BNU -D <other switches ...>
+              REM Immediately disable them
+              BNU -N
+
+         The option to load without  screen  refresh "/Dn-" still
+         uses clock cycles: only the screen update is inhibited.
+
+         The "/N"   switch   actually  disables  the   background
+         processing and   will   not  cause  any  degradation  in
+         performance.  "/D" can be  used  to  reenable the module
+         again.
+
+
+
+
+    /N        Disable diagnostics panel
+
+         eg.  BNU /N
+
+         This switch disables output of diagnostic information to
+         the screen, and also the background processing  required
+         to update it.
+
+
+
+
+
+                                - 17 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+    /A        Set diagnostics panel attribute
+
+         eg.  BNU /A=79
+              Causes the  diagnostics  panel  to  become  intense
+              white on red
+
+         This allows the physical screen attribute to be set.  By
+         default, a colour screen uses  dark blue on white, and a
+         monochrome screen reverse video.
+
+
+
+    /I        Init/deinit FOSSIL enhanced functions
+
+         eg.  BNU /I0+
+              Initialise port 0 (COM1) for FOSSIL processing
+              BNU /I1-
+              Deinitialise port 1 (COM2)
+
+         This provides the facility to force normally  non-FOSSIL
+         aware BIOS  compatible  programs to use the basic FOSSIL
+         character input/output functions.
+
+         This has  specific  advantages   when  running  under  a
+         multitasker, since  all  input/output is from  interrupt
+         serviced buffers,   and   not   directly   polling   the
+         communications port for activity.
+
+         Not all non-FOSSIL aware  programs  will  be  compatible
+         with use  of this option.  Only strictly  BIOS-compliant
+         programs will benefit.  Some program will have their own
+         interrupt driven  communications  functions,  and others
+         will poll the port directly.  Initialising the FOSSIL in
+         this way MAY interfere with  correct  operation of these
+         programs.
+
+
+
+
+                         GENERAL INFORMATION
+
+
+    The following sections outline how best to utilise the driver
+    and get the best performance from it on your hardware setup.
+
+
+    INSTALLATION
+
+    BNU.COM is usually installed in your AUTOEXEC.BAT  or at some
+    time before you    load    your    communications   software.
+    Alternatively, MS-DOS 4.xx has  an option to allow loading of
+    some 'compatible' TSRs using an "install=" statement  in your
+    CONFIG.SYS.  A major  benefit  of  this  is  that  BNU can be
+    loaded before any environment variables are set, and so takes
+    up the absolute minimum of RAM.   However, as with the device
+    driver when loaded   from  CONFIG.SYS,  BNU.COM   cannot   be
+    unloaded from memory using the "/U" option.
+
+
+                                - 18 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+    ERRORLEVELS
+
+    The following errorlevels are returned by BNU (this also
+    documents some of the possible errors which can be returned):
+
+
+         0    No error - operation(s) successful
+         1    Status was requested and displayed
+         2    A FOSSIL driver other than BNU is present
+         3    Incompatible version of BNU is already loaded
+         4    Can't modify parameters with ports active
+         5    BNU is not yet resident or loaded
+         6    Not used
+         7    DOS memory allocation error - fatal abort
+         8    Invalid command line option
+         9    Can't unload - FOSSIL appendages are loaded
+         10   System reboot failure
+         11   Error enabling or disabling carrier watch
+         12   Unable to recapture INT 14H vector
+         13   Can't unload if installed from CONFIG.SYS
+         14   Maximum combined TX/RX buffer size exceeded
+         15   Can't disable/enable diags panel - not loaded
+         16   Unable to unload due to interrupt chaining
+         17   Problem initialising FOSSIL (with /I)
+
+
+
+
+    MULTITASKERS
+
+    Prior versions of BNU directly supported various multitaskers
+    by allowing for  "poll" detection on status and character I/O
+    calls made to the FOSSIL.  When BNU sensed a task was "idle",
+    it automatically gave  time slices  up  during  "polling"  to
+    other tasks in the system.
+
+    This internal multitasker  support  has  been   removed  from
+    BNU.COM and BNU.SYS,   and   the   /X  switch  is  no  longer
+    implemented.  However, the current  version  of BNU does have
+    'hooks' for an installable driver to link into  BNU and carry
+    out this task.   This  eliminates  much  of  the  unnecessary
+    "baggage" suffered by users  of  BNU  who  do  not  need this
+    feature.  It also  eliminates  code  made  redundant  by  not
+    having all multitasker   time   slice   resident   at   once,
+    irrespective of which specific  multitasker  is in use.  Only
+    that code which is actually used and plays a part  in support
+    of the multitasker itself is loaded.
+
+    While this current release (1.70) is not accompanied by these
+    drivers (which are   now   [October,  1989]  in  beta  test),
+    multitasking appendages for DESQview/TopView  and  PC-MOS/386
+    will soon be available.
+
+
+
+
+
+
+
+                                - 19 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+    MEMORY
+
+
+    BNU.COM is approximately  11K  in size.  It is made up of the
+    following main parts:
+
+
+    Description           Size  Used by
+    Resident
+    -------------------------------------------------------------
+    ISR Device Driver     0.5K  Common 4 ports   Yes
+    INT 14H Despatcher    4.5K  Common 4 ports   Yes
+    Diagnostics Model     1.0K  Common 4 ports   Optional
+    Initialisation/Setup  1.0K  Run time only    Discarded
+    Command line utility  4.0K  Run time only    Discarded
+    -------------------------------------------------------------
+
+    What eventually remains resident  depends  upon  what command
+    line options are used.  Initial overhead is about  5K for the
+    ISR and despatcher.   If  diagnostics are used (rarely), then
+    add 1K. Add to this, the sum  of  the  transmit  and  receive
+    buffers times the number of communications ports selected.
+
+
+
+    THE DIAGNOSTICS PANEL
+
+    The ability to  view the state of the FOSSIL driver  is  very
+    useful when developing  software  utilising FOSSIL calls.  It
+    can also be an invaluable aid in  "tuning" the driver to your
+    machine.  Memory is precious - especially in  a  multitasking
+    environment, and most  of  the time, the standard 1K transmit
+    and receive buffers are far too  much  to allocate.  This can
+    only be empirically tested.
+
+    Instead of "guessing" and using trial and error  to  see  how
+    well the driver  performs,  it  is  much better to enable the
+    diagnostics window.  This provides a 'snapshot' of the driver
+    18.2 times per second (each clock  tick).   Particular fields
+    to look at are:
+
+
+         "TX Cnt"  Indicates how full the transmit  buffer  is in
+                   bytes.
+
+         "TX Max"    This  is  the  current  'maximum'  count  if
+                   characters in the  transmit buffer detected by
+                   the diagnostics routine (it views  the  driver
+                   in 'snapshots'   so   cannot   be   completely
+                   accurate.
+
+         "RX Cnt"  Indicates how full  the  receive  buffer is in
+                   bytes.
+
+         "RX Max"   Maximum count of characters  in  the  receive
+                   buffer (see TX Max).
+
+
+
+                                - 20 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+         "Int14h"  Particularly  useful  for  monitoring  program
+                   activity.  This  counter ticks over every time
+                   the running  application  requests   a  FOSSIL
+                   service.
+
+         "Errors"  Locates  possible  problems in the program you
+                   are running.  Any  time  the  program makes an
+                   "illegal" call  (usually  incorrect   register
+                   values).  The   last   FOSSIL   function  code
+                   invoked which  triggered  the  error  will  be
+                   displayed next to "ErrFun".
+
+
+    By observation, it is possible to calculate the  optimum size
+    for both receive and transmit buffers.
+
+
+
+    16550 USART SUPPORT
+
+    BNU fully supports  the  16550 USART in buffered mode.  Using
+    the /Z command line switch, you  can  decrease  the amount of
+    FIFO buffering used, or disable the FIFO's completely.
+
+    This option has  been  included for "compatibility"  reasons.
+    Previous releases of   BNU   used  the  equivalent  of  "/Z2"
+    buffering, whereas this release  defaults  to full use of the
+    FIFO queues.  If you have problems using the default "/Z0"
+    setting, try reducing  first to "/Z1", then "/Z2"  or  lower,
+    and once you've found a setting that works, please contact me
+    (I'm interested in  know what sort of setup this DOESN'T work
+    on).
+
+
+
+    BETA VERSIONS
+
+
+    Versions of BNU will either be  BETA  TEST  versions  or full
+    releases.   Public release versions are numbered  ending with
+    a zero and  carry  no  "alpha",  "beta", "gamma" etc. suffix.
+    Beta test releases carry an suffix  after the version number,
+    and will be  numbered  ending  with  a  non-zero  digit  (for
+    identification of incremental versions).
+
+    Beta releases of  the  BNU driver are not publicly available.
+    These are generally requestable from a number of systems, but
+    are be restricted for use by beta testing sites only.  If you
+    would like to assist in beta testing  future beta versions of
+    BNU, request "BNUINFO"  (magic  name)  WaZoo   from   Fidonet
+    3:632/348 (or Alternet 7:833/387).
+
+    Beta releases are,   by  nature,  less  stable  than  release
+    versions.  If you obtain one, please  do NOT distribute it by
+    posting it for download or file request.
+
+
+
+
+
+                                - 21 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    PROBLEM REPORTS
+
+
+    If you have  problems  in  getting BNU to run on your system,
+    remember that I cannot solve that  problem if you do not take
+    the time to  let  me know.  If you do decide  to  pursue  any
+    problem, please give  as much detail regarding your system as
+    possible so that I can more readily  evaluate  why  something
+    may or may  not  be  occurring.  Please keep the  information
+    relevant (ie. I  don't need to know your shoe size, but I may
+    want to know what's in your CONFIG.SYS!).
+
+
+    Some information I'll probably need:
+
+         o    Machine type/model and class (XT/AT/386 etc.)
+
+         o    Type of USARTs installed (8250/16450/16550 etc.)
+
+         o    Communications software you're running
+
+         o    Contents of your AUTOEXEC.BAT/CONFIG.SYS or other
+              batch files which may be relevant
+
+         o    Switches used to load BNU.COM
+
+         o    Whether  you've  used   BNUPORT   to   change  port
+              assignments
+
+         o    Brief description of modem if at all unusual ie.
+              high speed, non-standard or sub-standard<grin>
+
+         o    Version of MS-DOS in use
+
+         o    Multitasker in use (if any), including version
+
+         o    Other TSR's loaded during communications activity
+
+         o    What other FOSSIL drivers have worked in the past
+
+         o    An accurate and complete (oh, I wish!)  description
+              of your problem
+
+         o    Contents of a diagnostics window when the problem
+              is occurring (if at all possible)
+
+         o    If  you  have  TurboPower's TSR utilities or Andrew
+              Wylie's DOSMAP program  (or some similar DOS memory
+              control block  mapping  utility),   then   redirect
+              output of  this  to a file and include it with your
+              report.  Try to duplicate the exact state of memory
+              when the problem occurs.   Then  execute a command,
+              something like:
+
+                   "mapmem -v -h >output.mem"
+
+
+
+
+
+                                - 22 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    DEVELOPERS!
+
+
+    BNU is currently being restructured to use an alternative far
+    call model, instead  of  the  INT  14H  interface.  This will
+    follow the same lines as a FOSSIL  appendage, and is expected
+    to yield significant performance benefits for  DOS as well as
+    benefits for the developer by allowing more direct high level
+    language access.
+
+    Enquiries regarding this project should be directed to any of
+    the electronic addresses   listed   at   the  start  of  this
+    document.
+
+
+
+    SUPPORT
+
+    An echomail conference originating  from  my  system (Fidonet
+    3:632/348) called "BNU"  is  available  for general  use  for
+    support of BNU   and   related  programs.   Topic  areas  are
+    generally BNU related but also  cover a wider area, including
+    FOSSIL communications, general  usage,  software  development
+    using FOSSIL and 'tricks'.
+
+    Please forward any enquiries regarding this conference to me.
+
+
+
+    THANKS!
+
+    Thank you to  the  many  people involved in helping the "BNU"
+    project, especially those of you  willing  (and silly enough)
+    to run beta  versions  on your own systems and  tolerate  the
+    problems.  Without the  support of these people, I would have
+    given up long ago.
+
+    Special thanks to  Paul  Marwick   of   3:640/820   for   his
+    painstaking assistance in beta testing, the high quality (and
+    quantity!) of his reports and observations and by helping
+    by proof-reading this documentation.  And to  his  poor users
+    for putting up with "would you like to try something for
+    me?" ...  :-)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                - 23 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+
+                            LICENSE OF USE
+
+
+    This license applies  ONLY  to  non-commercial  use of public
+    release versions.  Special terms  cover  use of BNU, BNU beta
+    test versions, any   accompanying  programs  (including   any
+    supplied source code)  and  its  documentation  in commercial
+    environments.  "Commercial" here  is  defined  loosely as any
+    environment in which  software assists - either  directly  or
+    indirectly - in   any   venture   concerning  making  profit,
+    financial or other (material) gain.
+
+    Vendors of commercial (for sale)  packages  should contact me
+    regarding distribution arrangements.  Special versions of BNU
+    are generated for  specific  commercial  products,  and  that
+    product name is   displayed  as  a  part  of  BNU's  standard
+    copyright message.  Any version of BNU distributed as part of
+    another package or  product   which   does  not  display  any
+    indication of it being a "special" version in  this way is in
+    breach of this license.
+
+    Programs and documentation  are supplied free of charge on an
+    as is basis to the Fidonet (and othernet) community.  You are
+    free to use them in any non-profit venture with no obligation
+    on either myself or my company  to  support or be responsible
+    for any such use (or misuse).
+
+    BNU, any accompanying programs, source and this documentation
+    are the exclusive property of Unique Computing  Pty  Ltd, and
+    is protected by international copyright laws.  By obtaining a
+    copy of the  package,  you  do  not  "own"  a copy - simply a
+    license to use it.  All property  rights  are retained by the
+    owner.
+
+    You may use the package and/or give copies of  the package to
+    others including posting  for  download  on a bulletin board,
+    but only in a form that permits  inclusion  of  all  files as
+    found in the  original,  archieved  form  in   which  BNU  is
+    distributed.  You are  not permitted to modify any portion of
+    the package in any way, including,  but not limited to adding
+    files to or  removing  files  from the distribution  package,
+    changing or editing  the  documentation,  and/or  changing or
+    modifying the executable program.   Permission  is granted to
+    repack the distribution  archive  using  a different  packing
+    method, provided that the uncompressed contents EXACTLY match
+    the uncompressed contents of the distribution archive (I have
+    no particular affiliation   with   or   preference   for  any
+    particular archiving method.
+
+    BNU is not provided with a warranty  of  any kind, including,
+    but not limited  to  fitness  for any particular  purpose  or
+    consequential loss.
+
+    This package may  be  posted  for download or file request by
+    any FidoNet or compatible network  system  in  archived form,
+    and in adherence  to  the  terms  of the License  above.   No
+    profit may be   realised  directly  from  such  distribution,
+
+
+                                - 24 -
+
+
+                      BNU Revision 5 FOSSIL Communications Driver
+                                                     Version 1.70
+
+    although BNU may  be  provided for download on "pay systems."
+    Distribution on diskette form  is  strictly prohibited unless
+    done for free  for  a charge not exceeding the  cost  of  the
+    diskettes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               - End -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                - 25 -
+

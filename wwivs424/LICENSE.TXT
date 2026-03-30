@@ -1,0 +1,23 @@
+
+                 THIS FILE IS NOT PUBLIC DOMAIN OR SHAREWARE
+
+       IT MAY NOT BE DISTRIBUTED, IN MODIFIED OR UNMODIFIED FORM, AT ALL
+
+You should only have this file (which contains the WWIV-BBS source code)
+if you have registered WWIV, and have a valid WWIV registration number.
+If you do not have a valid WWIV registration number, you should not have
+this file, and should delete it.
+
+Registration of WWIV entitles you to use the WWIV software beyond the
+60-day trial period, and access to and use of the WWIV v4 source code,
+for use on one BBS, with up to two lines.  (Additional lines may be
+purchased at a lower price.)
+
+
+You are allowed to view, modify, and use the source code for your BBS.
+(this means you can modify the source code to suit your needs/desires,
+compile that, and run your modified executable as your BBS.)  You may
+not give out the source code, or give out a copy of the BBS which you
+have compiled (only the version of the BBS, compiled by WWIV Software
+Services, may be distributed).  Questions may be addressed to WWIV
+Software Services at P.O. Box 720455, McAllen, TX  78504-0455.

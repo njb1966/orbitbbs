@@ -1,0 +1,8 @@
+CalvusRex
+1       ANSI? 1=yes,0=no,-1=unknown
+1       IBM-Characters? 1=yes,0=no,-1=unknown
+24      Page Length, 0=unknown
+9600    Baud rate
+0       COM port, 0=local
+-1      Time left, in minutes, -1=unlimited
+CalvusRex

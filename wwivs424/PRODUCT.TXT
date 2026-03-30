@@ -1,0 +1,168 @@
+The following accessory products are available from WWIV Software
+Services.  You may order them by using the ORDER.FRM.
+
+ESM       (External String Manager)
+           $5.00
+
+          Allows editing of external string (.STR)
+          files. Also comes with ESMPOP, a TSR loader,
+          that allows swapping out currently executing
+          program and loading in ESM.
+
+UEDIT     (User Editor)
+          $20.00
+
+          Allows global color redefinition, searching,
+          editing, tons of stuff. Also includes UDB,
+          which translates USER.LST data to comma-
+          delimited ASCII format, for importing into
+          mainstream database programs (Paradox, etc).
+
+PackScan  (NetWork2 Preprocessor)
+          $20.00
+
+          Registration enables only the files-via-
+          network capability. PUS-reception and
+          packet-logging are free. Probably the most
+          sophisticated network2 preprocessor on the
+          market, and written so that adding new
+          features may be incorporated.
+
+PUS       (PackScan Update System)
+          (Must be registered for each network)
+          $20.00
+
+          Does most of what NETUP does, but requires
+          PackScan on all systems. For small-scale
+          networks (local-only networks, generally).
+          Networks with >100 nodes should obtain
+          NETUP.
+
+StrPop    (String Pop)
+          $15.00
+
+          TSR string-editor/viewer, activated with
+          AltV. Put the cursor on a get_string or
+          get_stringx call and it pops up a window
+          showing what that string is, and allows
+          on-the-spot editing (usually from within
+          Borland IDE or the person's source code
+          editor).
+
+SPU       (Sound Playback Utility)
+          $10.00
+
+          Plays back .CMF, .VOC, and .WAV files,
+          for AdLib or Soundblaster equipped systems.
+
+GDU       (Graphics Display Utility)
+          $10.00   
+
+          Displays .PCX and .GIF files. Supports
+          commandline or interactive selection.
+          Supports 23 different VGA/SVGA chipsets.
+          Mainly written so that it could be invoked
+          from within TAM to view GIFs that a BBS
+          might have online.
+
+TAM       (Transfer Area Manager)
+          $20.00
+
+          Permits easy management of transfer area
+          data including editing descriptions, sorting,
+          etc.
+
+ProbeLite (Network Utility)
+          $10.00
+
+          Allows profanity-zapping and network logging.
+
+UTIL_PAK  (Utility Package)
+          $10.00
+
+          Includes serveral small utiliites as described
+          below:
+
+          LFILE -- Generates file listings based on
+          the access of a supplied usernum.
+
+          NSORT -- Sorts N*.NET files
+
+          NewFile -- Marks specified files as showing as
+          always new on the BBS.
+
+          TVault -- Time Bank type chain. Very similar
+          to the Time Vault built into WWIV.
+
+          ZLOG -- Shows ZLOG data in scrollable
+          fullscreen form.
+
+RR       (Russian Roulette)
+         $10.00
+
+         ANSI game, pull-trigger-blow-brains-out chain.
+         Hangs up if you lose.
+
+
+Topper   (Top Ten User Utility)
+         $10.00
+
+         Chain/util to create list of top ten users
+         in various categories.
+
+WSSFDI   (WWIV Software Services FrontDoor Installer)
+         $15.00
+
+         This utility provides all files necessary to
+         install FrontDoor (tm) for use with WWIV.  These
+         programs are used in FidoNet installations and
+         allows your board to send/receive FidoNet files.
+         The program is ONLY available on 3.5 inch 1.44
+         meg diskettes.  The program takes most of the
+         work out of installing the front end mailer.
+
+WWMON    (WWIV Instance Monitor)
+         $10.00
+
+         Shows some basic info about all instances
+         (who online, etc). ALso allows some of the
+         inter-instance message types to be sent
+         (string msg, shutdown msg).  Intended to help
+         multi-instance systems keep track of what's
+         going on from one "watchdog" program.
+
+WUFFC    (WWIV Uploader for FIDOnet Files)
+          $75.00
+
+         Basically imports the FIDOnet file backbone
+         directly into WWIV. A maintenance-type
+         program estimated to save the sysop who is
+         receiving all of the FILEBONE approximately
+         15 weeks of maintenance time per year.
+         Unlimited directories.
+
+
+WUFFB    Same as WUFFC but limited to 50 directories
+         $50.00
+
+WUFFA    Same as WUFFC but limited to 25 directories
+         $25.00
+
+WUFFCD   CD uploader (much faster than //uploadfile)
+         $10.00
+
+         This program requires that you be a registered
+         WUFF user already.
+
+WWIVedit WWIV compatible external Full-Screen Editor
+         $20.00
+
+         This program was originally developed by Adam Caldwell.
+         WWIV Software Services has enhanced the code, included
+         some professional libraries, and generally made
+         improvements.  The program will be made available to
+         previous registrants at a minor charge for shipping
+         and handling ($2.00).  Source code is NOT available
+         for new releases of this product.
+
+

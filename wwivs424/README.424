@@ -1,0 +1,612 @@
+This file lists only the differences between the current version of WWIV
+and previous releases.  Please also read through the 'read.me' file, as
+it contains additional information.
+
+/****************************************************************************/
+
+WWIV 4.24a: Merely bug fixes
+
+  1)  "Filename" prompts mean one file, "FileSpec" means wildcards allowed.
+  2)  The disable pause when shrinking option now works.
+  3)  You can use the root dir on a drive for a BBS dir (data, etc), but
+      you should avoid that unless the drive is SUBST or ASSIGNd.
+  4)  New instance state of "GetUser" now supported.
+  5)  DNM (Direct Network Mail) logons are allowed during net-only times.
+  6)  New net35+ gating format (user@nodenum.netname) supported.
+  7)  /A would sometimes get confused about if you have dir conferences
+      or not; that is fixed.
+  8)  /O with files in batch queue would log off after the xfer; now it does.
+  9)  Modem initialization errors are now verbosely described,
+      "(Error)...", not "(4)...".
+  10) Duplicate phone number checking sometimes logged erroneous
+      messages; that is fixed.
+  11) G option in //UEDIT (re-enter user's birthdate) now has a confirm
+      question, so you aren't forced to re-enter the info if you hit G
+      accidentally.
+  12) Some funny file-tagging boarder displays have been cleaned up.
+  13) Some new SDS's have been added.
+  14) QWK & RIP now detect user hangups correctly.
+  15) Misc QWK & RIP display quirks fixed.
+  16) RIP now supports the default-to-yes prompts.
+  17) RIPDRIVE support has been made easier and less confusing.
+  18) RIP_DIR wwiv.ini flag sets rip menu directory
+  19) If remote RIP logon info gets corrupted, the caller can now enter
+      it manually (as opposed to having all three logon attempts rejected
+      without user intervention).
+
+
+/****************************************************************************/
+
+WWIV 4.24:
+
+  1) Swapping spawn implemented. (Code courtesy of TurboPower Software,
+     distributed in .OBJ/.LIB format, with permission.)
+  2) Sound Definition Files supported. (Uses local PC speaker to read/play
+     alterable tunes.
+  3) Various bug fixes as usual.
+  4) Conferencing improved (confedit).
+  5) N-Scanning dirs is now done automatically (if set in xfer defaults) only
+     after the first n-scan - no more redundant file n-scans after msgbase
+     n-scan.
+  6) WWIV.INI file support added. See docs for available settings and details.
+  7) The internal editor will now allow you to backspace to the previous line.
+  8) You can now have up to 16,000 posts on a sub (net34+ required for netted
+     subs).
+  9) Max files per dir can be 999 now, vs 499 previously.
+ 10) [ and ] will scroll through dirs/subs/chains/gfilesec while editing them.
+ 11) The instance number now shows in the sysoplog.
+ 12) Newuser user number assignment much more robust.
+ 13) 115200 baud rate supported everywhere.
+ 14) 'F' at the scan prompt will search for text in a post (or title).
+ 15) 'M' from the mail read prompt will send email to someone else,
+     but allow you to quote from the current email.
+ 16) Not-yet-seen email is marked with '*' in the email one-line listing.
+ 17) Users can disable inter-instance messages in the defaults section.
+ 18) The /V main-menu command will allow you to quickly validate all
+     not-yet-validated net posts on your system.
+ 19) You can set CD-ROM xfer directories, or conferences, to be unavailable
+     to users.  (The sysop will still have access to them.)  This would be
+     useful if you have a single CD-ROM drive, but sometimes put different
+     CD-ROMs into it.
+ 20) With CHAIN_REG enabled, you can set a minimum and maximum age for chains.
+ 21) RIP is now supported.
+ 21) QWK is now supported internally (with a hook for external QWK programs).
+ 22) The ability to abort the hangup-after-download.
+ 23) //PACK from main menu will pack storage-type-2 message subs.
+ 24) Support for IRQs from 8-15.  net35 is required for callouts/in on
+     instances with high valued IRQs.
+
+/****************************************************************************/
+
+WWIV v4.23:
+
+ 1) All known bugs fixed.
+ 2) PW not showing in INIT startup.
+ 3) Up to 250 chars for email name (good for gateway routing).
+ 4) //UPLOADFILE reads extended descriptions also.
+ 5) NET31 and earlier bug in //BOARDEDIT not allowing net subs to be added
+ 6) Color changes in [PAUSE] now supported.
+ 7) Moving file optionally resets daten for nscan searches.
+ 8) by/re/internal editor commands (/es, ...) now in bbs.str
+ 9) Multiple languages supported.
+10) Multiple fast local logons for sysops (with <space>num).
+11) Remote autovalidation (1,2..0 keys act as AltF1-AltF10 would) when in
+      uedit.
+12) 255 SL protection from Alt-F keys and remote autovalidation.
+13) Better pending display. Shows all network connections rather than just
+      those with bytes waiting. Also shows to minute accuracy rather than
+      hour accuracy.
+14) Autodialing for network callouts. Can specify number of retries.
+      Abortable with ESC key. Key is '.' at wfc for autodialing, '/'
+      does just one try as usual.
+15) Can specify minimum k before network callout. One-day override: if an
+      entire 24 hours goes by and the minimum k is not reached, then the
+      BBS will start calling again as if there were no minimum k defined.
+      NET33 required (so that a re-analysis doesn't erase the |<num> entry).
+16) Support for colors 8 and 9 in messages, defaults, etc.
+17) Topscreen/F1 color setting changed to white on blue (and uses a #define
+      for easy alteration). editline color also #define'd in CONIO.C for
+      easy customization.
+18) F1 editor edits more fields, including banktime, ass_pts, msgs posted,
+      upload k, etc. 60-char notes now handled properly.
+19) Local posts and network posts tracked separately. Topscreen shows no. of
+      local posts for the day.
+20) Randomized ANSI logon screens (WELCOME.0, .1, etc). Maximum of 1000
+      random screens, but no hard-coded maximum; code adjusts to the
+      number automatically.
+21) Control-Y toggles pause_on_screen on/off.
+22) Form letters are now FILENAME.FRM or FORM####.MSG, allowing eight
+      characters for more mnemonically easy form letter names. Also shows all
+      available (*.frm) form letters.
+23) LASTON.TXT/USER.LOG enhanced.
+24) Funky colors don't look quite so funky.
+25) Newuser colors are brown and cyan. No more flashing red.
+26) [ and ] move down/up dirs subs (as well as +/- and </>).
+27) Subname shown at read prompt.
+28) Embedded colors in gfile/dir/sub/chain descriptions won't weird out
+      the display in subedit/diredit, etc.
+29) Some "express" commands for the longer // sysop commands (//de for
+      diredit, //be for boardedit, //ce for chainedit, //ge for gfileedit,
+      //ue for uedit, //cu for chuser). The normal longer commands work
+      the same as always.
+30) Internal timebank for allowing users to store time for later use.
+31) //resetf (reset_files()) now works at wfc with the '=' key.
+32) FILE_IDZ.DIZ/DESC.SDI in archives supported for file descriptions.
+33) Multiple-sysop feedback, shows sysops/cosysops with user numbers from
+      1 to 9 at the feedback prompt. If only 1 sysop/cosysop found, the BBS
+      works as normal (no menu selection).
+34) User data written to disk for spawns, read back in upon return, for
+      programs that might alter the online user's userrec data.
+35) //BOARDEDIT, when editing the description, now allows deleting the
+      sub description.
+36) Several different dropfiles now created when CHAIN.TXT created, including
+      DORINFO1.DEF, PCBOARD.SYS, DOOR.SYS, and CALLINFO.BBS.
+37) All declared-but-unused vars deleted from the code.
+38) International character support (¥, ¤, , etc).
+39) Network dialouts show BBS name and location of board being called.
+40) Logon info enhanced a bit.
+41) Msg/mail headers split up so that location data is shown on a separate
+      line (prevents screen overrun).
+42) Local windows (done with makewindow()) now "shadowized".
+43) F10 (chat) key allows selecting name-string to "chat as". Also takes
+      user number.
+44) For 80-column people, the sub title-scan shows who posted each message,
+      as well as the title itself of course.
+45) editline(), etc. now use "unsigned char", thus allowing upper ASCII chars
+      for user notes, "chat as" strings, etc.
+46) Newuser event now allows external ASV/CBV programs to be plugged in, and
+      if these change the SL/ARs, etc. this is automatically accounted for
+      upon return to WWIV.
+47) Support for Multiple Instances
+48) Support for Multiple languages
+49) File Tagging
+50) Conferencing
+51) Auto-Sysop Validation
+52) Callback Verification (registered sysops only)
+53) Additional (optional) files for use like welcome and logoff.  The
+    new ones that will be printed if they exist include: CHAINS,
+    DEFAULTS, GFILES, XFER, DOWNLOAD, and UPLOAD.  These may have
+    an ANS, MSG, or B&W extension.
+54) Conferencing allows sysop to include or exclude all subs/dirs with
+    a single command.
+55) User configuration of Q-scan and N-scan improved via conferencing
+56) User toggle in defaults to use (not use) conferencing.
+57) WWIV reg number requirement added to conferencing.  This helps
+    for those conferences and/or subs where registration is required.
+58) Enhanced extract abilities.  Old method of extract is still 
+    usable if OPT_OLD_EXTRACT is #define'd.
+59) Can add net subscribers to subs from mail read prompt.
+60) Callers are compensated for time spent posting.
+61) Subs and dirs are now conferenced.  User can turn it on/off in
+    DEFAULTS.
+62) Limited multi-instance chat and messaging ability.
+63) A fast binary search for files when someone uploads is available.
+64) Chains are definable as multi-line capable or not.
+65) Extra chain ability to show who sponsored chain (#defineable).
+66) The chat sound is now changeable with a #define.
+67) SSMs on mail-delete say which network now.
+68) Sysop-selectable #defines moved to bottom of VARS.H for ease
+    of location and use.
+69) Mail-list shows originating address >and< title
+70) Backgrave (') may now be used in menus.
+71) Simple auto-sysop validation (#defineable).  Use the ALT F10
+    key settings and gives exemption of 9.  Prints optional
+    ASV.ANS/MSG file.
+72) Hop command added to main menu and transfer menu to allow
+    "hopping" from one sub or dir to another with ease when you
+    know the name or part of it but not the number.
+
+
+
+
+
+
+/****************************************************************************/
+
+WWIV v4.22:
+
+There is a new userrec format in v4.22.  If you are using a standard userrec
+format (32 or 64 sub format), the INIT program will convert your userlist from
+the old to new format.  Just run INIT, and it will detect if you have a
+standard v4.21a userrec.  If you do, it will ask if you want to convert it now.
+
+NOTE: you MUST convert your userrec to the new format before running the v4.22
+BBS.EXE/BBS.COM program.
+
+If you have a nonstandard userrec, you'll need to modify the CONVERT.C program
+(included with the source code distribution) to convert over any non-standard
+fields in your userrec.  Then, compile and run it ("BCC -ml convert.c",
+"convert").  You'll have to copy your old userrec structure into the CONVERT.C
+file (calling it 'olduserrec'), then modify the c_old_to_new() function to copy
+over your non-standard fields into the new userrec structure.  Note that the
+new userrec structure has just about all add-in userrec fields that other
+people have been using.  THIS DOES NOT MEAN THAT ALL FIELDS ARE USED IN THE
+BBS.
+
+In all cases, your old userlist will be saved as "USER.OLD".  You can safely
+delete this after you are sure that v4.22 is working correctly.  Under v4.22,
+the userrec is 1k long (1024 bytes), and holds all user-related info.
+Additionally, quickscan/newscan pointers are stored in a separate file,
+"USER.QSC".
+
+You can now have up to 999 subboards and 999 directories.  The more you allow,
+of course, the more memory will be required.  Use INIT to change the max number
+of subs/dirs allowed.  Both number of subs and number of dirs will be rounded
+up to the next 32 boundary (that is, allowable values are 32, 64, 96, 128,
+etc).  You do not have to use all subs/dirs you have allowed, but for optimal
+performance, set the number of subs and dirs to the lowest value that allows
+you to have the subs/dirs you want.  If you later decide you want more, go into
+INIT, and bump up the max.  DON'T just set them to 999 because you think you
+may want to use that many some day - you can always increase the number later.
+
+
+You can now have the BBS prompt users for their address, by toggling "Extended
+user info" in INIT section 2.  Note that this will require all your current
+users to enter the additional info when they first log on again (in addition to
+having new users enter the info).
+
+All textual strings have been removed from the BBS.  They are now stored in two
+(non-text) files in the gfiles directory: BBS.STR and SYSOPLOG.STR.  "BBS.STR"
+contains all user-visible strings, and "SYSOPLOG.STR" contains all
+sysop-only-visible strings.  The reason for having two different files is to
+prepare for WWIV v4.23, which will have multiple language support (where you'd
+want the sysoplog messages to all be in the sysop's language, while
+user-visible strings change depending upon the user's language).  Note that you
+need the ESM program (External Strings Manager) to update the .STR files.  DO
+NOT try to edit them any other way.  Also please note that "BBS.STR" is
+distributed in the archive as "ENGLISH.STR", again, to prepare for
+multi-lingual support.  A final note on the .STR files - the "SYSOPLOG.STR"
+file contains strings with %'s in them - %s, %d, etc.  So, be VERY careful when
+modifying those, and don't change the positions of the %'s, unless you know
+what you're doing.
+
+You can now override internal protocols (xmodem, xmodem-crc, ymodem).  This
+will allow you to use dsz.com to transfer using those protocols, if you want.
+Be aware, however, that if you override any internal protocols, you'll have
+about 3k less memory available in the BBS.  You can override any or all
+protocols, in any or all directions (that is, use internal xmodem send, but
+external xmodem receive).  INIT will only allow you to enter protocol strings
+in the allowed places (no xmodem batch upload, for example).
+
+Users can now select protocols by the first character of the protocol
+(excepting Ascii transfers and xmodem (non-crc)).  This will work
+automatically, you don't need to do anything.  But, note that if you have two
+protocols that begin with the same character, only the first one can be
+selected by character.
+
+//BOARDEDIT now manages additional information for you, such as the host system
+#, whether a sub you host is auto-requestable, and whether the sub is
+automatically reported for SUBS.LST updates.  This additional info is stored in
+the "SUBS.XTR" file in your data directory, but DO NOT MODIFY THAT FILE
+DIRECTLY.  Use //BOARDEDIT all the time.  If you're using net31 or earlier,
+you'll notice that your nnall.net, allow.net, and subs.pub files will
+automatically be updated for you.  With net32 or later, the files will be
+deleted, as all the info is now in the SUBS.XTR FILE.
+
+You can now gate subboards among networks your system is a member of.  This is
+done in //BOARDEDIT, simply by entering net info for multiple networks.  In
+order to support sub gating, you need to be using net32 or later.  Do not try
+listing different sub types in the same network, as it probably won't work.
+Gating DOES work with net-validation.  You can gate subs as either the host or
+as a subscriber system, but please do not gate subs unless you really have a
+good reason, and know what you're doing.
+
+You can now net subboards by sub name (instead of just sub type).  A sub name
+is 1-7 chars of upper-case letters and numbers, and doesn't start with a
+number.  Note that in order to use sub-by-name, the host AND all subscribers
+need to be using v4.22 (or later) AND net32 (or later).  Other than that,
+subs-by-name works the same as subs-by-type.
+
+If you connect to the same system number in multiple networks, you can now
+force a callout to either one (you are prompted to select which one).
+
+BBS macros (stored in DATA\MACROS.TXT) can now be used for "normal" macros, in
+addition to DOS macros.  Simply start the command with an '@', and the rest of
+the line is the macro substitution ("{" is converted to a carriage return).
+So, for example, if you have currently
+
+e qedit wwivnet\n1701.net
+
+(to run qedit to edit a net file), you can add in
+
+t @e1@3{Here is today's update:{
+
+so when you hit alt-t in the BBS, it will send email to 1@3, with the title
+"Here is today's update:", and put you into the editor.
+
+(Note also that DOS macros now work from WFC, in addition to while logged on.)
+
+There is now an external hangup handler, so fullscreen editors (and other
+external programs) can cleanup gracefully when users hang up.
+
+You can now (correctly) forward mail between networks.  If you're using net32
+or later, if the person you forward the email to auto-replies, the reply will
+correctly go back to the original person who sent the email.
+
+From the mail or post read prompt, you can now extract the message to ANY
+directory (not just the gfiles directory).  It will default to the gfiles
+directory, but you can simply specify a different directory, such as ".\file"
+to put it in the main BBS directory.
+
+You can now specify /R<min> to limit the amount of time a user is online.  You
+would only use this if you are running WWIV from a front-end mail program, or
+something similar.  /R5 would limit the user to 5 minutes inside the BBS.
+
+If you have 'Notify user of DL' set in INIT, it will now send the notification
+only if it is the same user that uploaded the file.  That is, if user #2
+uploads a file, you delete user #2, someone loggs on new as #2, then someone
+downloads the file that the old #2 uploaded, the new #2 won't get an indication
+of the download.  (Technically, it will only send the notification if the
+"firston" time for the user is before the time of the upload.)
+
+
+
+/****************************************************************************/
+
+WWIV v4.21a:
+
+The new address for WWIV registrations is:
+
+WWIV Software Services
+PO Box 720455
+McAllen, TX  78504-0455
+
+As usual, some bugs here and there (such as the mail forwarding bug in
+v4.21) have been fixed.
+
+Lists CPS rate in sysoplog for batch transfers when CPS rate is known.
+
+Has 64 sub "mod" built in.  If you initially set up the BBS with v4.21a,
+it will default to the 64 sub configuration.  If your system was set up
+with 32 subs only (and you have NOT modified your userrec), then INIT
+option U will allow you to easily switch to the 64 sub configuration.
+
+Multiple WWIVnet-type networks are now supported, if you are running
+net31 or higher.  Init option N allows you to add/delete networks you
+are in.  Each network has its own directory.  The network directory
+contains the following files that used to be in the DATA directory:
+*.net, bbslist.*, connect.*, bbsdata.*, subs.lst, subs.1, subs.2, etc.
+Also, *.net from the GFILES directory (for auto-sub-request responses)
+should be in your network directory(s).
+
+Message quoting has been partially implemented.  The message being
+responded to is stored to 'quotes.txt', and an 'indented' version (with
+"> " at the beginning of each line) is stored in quotes.ind.  I believe
+the next version of WWIVedit will handle these files.
+
+The BBS will now shrink when running programs listed in the remotes.dat
+file.
+
+The forward mail option in the default section now just takes a single
+string input - the same as if you were specifying a person to send email
+to, instead of the yes/no, input system # and user # prompts that were
+there before.
+
+The BBS now supports the fedit.inf and editor.inf/result.ed files to
+allow external editors to modify the title, and pass back anony status
+(for fedit and wwivedit, at least).
+
+You can now use 'L' at the message scanning prompt to load a file (for
+posting or auto-replying), if sl==255.
+
+You can now type 'C' at the mail read prompt to go into uedit, in short
+mode, without clearing the screen.  This is useful for changing a user's
+name or phone #, so if you get email saying "please change my phone
+number to 123-456-7890", you just hit C, P, and copy the phone # out of
+the email.
+
+boardedit now displays a sub's sub type (instead of anony and key) in
+the main listing.
+
+When the BBS is initializing, if it runs out of memory, it will now tell
+you exactly WHERE it ran out of memory, and how much it was trying to
+allocate, to facilitate tracking down problems where the BBS won't come
+up at all.
+
+
+
+/****************************************************************************/
+
+WWIV v4.21:
+
+You can now have a file "NNALL.NET" in your data directory instead of
+lots of little NN*.NET files.  You have two columns of data in it, the
+first being the sub type, the second being the host system.  Anything
+after the second column is ignored.  Note that if you use this, and are
+using net26 or earlier, the net feedback may give incorrect info about
+"unknown system X in NNALL.NET".
+
+If you're using net29 or later, when you change the sub type in
+//boardedit, you will have the option of sending an automated sub
+add/drop request (so you will not need the 'REQ.EXE' program).  The BBS
+will now also update your nnall.net file when you subscribe to a
+subboard.  The BBS checks the subs.lst file (and subs.1, etc, if any) to
+find the host for the sub in question.
+
+The list of disallowed filenames (CON, LPT, etc) are taken from the
+system device list instead of being hard-coded, for added security.  ^
+(caret) from the xfer main menu lists out the devices found.
+
+In addition to .ZIP, now .ARC, .ARJ, and .LZH files are checked for
+invalid filenames/paths before extraction is allowed.
+
+Interrupt handling has been completely re-done.  Instead of using 3
+interrupt vectors, the BBS now only uses one, and the vector used is not
+hard-coded, but an unused vector is dynamically selected.  This should
+fix problems with SCSI drives, networks, etc.
+
+Bi-directional file transfers are now supported, using hslink.  If you
+want to use bimodem, source code modifications are required.  The hslink
+bi-directional commandline is:
+
+hslink -p%2 -e%4 -@ @%3
+
+You can now forward mail (from the mail read prompt) over the network.
+
+, (comma) from the main menu allows the sysop to print out the
+netdat*.log files.
+
+/z from the main menu does a newscan of all dirs (the equivalent of a
+Z), saves it to a file, zips it up, and allows the user to DL it.
+
+/s from the xfer main menu creates a list of all files the user has
+available, and adds it to the temporary archive.
+
+Users can now close their mailbox.
+
+Type 2 messages (in subboards or email) now support >1MB dat files (in
+the msgs\ directory).  Previously, if all the posts added up to over
+1MB, things would start getting screwed up.  net28 and later support the
+>1MB files.  (For <1MB files, it is completely compatible with previous
+versions.)
+
+A co-sysop now has the option of purging mail from a specific user.  If
+you get a lot of junk-mail from the same user, hitting 'P' at the mail
+read prompt will allow you to delete all mail waiting for you from that
+user.
+
+The newuser routines have been re-done to support ANSI.
+
+The xfer sections that a user has access to are searched for duplicate
+filenames before an upload is allowed.
+
+If you have a chain that does not need DOS intercepts, and shrinks,
+return.exe will no longer be loaded.  The only overhead you'll have for
+the program is bbs.com (about 1k) and command.com (about 3k), for a
+total of about 4k overhead.  This is only for SHRINKING WITHOUT DOS
+INTERCEPTS.
+
+To enable flow control when running the BBS when a user is already
+logged on (from a front-door type program, where you usually use the /b,
+/o, etc parameters), pass /C to the BBS also.
+
+/****************************************************************************/
+
+WWIV v4.20:
+
+The source code has been cleaned up quite a bit.  Consult the source
+docs (wwivsour.doc) for more info, if you are registered and have the
+source code.
+
+A few of the file formats have changed; run the init program once to
+convert any WWIV v4.12 or earlier data files to the v4.20 format before
+running the BBS.
+
+As always, lots of little bugs and oversights have been fixed.
+
+Additional security has been added in to the temporary extraction
+area in the transfer section.  It will now find the full path name of
+pkzip/dsz/etc when executing any program (so it won't run a 'pkzip.bat'
+file out of the temp dir).  Also, before allowing a user to extract any
+files out of a .ZIP file, the BBS first scanns the .ZIP file to see if
+it has anything like ".." or "\" or ":", or "command" in it.  If it
+finds anything questionable in it, it will tell the user, and not allow
+him to extract anything out of the file.  This prevents a user from
+extracting a file "..\config.dat" or "c:config.dat" from a .ZIP file.  I
+do not believe this is a problem with other archivers (arc, pak, lzh,
+etc), but I do not know for sure.
+
+The transfer section newscan has been speeded up, for the case when
+there are no new files in a directory.
+
+The message base newscan/quickscan has been speeded up also, for the
+case when there are no new messages on a sub.  You will see the
+"< Nothing new on General 1 >" in this case.
+
+The modem handling routines have been completely done.  The modem
+info/result codes section in init has been replaced with a simple
+'select your modem' menu.  If your modem isn't listed, or the modem
+isn't handled correctly, consult the 'wwivmodm.doc' file.
+
+A new command-line option has been added to the BBS, /S.  If a user is
+connected at 14400/HST/HST/V.42bis (thus the modem speed is 14400, but
+the com port baud rate is 38400), then you would say "BBS /B14400
+/S38400 /O" to say that the modem speed is 14400, the com port speed is
+38400, and to quit the BBS when the use loggs off.  NOTE: You will only
+need to use this if you are running a front-end program to the BBS.
+
+You can say "//NET=5250" from the main menu to start the net listing at
+a specified system number.
+
+//rsort from the dl main menu will reverse-sort the entire xfer section
+by date.  This is to allow you to easily remove old files.
+
+UARTS with buffers now have the buffers enabled by the BBS.  The init
+program automatically detects buffered UARTS.
+
+The BBS now supports dos-macros.  Create a file in your data directory
+called "macros.txt".  The format of the file is one char then a DOS
+command-line.  For example, if you put "d dir" in the macros.txt file,
+then whenever you hit ALT-D while in the BBS, the BBS will shell-to-dos
+and run the "dir" command (running "dir" is fairly useless, but you get
+the idea).  I use it for editing WWIVnet message files, having entries
+such as "n q data\n*.net", which runs qedit on all the n*.net files when
+I hit alt-n.
+
+The baud rate the user is logged on at is displayed on the boarder line
+for the top-of-screen info.
+
+For WWIVnet email/posts, the &,%,^ indicators (for NC, GC, AC) are
+displayed in the message only if the email/post is from user #1 on the
+system.
+
+When people reply to a post (via the 'W' command in the messagebase), in
+addition to the "RE:" line, a "BY:" line is saved, indicating who posted
+the message that the reply is in reference to.
+
+When extracting out posts/email using the 'E' command, the title is now
+written out along with the post/email.
+
+When receiving source-verified net-email, a line on the message now
+indicates that it is source-verified, and who it is from.
+
+Batch downloads have been expanded, and batch uploads are now supported.
+Any protocol that writes to the dszlog can now be used as a batch
+protocol (for upload or download).  The files to up or download are
+passed to the protocol in the "@c:files.lst" method, where a file
+listing the files to transfer is passed to the protocol.
+
+The appropriate lines for DSZ (minus any flow options you may need) are:
+Batch Send: "dsz port %2 speed %1 est 0 %4 sz @%3"
+Batch Receive: "dsz port %2 speed %1 est 0 %4 restrict rz"
+
+Any unexpected files that are uploaded with batch upload will simply be
+deleted.  When selecting up/download or batch up/download, only the
+protocols available for that function will be listed.  Protocols can now
+be restricted to error-controlled (ie, LAPM, MNP2-4) connections only.
+
+There is now a batch upload directory, which defaults to your temp
+directory.  You may want to change this to be a directory on the same
+disk where most of your uploads are, for increased performance.
+
+BIMODEM is >NOT< supported currently.
+
+The upload event is now run anytime a file is uploaded (including
+//upload, //uploadall).  A "Please wait..." message is displayed, and
+the output is NOT re-directed to the com port, as it was in v4.12.  This
+ensures that the upload event will completely run, even if the user
+hangs up while it is running.
+
+File searches (by date, filename) can now be aborted more quickly by
+hitting a spacebar, even if there is not anything being printed out to
+the user at the time.
+
+The users SL is now always saved and restored when you use F9 to make
+the user a temp-sysop, even if you use //dos to shell to dos.
+
+A bit more info is printed out in uedit about a user, including their
+birthdate, where their mail is forwarded to, and their WWIV reg num (if
+any).
+
+The user-search now includes the ability to search based on number of
+logons, ie, "LOGONS<[2]" to find any user only logged on once.
+
+You can now import file descriptions from other BBS formats (such as
+QBBS, RBBS, PCBoard).  First, ensure that you have the DOS directory set
+correctly in //boardedit (to point to the directory which the files are
+in).  Then, in xfer section, go to the correct directory, and type
+//uploadfile.  It will first ask you for the file format, then the file
+name for the file which holds the file names/descriptions.  This command
+runs pretty much the same as //upload, except it takes the descriptions
+from the text file instead of prompting the user for the descriptions.
+

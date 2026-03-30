@@ -1,0 +1,36 @@
+
+                         Jan 18, 2001 TEOS V2.02
+
+
+As with all other software, run Planets: TEOS at your own risk.
+Although most likely the worst it could possible do is 'not work'. <G>
+
+** TO UPGRADE FROM ANY BETA 2.00 VERSIONS, JUST COPY IT OVER,
+   OVERWRITING EVERYTHING AND YOU'RE DONE. **
+
+  *NOTE*  You cannot upgrade from 1.12. (the '93 version)  Setting up in a
+  an old 1.12 dir will cause MAJOR problems, so don't even think about it.
+
+
+REQUIRED TO USE THIS:
+
+- 380 K of conventional memory free.
+- To use nonstandard com ports we HIGHLY recommend using a fossil driver
+  such as X00.SYS with a locked port.  (heck, use one anyway)
+
+SYSOP.DOC    þ Setup info and tips N tricks. (wannabe IGM makers read this)
+TROUBLE.DOC  þ Read this if TEOS won't behave. (lockups, ect)
+BUGRPT.FRM   þ Use this form when reporting bug reports.  Helps me SOO much!
+
+NOTE:  Remember, TEOS 2.0 uses a NEW registration scheme, if you are already
+registered in the the OLD (1.00 or 1.12) versions, you can get the new
+codes fast and free.  Check SYSOP.DOC for info.
+
+Various ways of contacting me are listed in SYSOP.DOC in case you need 'em!
+
+Run LOCAL.BAT to see the game in action before doing any setup work!
+
+This game can be registered in minutes via our voice reg line!  Also, check
+our BBS or web page for the latest list of OTHER PEOPLES products we can
+register, including LORD and TEOS IGMs.
+

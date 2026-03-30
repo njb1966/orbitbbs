@@ -1,0 +1,81 @@
+Bulletins List
+--------------
+To create your own Bulletins, type:
+;^[NAME]
+;The Bulletin itself
+;Continued
+;^END
+Without the Semicolons;  [NAME] Is the name of the bulletin in ALL CAPS
+
+^README
+Hello!  Welcome to Barren Realms Elite, the first InterBBS SRGame!  This game
+gives a whole new meaning to Online Gaming.  Not only do you fight local
+players as in most games, but now you can challenge up to 254 other BBSes
+around the country playing head to head - BBS vs BBS combat.  Not only must
+you perfect your own strategies to become the ultimate player, but you also
+must work as a team with your BBS, make alliances with others, and control
+the world - the real world.
+^END
+
+^IPSTRATEGY
+There is only one requirement to be a good InterBBS team: Teamwork.
+Keep constant communications flowing between other players on your BBS and
+and other BBS's - Make allies on other BBS's.  You should have a high team
+spirit if you want a good success rate-Teamwork.  If players attack each
+other in the game, warn them not to.  If they continue, ally your BBS and
+destroy them.  To be the best in the league, you'll need a high amount
+of team cooperation.  Do not allow anybody to dictate the BBS; make it a
+team effort.  You may even wish to designate public relations people, local
+coordinators, etc, etc.  Whatever you do, be a team.  Good luck in the world
+of BBS Warfare!
+^END
+
+^NEW AUTHOR
+In early 1998, four of the five SRGame products were sold to a new
+shareware author in the hopes of their continued success.  These
+products include Barren Realms Elite, Falcon's Eye, Falcon's Honor,
+and The Arcadia Legends.
+
+Version 1.06 and future versions of Falcon's Eye will be made
+available by John Dailey Software.  Please feel free to visit us on
+the web at www.johndaileysoftware.com for all the latest news and
+events.
+
+Sincerely,
+John Dailey
+John Dailey Software
+
+www.johndaileysoftware.com
+(407) 654-9705  24Hr BBS, 33.6kbps
+jd@johndaileysoftware.com
+^END
+
+^ECHO
+There are two echos currently available for the discussion of the
+products BRE, FE, FH and TAL.
+
+The first is the John Dailey Software support echo, available via
+FidoNET (JDSSOFT), TerraNET (JDSSOFT @4701) and WWIVNet (JDSSOFT @4701).
+
+The SRGAMES echo via FidoNET is for the discussion of strictly the
+forementioned products.  Discussion of any other John Dailey Software
+product should be reserved for the JDS support echo.
+
+If you are a sysop, request JDSSOFT SRGAMES from your Echo
+distributor.  If you are a user, look in the message base for either
+message area and if it's not there, ask your sysop to pick it up.
+^END
+
+^Registered Features
+The registered version of Barren Realms Elite offers several enhancements
+over the standard version.  These include special bank features such as
+investments, interest and loans, and an interplanetary option of SDI
+Defense, each adding variety and competitiveness to the game.  If your
+sysop is currently running the regular version, we highly recommend you
+encourage him or her to get the registered one.  We feel that you will find
+it even more enjoyable!
+
+                                           Thanks,
+                                           John Dailey
+
+^END

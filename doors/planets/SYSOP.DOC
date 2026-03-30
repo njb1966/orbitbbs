@@ -1,0 +1,382 @@
+
+          °±² PLANETS: THE EXPLORATION OF SPACE V2.02 ²±°
+
+                      Also known as TEOS.  (tee-ose) 
+
+                 Originally Written by Seth A. Robinson
+                      Developed by Michael Preslar
+
+                    (c) Copright 2001 : Metropolis, Inc.
+                 Home Page:  http://www.metropolis.com
+  
+
+
+                             °±² INDEX  ²±°
+
+               *1*         .................      About the game
+               *2*         .................      Game Installation
+               *3*         .................      Sysop Info/Tricks 
+               *4*         .................      Game Registration
+
+  To access parts of this document fast use the find feature in your text
+  editor.  (like "find *3*" for section 3)
+
+
+                    °±² SECTION *1* About the game  ²±°
+
+  TEOS is a space trading game. V2.02 is NOT finished.  We are allowing
+  anyone who wishes to test it however - and help make it a better game
+  via bug reports and suggestions.
+
+  It is a space oddessy that allows players to shape the game like no other.
+
+  ANSI games are becoming a relic of the past - falling to new graphically
+  oriented games and BBS clients, but there is still something magical about
+  how simple and complex a text game can be when inside a world that allows
+  you to take player interaction to the max.  
+
+  * Supports 200 players.
+  * Multinode interactive (some options only appear when 2+ are playing!)
+  * Team play - up to 10 players per 'cartel'.  Up to 200 teams
+  * Support for team allys - up to 20
+  * Support for up to 99 planets
+  * Up to 32,000 ship types, comes with 16
+  * Player, World, Ship, NPC editors are inside PLANCFG.EXE!  (note: a
+    registered game is required to change values)
+  * Support for most drop files
+  * Copy setup from LORD option (if you can run LORD, you can run this)
+  * own planets and get daily reports, taxes, news
+  * be good (Alliance), evil (Maraken) or neutral
+  * Alliance and Maraken each have a home planet and base players can land
+    on
+  * Comprehensive player and team rankings
+  * Players can see if their teamates have played yet today/how much
+  * In game email of unlimited length
+  * 'mass team mailing'
+  * `%Sansi `2color `%codes!! 
+  * Players can customize their planets after they own them
+  * IGM Support!  Each planet can have up to 8 IGM's.  Players must be on
+    the planet to see 'em
+  * "Game Info" feature shows players what the settings are, what IGM's are
+    installed and where they are.  (unless the IGM tells TEOS not to)
+  * Smart NPC's that have custom texts, stats, likes and dislikes and
+    remembers every encounter with every player they meet.  NPC's can be
+    edited and added
+  * IGM's are strictly controlled - because IGM authors use the TEOS Kit,
+    you know they will be compatible - PLUS extras like
+    all IGM's can handle mail and communication all automatically (new!) 
+  * Players can put chatwalls up on their own planets
+  * Players can pretty much have the time of their lives
+  * New flavors including new Planets, Item Settings, Ships, Enemies and
+    Gossip files are/will be available for download for a unique game, or
+    just make your own!
+  * Actually fun to play!   <-- The most important feature
+
+
+                    °±² SECTION *2* Game installation ²±°
+
+  Those familiar with how LORD:  The setup is identical.  There is also a
+  'COPY NODE SETUP FROM LORD' option inside PLANCFG.EXE.
+
+  To install:
+
+  Unzip into an empty dir.
+
+  * Run "PLANCFG.EXE" from the dos prompt.  (it will create the GAME.DAT file)
+
+  * Exit it.
+
+
+                                 -=-=-=-=-=-
+
+  To play without a BBS or for testing purposes:
+
+  * Type "START" from the directory TEOS is in.  You are now playing the game!
+
+  (quick tip - to advance the day one and put the game into debug mode, type
+   "START MAINT" This is a LOCAL ONLY switch for testing ONLY!!!)
+
+                                 -=-=-=-=-=-
+  To setup on your BBS.
+
+  Run "PLANCFG.EXE" and choose the (S)etup a node option.  You can now setup
+  up to 999 node configurations, including drop file type & path, com port,
+  locked port rate and more.
+
+  ** YOU MUST RUN START.BAT FROM THE DIRECTORY IT IS IN! **
+  ** If you wish, you can edit the top of the START.BAT  **
+  ** file to switch to that directory - that works too.  **                                                 
+  
+
+  Examples of command lines to run the game from your BBS:
+
+  CALL START 1
+
+  (to run configuration 1)
+
+  CALL START 13 
+
+  (to run configuration 13)
+
+  For trouble shooting, check TROUBLE.DOC.
+  
+  If you run just START with no parm, it will default to 0.  When you unzip,
+  NODE0.DAT comes with it, setting node 0 to local node.  You CAN change
+  this if you want to run your BBS on node 0, in PLANCFG's (S)etup a node
+  option enter 0 for the node to edit.
+
+
+
+                    °±² SECTION *3* Sysop Info/Tricks ²±°
+
+  Q. LOOKS COOL - IS IT CRIPPLED?
+
+  A. <sigh> Yes - players cannot buy new ships or use torpedos.  IGM's
+     that change these values not function correctly.
+
+     HOWEVER - Its still a fun game.  (until you lose your ship and have to
+     come back in a garbage scow!! <G> )
+
+     Registering also allows you to use the many editors in PLANCFG.EXE,
+     unregistered you can VIEW everything but not change 'em.
+
+     * WHEN YOU DECIDE ITS A ROCKING GAME AND A BARGAIN AT $15 *
+
+     $15 on your Visa/MC on our voice registration line can have you
+     registered in minutes.  (we give you a code that unlocks this copy!)
+
+  Q. DOES TEOS HAVE RIP SUPPORT?
+
+  A. No.  I just didn't see RIP begin high enough to warrant that much
+     time into development.  But this RIP 2.0 is looking good so who knows!
+
+  Q. HOW CAN I GENERATE SCORE FILES FOR MY BULLETINS?
+
+  A. ANSI and ASCII score files are called SCORE.ANS and SCORE.ASC defaultly,
+     you can change this in the (G)ame Options section in PLANCFG.EXE.
+
+     The files are generated after someone PLAYS the game, then quits.
+
+     TIP:  Enter a blank line to not generate files.
+
+  Q. WHAT THE HELL?  THERE IS NO PLANETS.DAT OR ENEMIES.DAT FILE!!??
+
+  A. Duh.  If they don't exist they will be created the first time you play
+     or use PLANCFG.EXE. They are copied from PLANETS.ORG and ENEMIES.ORG.
+     Planets and NPC's change throughout the game.  NPC's grow stronger, buy
+     holds, items and develop likes and dislikes.
+
+     The .ORG files are the 'fresh' versions and are never changed - keep
+     in mind some NPC's will hate people right off the bat because of their
+     alliance or they are just mean.  Some NPC's have a low 'intelligence'
+     and trade and build slower than others.
+
+  Q. DOES TEOS HAVE IGM SUPPORT?
+
+  A. Yep. That it does.
+
+     IGM's in TEOS are special - they can directly communcate with the game
+     in many ways unprecedented in door history - they can move themselves
+     from planet to planet, add planets, destroy planets, add players, npcs,
+     quests, change other IGM's and handle reading and writing mail as if
+     they were in TEOS itself.
+
+  Q. WHAT THE DING DONG DOES IGM STAND FOR, ANYWAY?
+
+  A. (I)n (G)ame (M)odule.  A term created by RTSoft for another door called
+     LORD a few years ago.
+
+  Q. HOW MANY IGM'S CAN I PUT IN TEOS?
+
+  A. Each planet can hold up to 8.  They will show up on the main console
+     menu.  Don't forget that the Alliance/Maraken Headquarters/Bank/Dreamor
+     temple count as IGM's, even though they are internal.  They can be
+     removed in PLANCFG.EXE though.
+
+  Q. CAN I MAKE AN IGM FOR IT?
+
+  A. At this time, I think I'm only going to give the 'TEOS IGM KIT' to
+     certain people.  I hope this improves the quality of the IGM's and in
+     the long run makes the sysops job easier.
+
+     If you wish to develop - contact me and send me a copy of a program
+     you have written.  This will prove to me you know what you're doing and
+     this isn't your 1st project.
+
+     The IGM kit contains many TPU's from TEOS itself, and can only be used
+     in Turbo Pascal 7.0.  (Sorry C devs!!!)  It's SOOO darned easy!
+
+  Q. CAN THIS GAME BE FINISHED?
+
+  A. No.  This will probably be added as an IGM set - IGM's can actually
+     do this now, and even reset the game and post screens depicted the
+     last winner/ect for people in the next game to see.
+
+  Q. I JUST INSTALLED THE CRAPPIEST IGM ON EARTH - HOW DO I GET RID OF IT?
+
+  A. Two ways - One is use the CFG program it came with, (it should have a
+     uninstall option) or use the IGM Control option in PLANCFG.EXE.  Switch
+     to the planet it is on then move the curser to the IGM line it is on
+     and pres the <DELETE> key.
+
+  Q. I like the IGM Control area, but what is NOSHOW and NOLOCATION mean?
+
+  A. Setting NOSHOW means this IGM does not shop up in (G)ame Stats at all.
+     Setting NOLOCATION means the IGM 'name' shows up but not which planet it
+     is on.
+
+  Q. WHY WON'T IT LET ME KILL SOMEBODY WHO IS ONLINE?
+
+  A. We tried it both ways, and it seems this is the more 'fair' way for 
+     those playing.  No one likes being killed while they are trading and
+     uncloaked simply because they were on while someone else was.
+
+  Q. WHAT THE?? WHERE IS GOMAR'S GUNS AND THE SCHOOLOR LIBRARY, ECT?
+
+  A. I know a few planet descriptions reference places to go that are not
+     there, I hope that these will be added by myself or someone else later
+     in the form of an IGM.  They aren't essential anymore, ie, Phaser units
+     were taken out.
+
+  Q. HOW DO I DISABLE/ADD TO OR MODIFY THE 'PROFANITY CHECKER'?
+
+  A. The file is called BADWORDS.DAT - use any text editor. To disable it,
+     comment out everything or delete the file.
+
+  Q. HOW CAN I SET THE TIME TO DELETE INACTIVE PLAYERS?
+
+  A. TEOS defaults to delete inactive players after 15 days.  You can change
+     this in PLANCFG.EXE. (Game options)
+
+  Q. HOW CAN I FORCE TEOS TO DISPLAY A TEXT SCREEN I MADE TO PEOPLE?
+
+  A. Name the file NEWS.TXT.  TEOS will display it after the intro ansi. Very
+     handy to notify them of a coming reset or beg for money.
+
+  Q. HOW CAN I RESET THE GAME?
+
+  A. To reset the players delete TRADER.DAT.  To reset the planets delete
+     PLANETS.DAT.  To reset the NPCs delete 'ENEMY.DAT'.  You can reset these
+     all together or in any combination.
+
+     Use PLANCFG.EXE's (R)eset Game option to reset everything for you.
+
+  Q. IF I RESET, WILL I HAVE TO REINSTALL MY IGM'S?
+
+  A. No!  The IGM??.DAT files in the mail dir will remain intact - these
+     hold the IGM info.  The ?? is the planet #.  Your IGM's will all still
+     be there after resetting!
+
+  Q. WHERE ARE THE PLAYER MAIL FILES KEPT, I WANT TO LOOK AT 'EM!
+
+  A. TEOS creates a directory called MAIL.  They as well as IGM data
+     data files are kept there to keep the main dir clean.
+
+  Q. HOW MANY PLAYERS CAN BE IN A GAME AT ONCE?
+
+  A. The max player accounts in a game at once is 200.  The max amount of  
+     players that can be online simultaneously is also 200.
+
+  Q. IT SAYS A PLAYER IS 'ON NOW' BUT THEY AREN'T! WHAT DO I DO?
+
+  A. TEOS will fix this at maintenance.  (midnight)  Or the next time that
+    player logs on, whichever is first.
+
+  Q. TEOS SAYS 'BAD TRADER.DAT FILE' I THINK ITS CORRUPTED. NOW WHAT?
+
+  A. TEOS makes a backup copy called TRADER.BAK once a day.  Rename it to
+     TRADER.DAT and you may save your game.
+
+  Q. I HATE YOUR MENUS, I WANNA CHANGE 'EM.
+
+  A. Thanks.  Use ADDANSI.EXE to extract or put ansi files in the PLANTXT.DAT,
+     INTROTXT.DAT.  Type ADDANSI without any parms to see the format for use.
+
+     Remember, you can use any text editor such as EDIT to look at these
+     files also - look for @#<NAME> to see what each ones header is called!
+
+  Q. I WANT TO MAKE A PLANET THAT SELLS HOT DOGS.  CAN I?
+
+  A. Yeah. Use the Item Settings Editor inside of (G)ame Options inside of
+  PLANCFG.EXE and find a blank item spot - change the name to "* Hot Dogs".
+
+  (The 1st char is what a player needs to hit to pick it, I used * because
+   I know its not being used anywhere else..There are a few letters left too
+   though.. If two items start with the same letter/symbol, if they are both
+   on one planet, only one can be accessed.)
+
+  Set the price and how many someone can buy at once also.  Leave 0 to limit
+  it only by their cargo spaces.
+
+  Next, use the planet editor and edit a planet - edit the trade rates, find
+  Hot Dog on the list and set it to a % higher than 0.  100 means the planet
+  will sell/buy at the base price.  200 % means twice as much.
+
+  Q. AWESOME!  I CREATED A BUNCH OF NEW ITEMS AND PLANETS, HOW CAN I SHARE
+     THEM WITH MY BROTHER IN VEGAS?
+
+  A. Not too hard - take your changed planets.dat file (before anybody plays
+     it) and put it in an empty dir.
+
+     Go to the TEOS dir and type "PUTIL MAKE FOOD.PAK".
+
+     Put that in the empty dir too - now (assuming PKZIP.EXE is in your path)
+     type "PKZIP FOOD.ZIP".
+
+     Now send it off to your brother!
+
+     Tell him to RESET his game before installing, otherwise when he adds
+     your new PLANET.DAT file, any planets owned by his player will be lost!
+
+     Next, have him type "PUTIL ADD FOOD.PAK".  It will update his item
+     list with YOUR items.  'course, you could always make an INSTALL.BAT
+     for him or whatever also.  If you plan on distributing your 'flavor'
+     which could also include enemies, gossip defaults, menues, new planet
+     graphics ect, please run a copy by me (Michael) so I can check it out
+     1st and make sure it works right.  Thanks!
+
+  Q. I REGISTERED, SO WHAT DO I GET?!
+
+  A. I love you! - you can add and change ships, planets, npcs and users.
+
+     Your players can now buy ships and torpedos and use IGM's that change
+     'registered only' values.
+
+    You will also recieve a warm feeling for supporting a quality product
+    which allows more of 'em to be made.
+
+    You go to heaven now. ;>
+
+
+                    °±² SECTION *4* Game registration ²±°
+
+
+                         -= TO REGISTER THE GAME =-
+  See the file register.doc .. It has all of the information you need..
+
+
+           -= IF YOU HAVE REGISTERED AN OLDER VERSION ALREADY =-
+
+  Due to piracy problems TEOS 2.0 uses a different registration scheme than
+  its predecessor.  IF YOU HAVE ALREADY REGISTERED TEOS 1 or 1.12, THIS IS
+  A FREE UPGRADE.
+
+  To get your updated codes fast:
+
+  INTERNET:
+
+  E-mail info@gameport.com with your name, address, BBS name, OLD CODES
+  and request your TEOS 2.00 codes.  We will attempt to reply within 24
+  hours. 
+
+  (you can also do this at our website at http://teleport.com/~sethable)
+
+  U.S. MAIL:
+
+ Same as above (name, address, bbsname, and old codes).. Send the
+ info to 
+
+ TEOS RegCode Request
+ Metropolis Systems
+ 8650 College Blvd, Suite 111
+ Overland Park, KS  66210

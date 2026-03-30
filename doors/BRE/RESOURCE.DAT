@@ -1,0 +1,11 @@
+Install.BBSDirectory                    c:\wwiv\
+Install.DoorFileDir                     c:\wwiv\e\1\temp\
+Install.BatchFile                       c:\wwiv\BRE.BAT
+Fossil                                  no
+LockedBaud                              
+ANSIScores                              
+AsciiScores                             
+TodayNewsAnsi                           
+TodayNewsAscii                          
+YesterdayNewsAnsi                       
+YesterdayNewsAscii                      

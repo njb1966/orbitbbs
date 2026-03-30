@@ -1,0 +1,18 @@
+
+   -----------------------------------------------------------------------
+
+   In the interests of conserving file size (and expense) BNU is no longer
+   distributed with the  Revision 5 FOSSIL specification.    This document
+   can be found on any networking system carrying  the FTSC documentation,
+   and is called FSC-0015.*   Developers should refer to that when writing
+   an interface using FOSSIL extended communications calls.
+
+   For information on BNU specific enhancements to these calls designed to
+   suit special-purpose situations, you are welcome to contact me.
+
+   -----------------------------------------------------------------------
+
+
+                               David Nugent
+
+             FidoNet 3:632/348   Alternet 7:833/387   FreeNet 23:2/3

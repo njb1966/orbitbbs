@@ -1,0 +1,274 @@
+`0============================================ Menus by Filo 1@4000 ====
+2= WWIV v4.24 Main Menu =0
+2Press "P" to Pause or (SPACE) to Abort0
+2CTRL-T = Time  CTRL-O = On-Line Help  CTRL Y = Toggle Pause0
+
+1A3>5uto-Message       1B3>5BS List          1C3>5hat with Sysop    1D3>5efaults Section
+1E3>5-Mail a User      1F3>5eedback to Sysop 1G3>5eneral Text Files 1H3>5op To Another Sub
+1I3>5nformation        1J3>5oin Conference   1K3>5ill E-Mail Sent   1L3>5ast Callers
+1M3>5ailbox Scan       1N3>5ew Message Scan  1O3>5 Log Off          1P3>5ost a Message
+1Q3>5uick Message Scan 1R3>5emove a Message  1S3>5can Messages      1T3>5ransfer Section
+1U3>5ser List          1V3>5oting Section    1W3>5WIV Slash Menu    1X3>5 Expert Mode
+1Y3>5our User Stats    1Z3>5 Express N-Scan  1*3>5 List Subs Avail. 1.3>5 On-Line Programs
+1#3>5 Go to # Pressed  1$3>5 Use Time Bank
+
+1> 3, 1+ 3, 1] > 5 Advance 1 Sub             1}3 > 5Advance 1 Conference
+1< 3, 1- 3, 1[ > 5 Retreat 1 Sub             1{3 > 5Retreat 1 Conference
+`1============================================================================
+2= WWIV Message Base Commands =0
+
+1(ENTER)3 =5 Read Next Message
+1#3>5 Go to Message # Entered
+1-3>5 Back Up One Message #
+1A3>5 E-Mail Author of Last Message
+1B3>5ypass (Skip) Current Sub (For N-Scan)
+1C3>5ontinuous Message Read
+1F3>5ind specific text in messages and headers
+1P3>5ost a Public Message in Current Sub
+1Q3>5uit to Main Menu
+1R3>5e-Read Last Message #
+1T3>5 See Titles of Next 15 Messages
+1W3>5 Reply with "Regards" to Last Message0
+`2============================================================================
+1/ES  3=5 Save Message
+1/ESY 3=5 Save Message Anonymously
+1/ESN 3=5 Save Message NOT Anonymously
+1/ABT 3=5 Abort Entire Message (Quit)
+1/CLR 3=5 Clear Message and Start Over
+1/RL  3=5 Replace Last Line
+1/TI  3=5 Re-Type Message Title
+1/LI  3=5 List Message So Far
+1/C:  3=5 Center Text After "/C:"
+1/SU/Old/New 3=5 Replace Old Text with New
+1CTRL-P+Digit 3=5 Change Color to Digit
+`3============================================================================
+2= WWIV File Transfer Menu =0
+2Press "P" to Pause or (SPACE) to Abort0
+2CTRL-T = Time  CTRL-O = On-Line Help0
+
+1A3>5rchive Listing    1B3>5atch Download    1C3>5hat with Sysop    1D3>5ownload a File
+1E3>5xtract ARC File   1F3>5ind File Text    1G3>5 ARC Commands     1H3>5op to Directory
+1J3>5oin a Conference  1L3>5ist Files in Dir 1N3>5ew Files Uploaded 1O3>5 Log Off
+1P3>5 New Files Date   1Q3>5uit to Main Menu 1R3>5emove File        1S3>5earch for File
+1T3>5ransfer Options   1U3>5pload a File     1W>5 Other Commands    1X3>5 Batch Download
+1Y3>5our X-fer Stats   1Z3>5 Upload to Sysop  1*3>5 List Dirs Avail.
+
+1>3,1+3>5 Advance Dir #  1<3,1-3>5 Retreat Dir # 1#3>5 Go to # Pressed  3"1/O3"5 Fast Log Off0
+`4============================================================================
+1A3>5uto-Reply and Delete Last Mail Read
+1D3>5elete Last Mail Read
+1F3>5orward Mail to Another User; does not permit comments
+1G3>5o to Specific Mail #
+1I3>5gnore Last Mail Read
+1Q3>5uit to Main Menu
+1M3>5ail to Another User; Allows quoting from currrent mail
+1P3>5urge all mail from current user.
+1R3>5e-Read Last Mail #
+1S3>5ave Mail and Reply to Author
+1Z3>5ap Current Mail; does not send "So and So read your message."
+1-3>5 Back 1 Mail #0
+1+3>5 Advance 1 Mail #0
+`5============================================================================
+2= WWIV Co-Sysop Commands =0
+
+3"1//STATUS3"    =5 Current System Status
+3"1//IVOTES3"    =5 Initialize Voting Data
+3"1//LOG3"       =5 Today's Sysop Log
+3"1//TEDIT3"     =5 Text File Editor
+3"1//YLOG3"      =5 Yesterday's Sysop Log
+3"1//UEDIT3"     =5 User Data Editor
+3"1//ZLOG3"      =5 System Activity Log
+3"1!3"           =5 Validate a User
+3"1//VOTEPRINT3" =5 Save Voting Info to
+                5Disk
+3"1//PENDING3"   =5 Network Files Pending
+3"1/V3"          =5 Validage Msgs.
+
+2= WWIV Sysop Commands =0
+
+3"1//BOARDEDIT3" =5 Sub-Board Editor
+3"1//EDIT3"      =5 Edit Any File
+3"1//DIREDIT3"   =5 Directory Editor
+3"1//GFILEEDIT3" =5 G-File Editor
+3"1//CHAINEDIT3" =5 Chain Editor
+3"1//LOAD3"      =5 Load File Into Editor
+3"1//CHUSER3"    =5 Change Into a User
+3"1//MAILR3"     =5 Read All Mail Sent
+3"1//DOS3"       =5 Drop to DOS
+3"1//REBOOT3"    =5 Reset System Computer
+3"1//STAT3"      =5 Stack and Heep in Mem.
+3"1//RESETF3"    =5 Reset User Files
+3"1//RELOAD3"    =5 Re-Load Menus Into Mem.
+3"1//CHAT3"      =5 Toggle Sysop Available0
+3"1//INSTEDIT3"  =5 Limited Instance Editor0
+3"1//PACK3"      =5 Pack Current Msg. Base0
+`6============================================================================
+2= WWIV User Editor =0
+
+1[3> 5Down One User #  1]3>5 Up One User #
+1{3> 5Search Down      1}3>5 Search Up
+1,3> 5Temp. Full Info  1.3>5 Full Info
+1/3> 5Search Specs.    1A3>5 Change ARs
+1C3> 5Change Callsign  1D3>5 Delete User
+1E3> 5Change Exemption 1G3>5 Change Age
+1I3> 5Change DARs      1L3>5 Real Name
+1M3> 5Computer Type    1N3>5 Name/Handle
+1O3> 5Change Note      1P3>5 Phone Number
+1Q3> 5Quit to BBS      1R3>5 Restore User
+1S3> 5Change SL        1T3>5 Change DSL
+1U3> 5Go to User       2X3>5 Change Reg/Exp Dates
+1Y3>5 Sysop Sub        1Z3> 5Restrictions
+1~3>5 Remove AssPts    1:3> 5Re-Enter Personal-Data0
+`7============================================================================
+7‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+7€ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ€4 WFC COMMANDS 7€ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ€
+7›1(SPACE)3>5 Log On                7ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ5    1(SPACE)+F3>5ast Log On        7ﬁ
+7›1A3>5nswer Telephone       1B3>5 Message Sub Editor    1C3>5 On-Line Program Editor   7ﬁ
+7›1D3>5ownload Dir Editor    1E3>5mail                   1F3>5 Drop to DOS              7ﬁ
+7›1G3>5-File Section Editor  1I3>5nitialize Voting Data  1L3>5 Today's Sysop Log        7ﬁ
+7›1M3>5 Read All Mail Sent   1N3>5etwork Log             1Q3>5uit BBS                   7ﬁ
+7›1R3>5ead Feedback          1S3>5ystem Status           1T3>5erminal Program           7ﬁ
+7›1U3>5ser Editor            1W3>5rite a File            1Y3>5esterday's Sysop Log      7ﬁ
+7›1Z3>5 System Activity Log  1/3>5 Force Network Callout 1Scroll Lck3>5 Toggle Available7ﬁ
+7›1J3>5 Conference Edit      1`3>5 Show Net Information  1.3>5 "War Dial Net Connect"   7ﬁ
+7›1ESC3>5 Quit BBS           1V3>5 Toggle User-On Line Menu                          7ﬁ
+7€                                                                             7€
+7€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
+`8============================================================================
+3"1//MOVE3"             - 5Move File to Diff. Dir
+3"1//REN3"              - 5Rename a File
+3"1//SORT3"             - 5Sort Files in Dirs
+3"1//RSORT3"            - 5Sort Files Oldest to Newest
+3"1//UPLOAD3"           - 5Upload Files in Dir
+3"1//UPLOADALL3"        - 5Upload Files in All Dirs
+3"1//UPLOADFILE3"       - 5Import File Descriptions from other BBS Software0
+3"1//2A1llow2E1edit"       - 5Edit the ALLOW.DAT file0
+3"1^3"                  -5 List Devices
+3"1M3"                  -5 Move File (same as //Move)0
+3"1U3"                  -5 Upload file with File_idz0
+`9============================================================================
+1L3>5ist Files in Queue
+1R3>5emove File from Queue
+1Q3>5uit to Transfer Menu
+1C3>5lear Queue
+1D3>5ownload Files
+1U3>5pload Files
+1B3>5i-directional transfer
+`10===========================================================================
+1L 3- 5Only 1 Log On per Day
+1C 3- 5Can't Page for Chat
+1M 3- 5Posts Require Sysop Validation
+1A 3- 5Restricted from Auto-Message
+1* 3- 5Restricted from Anonymous Posting
+1P 3- 5Can't Post Messages
+1E 3- 5Can't Send E-Mail
+1V 3- 5Restricted from Voting Section
+1K 3- 5Chat Room Restriction
+1N 3- 5Restricted from Network Access
+1U 3- 5Restricted to Sysop Dir Uploads0
+`11===========================================================================
+1C3>5lear Message
+1D3>5elete Current Line
+1I3>5nsert Lines
+1L3>5ist All Lines
+1P3>5rint Current Line
+1Q3>5uit Editing
+1S3>5ave Message
+1+3>5 Forward 1 Line #
+1-3>5 Backward 1 Line #0
+`12===========================================================================
+1A3>5dd to List
+1M3)5ailing-list add to List
+1D3>5elete from List
+1E3>5 Write and Send Multi-Mail
+1L3>5ist Users in Multi-Mail List
+1Q3>5uit Multi-Mail0
+`13===========================================================================
+2= WWIV Sysop Message Base Commands =0
+
+1(ENTER) 3=5 Read Next Message
+1#3>5 Go to Message # Entered
+1-3>5 Back Up One Message #
+1A3>5 E-Mail Author of Last Message
+1B3>5ypass (Skip) Current Sub (For N-Scan)
+1C3>5ontinuous Message Read
+1D3>5elete Current Message #
+1E3>5 Save Current Message to Disk
+1L3>5 oad a File to Message
+1M3>5ove Message to Another Sub
+1N3>5ot Auto-purgeable (toggle)
+1P3>5ost a Public Message in Current Sub
+1Q3>5uit to Main Menu
+1R3>5e-Read Last Message #
+1T3>5 See Titles of Next 15 Messages
+1U3>5 Make Current Message NOT Anonymous
+1W3>5 Reply with "Regards" to Last Message0
+`14===========================================================================
+1A3>5dd to Temporary ARC File
+1D3>5ownload Temporary ARC File
+1L3>5ist Files in Temporary Directory
+1Q3>5uit to Transfer Menu
+1R3>5emove a File from Temporary Directory
+1V3>5iew Files in Temporary ARC File
+1T3>5ext Download Files0
+`15==========================================================================
+4WWIV Slash Command Menu
+
+3 > Commands Preceeded by Two Slashes <
+
+  1Net      2Show Network Information
+  1Upload   2Upload a Text or Ansi File
+  1Qscan    2Clear Q-Scan Pointers
+  1CLS      2Clear Screen
+  1Who      2Who is on-line
+  1QWK      2Off-Line Reader
+
+3 > Commands Preceeded by One Slash <
+
+  1Z        2Zip New Messages for Download
+  1O        2Log Off without Logoff Msg
+  1E        2Multiple E-Mail0
+  1C        2Chat Room
+  1R        2Use RIP
+`16=================Slash Menu Transfer area================
+        4 Slash Commands 0
+
+1 Commands Preceeded by One Slash
+5 O 1>2  Log Off without Logoff Message
+5 S 1>2  Zip Up a Listing Of All Files0
+
+1 Other Commands available
+5 ~ List Users with Access Here
+`17===============File Tag Menu===============================
+9‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹2Tag File Menu9‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹0
+9€                          ﬂﬂﬂﬂﬂﬂﬂ€ﬂﬂﬂﬂﬂﬂﬂﬂﬂ                                 €0
+9›   2C1>8 Continue9                   €       2N1>8 No More Tags9                    ﬁ0
+9›   2D1>8 Download Tagged Files9      €       2Q1>8 Quit9                            ﬁ0
+9›   2E1>8 Extended Information9       €       2R1>8 Relist Files9                    ﬁ0
+9›   2M1>8 Move File (Sysop Only)9     €       2T1>8 Tag Files9                       ﬁ0
+9›                                  9     €       2V1>8 View Tagged File9                ﬁ0
+9€                                 €                                          €0
+9ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ0
+`18=================Extract menu=============================================
+1 Available directories0
+
+1 13>2 Extract to Transfer Directory0
+1 23>2 Extract to GFILES or Path\filename0
+1 33>2 Extract to Data Directory0
+1 43>2 Extract to TEMP Directory0
+
+1 Q3>2uit Extract0
+`19===============User On-Line Command Menu====================
+7‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+7€ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ€4 USER ON-LINE COMMANDS 7€ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ€
+7›                           ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ                           ﬁ
+7›1F-1       3>5 Edit User Information       1CTRL-F-5  3>5 Time-out; Drop Carrier   7ﬁ
+7›1F-2       3>5 Toggle Top of Screen Data   1F-6       3>5 Toggle User Alert        7ﬁ
+7›1F-3       3>5 (Dis/En)able Remote Typing  1F-7       3>5 Decrease User's Time by 57ﬁ
+7›1F-4       3>5 Turn Off Chat Call          1F-8       3>5 Increase User's Time by 57ﬁ
+7›1F-5       3>5 Drop Modem Carrier          1F-9       3>5 Temporary Sysop Access   7ﬁ
+7›1SHIFT-F5  3>5 Line Noise; Drop Carrier    1F-10      3>5 (Dis)Engage 2-Way Chat   7ﬁ
+7›1ALT-F-Keys3>5 Auto-Validation Keys        1CTRL-F-10 3>5 (Dis)Engage Regular Chat 7ﬁ
+7›1ScrollLck 3>5 Toggle Sysop Availability   1SHIFT-F-103>5 Drop to DOS              7ﬁ
+7›                                        1V         3>5 Toggle WFC Commands      7ﬁ
+7€‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹€0

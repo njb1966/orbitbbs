@@ -1,0 +1,777 @@
+`1============================================================================
+MAIN MENU HELP:
+
+(NOTE: Not all commands are available to unvalidated users.)
+
+
+MESSAGE COMMANDS
+----------------
+
+S - Scan messages on the current sub-board. This command allows you to read 
+the messages on the sub-board you are currently on. The current sub-board 
+name and number are shown on the main menu prompt.
+
+Q - Quickscan current sub-board. This will read the new messages on the 
+current sub-board.
+
+N - Newscan.  Newscan quickscans all the sub-boards.
+
+P - Post.  This will allow you to post a message on the current sub-board.
+
+R - Remove. This allows you to remove messages you have previously posted. 
+THIS DOES NOT APPLY TO WWIVnet POSTS. WWIVnet posts will still be sent out 
+to the host and distributed throughout the network, unless your sysop has 
+created a special on-line chain or modification that allows you to delete 
+the WWIVnet outgoing post.
+
+* - Board list.  You will be given a list of sub-boards you have access to.
+
+Z - Express newscan. This will read all new messages on all selected 
+sub-boards, but without pausing between messages. This is useful for 
+capturing all new messages, then logging off, and calling back later to 
+reply.
+
+Number - Typing a number will change the current sub-board to that 
+sub-board number.
+
+
+MAIL COMMANDS
+-------------
+
+C - Chat with the sysop. This command turns on a sysop page, which may 
+attract the attention of the sysop.
+
+F - Feedback.  This enables you to send a letter to the sysop personally.
+
+M - read Mail.  This lets you read mail addressed to you personally.
+
+E - E-mail.  You will be able to send mail to other users.
+
+/E - E-mail to more than one user. This will let you send the same piece of 
+mail to up to 20 different people. If the sysop has created one, you also 
+have the option of being able to use a pre-defined mailing list.
+
+
+ACCOUNT COMMANDS
+----------------
+
+Y - Your info.  Information is displayed about your user account.
+
+X - eXpert mode. This will toggle the automatic display of the main menu at 
+each prompt.
+
+D - Default change. This lets you set your screen size, ANSI state, 
+password, set your macros, and the sub-boards you want quickscanned in a 
+N:ewscan, along with several other user options.
+
+K - Kill old E-mail. If you send a piece of mail that you later decide you 
+didn't actually want to send, you can delete it with this command. THIS 
+DOES NOT APPLY TO WWIVnet E-MAIL.
+
+
+BOARD COMMANDS
+--------------
+
+T - File system.  This lets you upload and download files.
+
+A - Auto-message. This allows you to change the auto-message seen when 
+users first log on.
+
+V - Vote.  There are up to 19 questions that you may vote on.
+
+B - BBS list. This will allow you to display the numbers of other BBS 
+systems, to add other systems to the list, and display a current listing of 
+WWIVnet BBS systems.
+
+G - G-files.  These are general-interest files that you may view.
+
+I - Info on system. This will display the logon message and other general 
+information about the system.
+
+L - Log of the day.  This displays a list of users who logged on today.
+
+U - User list.  This shows a list of users of the system.
+
+O - Off the system.  This logs you off.
+
+. - Other (external) programs available.
+
+/O - Log off immediately.
+
+`2============================================================================
+BOARD COMMANDS
+--------------
+
+Q - Quit back to the BBS main menu.
+
+O - Log off the BBS.
+
+/O - Quick log off.
+
+C - Chat with the sysop.
+
+Y - Displays your file transfer statistics.
+
+
+LISTING FILES
+-------------
+
+L - List matching files in this directory.
+
+S - Search for matching files in ALL directories.
+
+F - Find matching file description.
+
+A - Archive listing of interior files. Files that have the extension .ARC 
+actually contain other files in them. This command will list out the files 
+that are containted within them, along with the sizes of the files. You may 
+enter global-filename characters, such as "*.ARC" to list out the interior 
+files for all .ARC files.
+
+N - This will list all the new files since your last logon.
+
+T - Transfer defaults. This will allow you to set your default protocol, 
+which directories will be scanned in an n-scan, and whether or not to do an 
+n-scan of the transfer system after an n-scan of the message base, along 
+with several other options.
+
+P - Set the date for a new file scan. If you wish to see all new files 
+since last week, you may enter a date for last week, and N:ew file searches 
+will list out those files uploaded on or after the date you enter.
+
+B - Download YMODEM Batch. If you marked any files to be downloaded with 
+YMODEM Batch protocol, use this option to download them. You also have the 
+option here of deleting files out of the download queue.
+
+
+FILE TRANSFER
+-------------
+
+U - Upload a file to the current directory.
+
+D - Download a file from the current directory. You may enter global 
+filename characters, such as "*.PAS", and you may download all .PAS files. 
+After listing out information on each matching file, you will be asked for 
+the protocol you wish to use. If you decide you do not wish to download it, 
+hit "Q" or "0", and you will not.
+
+R - Remove file. If you have uploaded a file, and you wish to remove it, 
+you can do so with this option.
+
+Z - Submit file to the sysop. If you want to send a file to the sysop only, 
+use the Z command instead of U.
+
+`3============================================================================
+This command will page the sysop to come to the computer to chat with you.  
+You must enter a reason for chatting, such as "VALIDATION," or some other 
+meaningful reason. The page will continue until you hang up or turn it off 
+by hitting "C" at the main menu again. If you do not wish to do this, just 
+hit <ENTER> here.
+
+`4============================================================================
+Here you may change certain information about your terminal and the way you 
+want the BBS to respond to you. The options are:
+
+1. Screen size. The screen width is usually 40 or 80, although some 
+terminals use 32 or 64. This information is used to format messages for 
+your screen size. The number of lines on your display is also asked for. 
+Most computers have 25 lines per screen.
+
+2. ANSI graphics. If your terminal supports ANSI graphics, you should have 
+this option set ON. It will allow the BBS to change the color of text on 
+your screen and move the cursor around more efficiently. If you have it set 
+on, you will also have to tell whether or not you have a color screen.
+
+3. Pause on screen. If you are using a high-speed modem, some information 
+may scroll off the screen faster than you can read it. You may use ctrl-S 
+or "P" to pause the screen, but it might be easier to use this option. If 
+the pause is set on, the BBS will pause when your screen is full of 
+information, wait for you to hit a key, and then resume.
+
+4. Mailbox. You have the option here of having your mail forwarded to 
+another user, or a user on a WWIVnet system (if this system is a member of 
+WWIVnet). For example, if you will be on vacation you may want your mail 
+forwarded. If you call other WWIVnet BBS systems, and this system is also a 
+member of WWIVnet, you might also want to use this feature to forward all 
+your mail to one mailbox, which reduces the time required on each BBS (by 
+receiving all your e-mail at one location).
+
+5. Configured Q-scan. This lets you identify which sub-boards you want to 
+scan for new messages in a N:ewscan.
+
+6. Change password. If you want to change your password, this option should 
+be used.
+
+7. Change macros. There are three user-defined macros, which can be set 
+using this option. To use these macros, you simply hit Ctrl-D, Ctrl-F, or 
+Ctrl-A (respectively) from ANYWHERE in the BBS, and the macro you have set 
+will be replayed.
+
+8. Colors. If you have the ANSI graphics option set on, you will be able to
+set which colors you would like displayed for prompts, questions, etc.
+
+9. Select full screen editor. If you have the ANSI graphics option turned 
+on, then this option will allow you to select an external full screen 
+editor for use when posting. This option will spit out an error message:
+                    "No full screen editors available."
+...if the sysop has not installed any full screen editors.
+
+A. Extended colors. If you have the ANSI graphics toggle set to 'On', then 
+you will see this option. Turning this option 'On' will allow you to see 
+several different colors when listing files in the transfer section (makes 
+the file lists look more colorful and more easily read).
+
+`5===========================================================================
+This feature enables you to send the same piece of mail to up to 20 
+different users. You may want to do this if you are, say, notifying people 
+of an upcoming meeting.
+
+The options at this menu are:
+? - Print menu
+
+Q - Quit back to main menu
+
+A - Add user numbers (WWIVnet node addresses are not allowed) to the 
+current mailing list. The BBS will present you with a ">" prompt. At that 
+prompt, you will enter a user name or number, ONE PER LINE, until either 
+the list is full or you hit <ENTER> at a blank prompt to terminate input.
+
+M - Use a pre-defined mailing list. If the sysop has created any mailing 
+list files, then a list of the will be presented to you. You simply select 
+the proper mailing list, and the BBS will automatically put the users 
+listed in the mailing list file into the current mailing list.
+
+E - Send multi-mail. Once you have added users to the current mailing list 
+(by using A or M commands), then this option will input the message you 
+wish to send, and then distribute it to all the people in the current 
+mailing list.
+
+D - Delete. This option allows you to delete a user from the current 
+mailing list.
+
+L - List.  This will display all the users in the current mailing list.
+
+`6===========================================================================
+You now are entering the title for a post or email. The title should be a 
+one-line description of what your message is going to be about.
+
+`7===========================================================================
+Here you may specify which sub-boards you want scanned for new messages in 
+a [N]ewscan. In the list, a "*" before the sub-board indicates that that 
+sub-board will be new-scanned. If you do not want a sub-board new-scanned 
+that is marked, just type the number of the sub-board, and it will be 
+un-marked. To re-mark the sub-board, just enter the sub-board number again.
+
+`8===========================================================================
+If you have sent a piece of mail that you decide you actually didn't want 
+to send, you may remove it with this command. Each un-read piece of mail 
+you have sent will be gone through, and you may optionally delete them. For 
+each piece of mail, the destination user, title, and how many days it was 
+sent will be printed out. Your options here are:
+
+R - Read the piece of mail.
+D - Delete it.
+N - Go on to the next piece.
+Q - Quit back to the main menu.
+
+`9==========================================================================
+You are being asked to enter a file mask. Specifying a file mask allows you 
+to specify only files that fit that mask. A mask is specified in standard 
+PC-DOS notation, such as "*.*" to list all files, or "*.PAS" for all files 
+with the .PAS extension, or any other such name, which may include "?" or 
+"*". If you just hit enter without any other input, it will default to 
+"*.*", for all the files.
+
+`10=========================================================================
+You now have a listing of who you have mail waiting from.  You can enter 
+the number of the piece of mail you wish to start reading at, or you can 
+just hit enter to read all the mail you have waiting sequentially, starting 
+at the first piece.
+
+`11=========================================================================
+You are being asked where to start listing the titles of messages. You are 
+given a numeric range of the messages, and you may start listing the titles 
+anywhere in that range. Optionally, you may type "S" to go directly to the 
+message read prompt, or "Q" to quit back to the main menu.
+
+`12=========================================================================
+If you continue (by hitting 'Y'), then you will be logged off the BBS, and 
+connection will be broken.
+
+`13=========================================================================
+You are being asked to enter a date for new files. The date you enter here 
+will be used when you do a new file search ("N"). The files listed in a new 
+file search will be any files that were uploaded on or after the date you 
+specify.
+
+NOTE: The date MUST be in the format of MM/DD/YY (ex. 01/01/90). You should 
+be extra careful to include an extra '0' (ie. 1/1/90 is NOT acceptable).
+
+`14=========================================================================
+You are being asked to identify a user. You may enter the user's name or 
+user number. Optionally, you may also enter only part of the user's name, 
+and the BBS will search through the user list for all users whose names 
+contain the part that you entered.
+
+`15=========================================================================
+This allows you to remove a message you have posted. You will be presented 
+with a list of the messages you have posted on the current board, and you 
+will be asked which one to delete. You may enter the number of the message 
+you wish to delete, or just hit <enter> if you do not wish to delete one. 
+If the post you wish to be removed was posted on a WWIVnet sub-board, then 
+the post will only be removed from this BBS, IT WILL STILL BE SENT TO OTHER 
+WWIVnet BBS systems.
+
+`16=========================================================================
+This is the message read prompt.  In the prompt line, you are told the range 
+of message numbers, and the last message number you have read.
+
+Your options are:
+
+<ENTER> - This reads the next message.
+"-" - Hitting the minus key will read the previous message.
+# - Entering a number will read that message number.
+Q - This will quit back to the main menu.
+B - If you are in a N:ewscan, this will cause you to stop reading the 
+messages on this sub-board, and go on to the sub-board and begin reading 
+new messages there.
+T - This will list the titles of the next 10 messages.
+P - This allows you to post a message at the end of this board.
+A - Auto-reply to last message. This will let you send a piece of mail to 
+the person who wrote the last message you have read.
+R - Re-read the last message.
+W - Post with REgards to the current message (reply to current msg).
+? - Prints out menu.
+
+
+`17=========================================================================
+After entering a filename for upload, the BBS will check to make sure that 
+that filename is valid, and isn't already in use. If it is valid and not 
+currently in use, then you will be asked to make sure you want to upload 
+it. If so, you will be asked for a one-line description of the file. The 
+description should give some general information about the file, such as 
+what it does and/or what version it is. A description may be up to 60 
+characters long. After that, you will be asked if you wish to enter an 
+extended description. This describes the file in more detail, and can be up 
+to 10 lines of 50 characters each. You hit <ENTER> on a blank line to end 
+input there. After entering the descriptions, you will be asked what 
+protocol you would like to use. Hit "?" for a list of valid protocols. 
+After you tell which protocol, the BBS will wait for you to start sending 
+the file. If you get this far, and then decide you don't want to upload it, 
+hit Ctrl-X several times, and wait for the BBS to abort the protocol and 
+return you to the menu prompt.
+
+`18=========================================================================
+Users may vote on certain topics which the Sysop picks. When you first 
+enter the voting section, you will be given a list of topics you may vote 
+on. Enter the number of the topic you wish to vote on. After specifying a 
+topic, you will be given a status of how the votes are so far, and be shown 
+what your current vote is, and asked if you wish to change it. If you do, 
+you will be asked to enter which response NUMBER you wish to change it to.
+
+`19=========================================================================
+The auto-message is read by all users when they first log on. This section 
+gives you three options:
+
+R. Read the current auto-message.
+W. Write a new auto-message.  If you do write a new auto-message, it will 
+be three lines long, each 36 characters long.  Certain users CANNOT 
+use this option due to their access.
+A. Reply to current auto-message.  This will send a piece of mail to the 
+author of the current auto-message.
+
+`20========================================================================
+When you choose this option from the file transfer main menu, you may enter 
+the filename you wish to download using global filename characters, such as 
+"*" and "?". So if you enter, say, "*.PAS", you will be given the option of 
+downloading all matching files in the current directory. You ARE NOT 
+required to enter the file extension.
+
+After you specify a file, you will be given information on that file, such 
+as the description, who uploaded it, and when it was upload, as well as the 
+file length. The file length is given as the number of k long the file is 
+(1k=1024 bytes). The approximate trasfer time is also given, although this 
+is usually an over-estimate if you have a good connection.
+
+You will then be asked what transfer protocol to use. Hit "?" for a list of 
+protocols. If you do not wish to download this file, hit "0", or "Q". If 
+you decide to download the file with YMODEM Batch protocol, it will be 
+added to a "queue." When you wish to download the files marked for Batch 
+protocol, from the download main menu hit "B". You will then have the 
+option of downloading those files.
+
+`21==========================================================================
+Here you may search the file DESCRIPTIONS to find matching entries. You 
+may, for example, search for "BBS", to find any files which may have to do 
+with BBS's. All descriptions are converted to uppercase first, so you do 
+not have to worry about whether to use upper or lower case.
+
+`22==========================================================================
+Here you have 4 main options:
+
+D - Download the files marked for batch transmission.
+
+L - List the files marked for transmission.
+
+R - Remove a file from the queue (by its number).
+
+C - Clear the batch queue.
+
+NOTE: You must have a terminal program which supports batch downloading.
+
+`23==========================================================================
+This option allows you to view the contents of a compressed (archived) 
+file. You first enter the name, with or without an extension, of a file 
+that is in the current d/l directory. The BBS then checks to be sure the 
+filename you typed in is a supported archive format. If it is, then the BBS 
+will list all the file's internal contents. If a compressed format is not 
+recognized by the BBS, I recommend that you contact the sysop for details.
+
+`24==========================================================================
+Here you may specify which directories you want newscanned in a newscan of 
+the transfer section. In the list, a "*" before the directory indicates 
+that that directory will be newscanned. If you do not want a directory 
+newscanned that is marked, just type the number of the directory, and it 
+will be un-marked. To re-mark the directory, just enter the directory 
+number again.
+
+`25===========================================================================
+You may now add the phone number of a BBS to the system list.  You must 
+enter the phone number in the form of ###-###-####.  Then you must enter the 
+name of the system, and any other information about it, such as operating 
+hours.  After that, you will be asked for the maximum baud rate of the BBS. 
+If you do not know what the maximum rate is, just hit return.  After you 
+enter the system name, you will be asked for a 4 character system type, 
+such as WWIV, RBBS, FIDO, WCAT, etc.
+
+`26==========================================================================
+You have just been presented with a list of on-line programs that the sysop 
+has installed. You may now type in the number (listed directly on the left 
+of the on-line program's description) of the on-line program you wish to 
+run, you may hit '?' to get the system to re-list the on-line program 
+descriptions, or you can hit 'Q' to return back to the BBS main menu.  
+On-line programs are also known as "doors", or "chains" on other BBS 
+systems.
+
+`27==========================================================================
+You now can enter the text of your message. Words will be wrapped 
+automatically for you. While writing your message, or after you have 
+finished entering the message, there are several "slash commands" that you 
+may use. You MUST type these in on a blank line.  They are:
+
+/es - This saves the message.
+/ti - This allows you to change the title of the message.
+/esy - This saves the message, and sets it to "anonymous", if that option 
+is available for you at that time.
+/esn - This saves the message, and also sets it to "non-anonymous", if that 
+option is available for you at that time.
+/abt - This aborts the message, and nothing is saved.
+/clr - This clears the message and allows you to start over.
+/li - This lists what you have entered so far, optionally with line numbers.
+/rl - This lets you replace the last line you have entered.  Essentially, it 
+deletes the last line you have typed.
+/c: - this centers a line on the screen.
+/su/str1/str2 - this substitutes str1 in the previous line with str2
+
+Example of centering:
+
+/c:this is centered
+you get:
+this is centered
+
+
+Example of substitution:
+
+"this is some text i am typing."
+/su/some/a lot of
+
+you will get:
+
+"this is a lot of text i am typing."
+
+for your previous line.
+
+Ctrl- keys: The following control keys are available:
+Ctrl-F - Ctrl-F macro
+Ctrl-D - Ctrl-D macro
+Ctrl-A - Ctrl-A macro
+Ctrl-N - backspacing.  This inserts a backspace in your line
+Ctrl-X - Delete entire line.
+Ctrl-W - Back a word.  This deletes the current word you are typing.
+Ctrl-I - Tab.  (or your tab key)
+Ctrl-P - This will allow you to change colors within your text.  To do this, 
+simply hit Ctrl-P followed by a number (0-7).  This will change your 
+current color to that color number. (Go to the default section, 
+option #9 to find which numbers correspond to which colors.) 
+To see the colors, you must have the ANSI option turned on.
+
+`28==========================================================================
+You are now in the "General Text File" section of the BBS. When you first 
+enter, you are presented with a list of sections, which text files are 
+divided up and placed into. Once you choose the desired section (by typing 
+in the number to the left of the section's description), then you will be 
+presented with a list of text files within that section. Here you may 
+choose a text file to read, by hitting the number corresponding to the 
+number to the left of the desired description, or you may hit 'Q' to quit 
+back to the section selection menu. From there, you may choose another 
+section, or hit 'Q' to quit back to the BBS main menu.
+
+`29==========================================================================
+This option will extract the files from the specified archive, and place 
+them in a temporary directory on the BBS's hard drive. You enter the 
+filespec to extract (you may use DOS wildcards such as '?' and '*'), you 
+may hit 'Q' to quit, or simply type '?' by itself for a listing of the 
+archive's internal contents. Once you have extracted all the files you 
+wish, you may then go to the Arc Commands section ('G' from the file 
+transfer menu) and manipulate them (download selected files, view text, 
+etc).
+
+`30==========================================================================
+This section allows the manipulation of files in the BBS temporary 
+directory. In order to use this function, you MUST have first extracted at 
+least one file from an archive, using the 'E' command. After that is done, 
+you are presented with a list of options, they are:
+
+Q - (of course) Quit.  Takes you back to the transfer menu prompt.
+D - Download temp arc. This allows the downloading of the temporary archive 
+created by the 'A' command (see description below). You may download it via 
+all the normal BBS file transfer protocols available.
+V - List temp arc. This command lists the contents of the temporary archive 
+(created by the 'A' command, described below).
+A - Add temp arc. This command prompts you for a filespec (DOS wildcards 
+ARE allowed) of files to add to the temporary archive. The files specified 
+must already exist in the temporary directory. Once the filespec is 
+determined as correct, then the BBS will execute the archiver (as installed 
+by the sysop) to compress JUST the specified files into one archive, for 
+later download.
+R - Remove files from temp. This function prompts you for a DOS filespec 
+(again, DOS wildcards are supported). Once the filespec you entered has 
+been determined as acceptable, then the BBS will erase the specified files 
+from the temporary directory.
+L - List temp dir. This function lists all the files currently in the 
+temporary directory, and then lists the free space in the temporary 
+directory.
+T - This is another powerful command. This allows viewing of ANY text file 
+in the temporary directory (again, DOS wildcards are allowed in the 
+filespec). This is useful to view, say, the first few pages of 
+documentation of a file to find out what is new. This saves a lot of time, 
+and perhaps money too.
+? - Prints the menu of commands available here at this prompt.
+
+These are VERY useful commands. For instance, say you wanted a 10k text 
+file, but it was in a 450k archive. You could extract it from the archive 
+(using the 'E' command at the transfer menu) into the temporary directory.  
+After that, you could the text file to the temporary archive (compressing 
+it even smaller) and download just that text file. This saved you the time 
+from downloading that large 450k archive, just for one tiny little file.
+
+`31==========================================================================
+This command will allow you to move a file from one directory to another.  
+This is useful if a user uploaded a file to the wrong file area, or if you 
+wish to move a file out of public access (if you suspect it may have a 
+virus, for example).
+
+After entering a file mask for the file(s) you wish to move, the system 
+will prompt you, for each file, if you wish to move it or not. If you do, 
+it will prompt you for the directory to move it to. Hitting '?' at this 
+prompt will give you a list of possible directories.
+
+`32==========================================================================
+This section allows you to change several options in your user status.  
+These options are:
+
+1 - Set N-Scan directories. This option allows you to set which d/l 
+directories you want to scan for new files, whenever you use the 'N' 
+command at the transfer main menu, and also when(if) you scan for new files 
+after reading new messages.
+
+2 - Set default protocol. This option allows you to set your default 
+file transfer protocol (such as Xmodem, Ymodem, Ymodem BATCH, and any other 
+external protocols the sysop has chosen to install). This option is used to 
+speed along file transfers. Whenever a "Protocol" prompt is encountered, 
+setting this will allow you to simply hit <ENTER> and begin downloading 
+with the chosen default protocol.
+
+3 - Set N-Scan after message base. This toggle option allows you to specify 
+whether or not you wish to scan for new files after you read new messages 
+(N:ew-scan).
+
+4 - Number of lines of extended description to print. Here you may specify 
+the maximum number of lines of an extended file description to print (when 
+L:isting d/l directories). Setting this to "0" will tell the BBS NOT to 
+print any extended description, while setting it to "10" will tell the BBS 
+to print out every line of each extended description listed.
+
+`33==========================================================================
+This option allows you to make a "macro", or a stored string, for use 
+anywhere in the BBS. Here you may include any character, or string of 
+characters in your macro. If the character is a Ctrl-Key, then a carat (^) 
+will appear before the letter. You may not enter Ctrl-A, Ctrl-D, or Ctrl-F 
+in your string.
+
+`34==========================================================================
+Your options, for each piece of mail that you have waiting, are:
+
+D - Delete the piece of mail.
+I - Ignore it.  Keep it in your "mailbox" so you may come back and read it 
+again later.
+R - Re-read the letter.
+A - Auto-reply to the letter.  This deletes the letter, and enables you to 
+send a letter in reply to whoever wrote it.
+S - Save the message and reply to it.
+F - Forward the mail.  If you enter F, you will be asked for the name 
+or number of the user to forward it to.  If you decide not to forward 
+it, just hit enter at this prompt.
+Q - Quit out of mail read, leaving the remaining letters in your mailbox.
+
+`35==========================================================================
+This option allows you to forward your mail to a different user on this 
+BBS, or if this BBS is on WWIVnet, then you may forward your mail to a 
+particular user on another system.
+
+`36==========================================================================
+This option allows you to select the different colors that are used in 
+different places around the BBS.
+
+`37==========================================================================
+This option allows you to change your full screen editor default. If the 
+sysop has no editors installed, the BBS will tell you so, otherwise, it 
+will present you with a list of full screen editors available. You may 
+choose any full screen editor, OR hit '0' to use WWIV's built-in non-full 
+screen editor.
+
+`38==========================================================================
+This command allows you to remove a file.  You may enter the file mask 
+that you wish to use to specify which file(s) to remove.  For each 
+matching file, you will be asked if you really wish to remove it. 
+Additionally, if you are a co-sysop, you will be prompted if you want to 
+actually delete the file (as opposed to just removing it from the BBS 
+database of available files, but leaving the file on the hard disk).  If 
+you do remove the file, you will be asked if you want to remove the 
+upload credit the user got for uploading the file.
+
+`39==========================================================================
+This option allows you to change a specified file's information. You may 
+change its MS-DOS filename, its description, or its extended description. 
+MS-DOS wildcards are allowed.
+
+`40==========================================================================
+This allows you to select your default file protocol.  If you select a 
+default protocol, whenever you upload or download a file, this protocol 
+will be used if you don't explicitly specify a different protocol.
+
+`41==========================================================================
+Here you may specify the maximum number of lines of an extended file 
+description to print (when L:isting d/l directories). Setting this to "0" 
+will tell the BBS NOT to print any extended description, while setting it 
+to "10" will tell the BBS to print out every line of each extended 
+description listed.
+
+`42==========================================================================
+The Uedit search allows you to enter a customized search string, 
+specifying which users you wish to view.  The search string is formatted 
+similar to the argument to an 'if' statement in C, but is slightly 
+different.  The search string consists of 'function calls' and logical 
+operators.
+
+Functions are:  SL, DSL, AR, DAR, SEX, AGE, LASTON, AREACODE, REALNAME.
+
+Numerical functions (SL, DSL, AGE, LASTON) are always modified by a < or 
+>.  Non-numerical functions (AR, DAR, SEX, AREACODE) take ONE parameter.  
+For example, you can specify only one AR, not a list.
+
+Parenthesis can be used anywhere for grouping.  The symbol '&' stands for 
+a logical 'and', and '|' stands for logical 'or'.  Comparison operators 
+(&,|) are interpreted left to right always, unless they are grouped 
+using parens.  The symbol '!' before a function call is a logical 'not'.  
+Function parameters are passed between square brackets [].
+
+An example search string is:
+
+(SL<[50] & LASTON>[90]) | LASTON>[120]
+
+Matching users are:
+  A user with SL<50 and hasn't been logged on in 90 days, or
+  A user who hasn't been logged on in 120 days.
+
+Thus, if you wish to delete inactive users, but wish to give more time 
+for higher SL users, you could use a string such as that.
+
+You can always enter a simple string such as 'AREACODE[213]' to find all 
+the users in the 213 area code, or 'SEX[M] & AGE>[20]' for all males 21 
+and over.  Or, perhaps 'AR[A]'.  Note, however, if you want to match all 
+users with an AR of A and B, you must say 'AR[A] & AR[B]'.  'AR[AB]' will 
+-NOT- work.
+
+If your parens or brackets don't match, or if you misspell a function, 
+there will be no error message.  It won't hurt the BBS at all, but which 
+users it matches will be pretty random.
+`43==========================================================================
+File tagging is a concept new to WWIV and still in its early stages.  If
+you have comments or suggestions please E-Mail the system operator.
+
+1C2)ontinue
+
+  Will display the next screen of available files and pause at the
+  end with the same opportunity to choose operations.
+
+1D2)ownload
+
+  Will begin the batch download of previously tagged files.  If none have
+  been tagged, none will be sent.
+
+1E2)xtended
+
+  Displays extended description of a file if one is available.
+
+1N2)on-stop
+
+  Will display the rest of the list with no further opportunity to
+  choose operations.
+
+1Q2)uit
+
+  Returns to the transfer section main menu.
+
+1R2)edisplay
+
+  Will refresh the display of the current page.
+
+1T2)ag
+
+  Will mark a file for download later.  You can specify multiple files
+  with a single tag by seperating the numbers with either a space,
+  a comma or a semi-colon.  IE: 1,2,3,4 would tag file 1, 2, 3 and 4
+  for download.
+
+1V2)iew
+
+  Will display the contents of an archive.
+
+`44==========================================================================
+WWIV's Chat Room has a few simple commands. These are:
+
+/Q : Quit the Chat Room
+/W : Shows who is available
+
+To send a message to another instance, you must precede the message with
+the instance number, like: "1 This is going to instance 1." Once you have
+"trained" it you need not type the instance number again unless you wish
+to switch to sending messages to another instance.
+
+To send a broadcast to all available instance (including those not in the
+Chat Room), simply begin the message with a backslash (\), like: "\This
+message goes to everyone."
+`45==========================================================================
+After selecting a network to list (if applicable), you will be presented
+with a list of options to use for searching the network node list.
+
+After selecting an option which requires a parameter (eg, which area
+code, for an area code list), you will be prompted for the parameter.
+
+You will then be asked if you wish region information included.  If you
+wish region info, each group of systems will be preceeded by an
+indication of the geographical region in which the systems reside (based
+upon area code).
+
+Finally, the matching systems will be listed.

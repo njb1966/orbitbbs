@@ -1,0 +1,100 @@
+   We all have trouble from time to time - but there is a beautiful solution
+                        to every problem.  Always.
+
+
+PROBLEM:  It keeps saying 'no drop file defined, running in local mode' and
+          asking for my name before the game even starts!
+
+Solution: You probably are running START.BAT without any parms, and it's
+          defaulting to node 0.  Node 0 comes defined as 'local'.  Some BBS
+          types (I've heard Wildcat 4.XX) do not send parms to batch files
+          correctly - a way around this is to run ANOTHER batch file that
+          DOES run it correctly.  Ie, run TEOS.BAT from the BBS and have
+          it contain:
+
+          cd \teosdir
+          CALL START 1
+
+          (this would load node 1's configuration)
+
+          NOTE:  If you try, you CAN change node 0's settings from BBS type
+          LOCAL to something else so it behaves like a regular node.
+
+PROBLEM:  I'm calling in RIPterm 154 and it's putting the text input boxes
+          in the wrong place sometimes!
+
+PROBLEM:  Something is terribly wrong - I'm losing my EMS memory everytime
+          TEOS is run or some other odd thing!
+
+          To stop TEOS from touching EMS memory add parm NOEMS when you run
+          it.  (example:  START 1 NOEMS)
+
+PROBLEM:  It just says "Bad command or file error" a couple times when
+          START.BAT is run!
+
+SOLUTION: Before you run the START.BAT file, switch to the dir it is in.
+          Otherwise the PLANETS.EXE/ect file will not be found.
+
+SOLUTION: TEOS assumes that the users screen is 24-80.  I may eventually
+          rewrite those routines - but it would be slower, I wouldn't be
+          able to use a direct gotoxy type ansi command, I would have to
+          go to the beginning of the line then move the curser forward to
+          the correct spot.
+
+          A FIX THOUGH:  Change the font to 'System 25/80' in RIPterm, and
+          then turn status bar on under the options menu. 
+
+PROBLEM:  My trader.dat file is screwed up for some reason!
+
+Solution: A backup is created nightly called TRADER.BAK, copy this to
+          TRADER.DAT - if you are lucky it was created before the trader.dat
+          was corrupted.
+
+PROBLEM:  It's saying people are on that logged off hours ago!
+
+Solution: This can happen when the computers power is disrrupted or if TEOS
+          is running in a window and you 'close it' without letting TEOS
+          do its exit procedures.
+
+          Just don't worry about it - at midnight it will figure out that
+          the person isn't on anymore.
+
+PROBLEM:  I get runtime error 203 when its loading!
+
+Solution: You don't have enough conventional memory free.  If you use DV,
+          try using QEMM to free some up.   
+
+          If you use Renegade BBS, use the Swap to disk option.  If you use
+          WWIV use the 'Shrink BBS' option.  if you use..<drones on>..Just
+          read the docs to your BBS!
+
+PROBLEM:  I run TSX BBS and crazy things happen when it prompts people for
+          there name in that blue box.
+
+Solution: The TSX people are looking into it - no solution at this time.  It
+          may be that the TSX 'ansi interpreter' is not 100 % compatible with 
+          complex ansi sequences.
+
+PROBLEM:  It locks up when returning to the BBS.  HELP!
+
+Solution: Use a locked fossil driver at 19200, 38400 or 57600.  This will
+          fix com routine freeze problems.                          
+
+PROBLEM:  Seems weird under Win 95 - Why?
+
+Solution: Set idle sensitivity to LOW - You can do this by editting the
+          PROPERTIES setting for you dos window.
+
+PROBLEM:  I have a bug report, or problem not addressed anywhere in the
+          this file!  I want to bug you about it!
+
+Solution: Great, we love to get feedback!  But please fill out BUGRPT.FRM
+          and send/e-mail that.  That way, we know more about your system
+          ect, and don't have to prod you for that info later.
+
+          If you do NOT use this medium, and instead say: "TEOS ain't working
+          right, fix it", don't expect a helpful answer!!! <G>
+
+PROBLEM:  I sometimes have erotic dreams about family members.
+
+Solution: Have not a clue.  If you find out, lemmie know.

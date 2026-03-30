@@ -1,0 +1,41 @@
+                             DDSETUP PROGRAM
+                              Copyright 1995
+                                   By
+                             By Steve Lorenz
+
+                               INTRODUCTION:
+                               ------------
+          Although we do our best to clearly explain how to manually
+          configure the required CTL file, there are still a number
+          of people who cannot for some reason get it right.  The
+          enclosed DDSETUP.EXE program should solve this problem.
+          It is FREEWARE and may be distributed with your own door
+          programs at no charge and without any permission required.
+          I do, however, retain all copyrights to it.
+
+                                REQUIREMENTS:
+                                ------------
+          None, other then a mouse would be helpful.
+
+                                Files Included
+                                --------------
+          Below is a listing of all files for the DDSETUP.ZIP Package:
+
+          DDSETUP.DOC  - The text file you are reading.
+          DDSETUP.EXE  - The DDSETUP program for making CTL configuration
+                          files.
+          HELP.TXT     - Support file required for DDSETUP.EXE program.
+
+                    Installation and Preparation for Use
+                    ------------------------------------
+ 
+         1. Move the archive package to a temporary directory and "unzip".
+
+         2. Distribute the DDSETUP.EXE program with you own door program
+            package. Just make sure the HELP.TXT file goes along with it.
+
+         3. Try running DDSETUP.EXE first to get a feel for how it works.
+
+         4.  That's it!  Enjoy and good luck.
+
+  

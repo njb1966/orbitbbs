@@ -1,0 +1,4488 @@
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                                ÜÛ²ÛÜ    ÜÛßÛÜ    ÜÛÛÛÜ
+                               ŞÛİ±ŞÛİ  ŞÛİ ²Ûİ  ŞÛİ²ŞÛİ
+                               Û² ° ÛÛ  ÛÛ  ±ÛÛ  ÛÛ ± ÛÛ
+                               ÛÛ   ÛÛ  ÛÛ  °ÛÛ  ÛÛ ° ÛÛ
+                               ÛÛ ° ßÜ  ÛÛ   ßÜ  ÛÛ   ßÜ
+                               ßÜ   ÛÛ  ßÜ  °ÛÛ  ßÜ ° ÛÛ
+                               ÛÛ °ŞÛİ  ÛÛ   ß   ÛÛ °ŞÛİ
+                               Û²ÛÛ²ß   Û²  °    Û²ŞÜ²ß 
+                               ±² °ßÜ   ²±       ²±   Ü²
+                               ²Û   ²²  ±²  °    ±² ° ²Û
+                               Ş²İ Ş²±  ²ÛÜ      ŞÛİşŞ²İ
+                                ±ÛÜ²±°  Ûß   988 ÜßÛÜÛ± 
+                                ° °±°   ²           ² ° 
+                                   °    ±           ±   
+                                        °           °   
+     
+                                b a r r e n  r e a l m s
+                                e    l     i     t     e
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                                Barren Realms Elite v0.988
+                              Copyright (c) 1999 John Dailey
+                            Written & Programmed By John Dailey
+     
+                             Originally created by Mehul Patel
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Licensing Information °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     This software is licensed, not sold.  The software in this package is
+     licensed according to the terms of the following software license
+     agreement:
+     
+     SOFTWARE LICENSE AGREEMENT
+     
+     Please read this license agreement before using this software.  Use of
+     this software acknowledges your agreement to the terms of this software
+     license agreement.
+     
+     If you do not wish to follow the terms of this license agreement, you
+     must remove this software from your system.  The only portion of the
+     software that you may retain is the distribution archive itself which
+     may be used solely for distribution purposes.
+     
+     DEFINITIONS:
+     
+     The term "software" as used in this agreement means the full system and
+     all utility computer programs contained in the distribution archive,
+     together with any updates subsequently supplied by John Dailey.
+     
+     The term "related materials" refers to any and all additional materials
+     provided in this package, printed or otherwise, supplied by John Dailey
+     for use with the Software.
+     
+     TERMS:
+     
+     You are granted a limited license to use this software for a sixty-day
+     trial period.  You are encouraged to run this software for the full
+     sixty-day period to ensure proper operation.  After expiration of the
+     trial period, you must either register with the author or remove the
+     software from your system.  No special "demo" key files are required
+     during the trial period.  The registration fee is $15.00 U.S. Funds.  A
+     registration form is included in the distribution archive as
+     "REGISTER.DOC."  Once registered, you will receive a license to use the
+     software on your system for an unlimited period of time.
+     
+     Barren Realms Elite is Copyrighted (c) 1999 by John Dailey.  All rights
+     are reserved.  You may copy the software and documentation for backup
+     purposes.  You also may copy and share UNMODIFIED copies of the
+     distribution archive, providing that the archive and files contained are
+     not modified in any way, nor is there any fee charged for distributing
+     the software.
+     
+     You may not sell this software for a fee and/or distribute this software
+     along with other products without the expressed written permission from
+     John Dailey, nor may you modify or remove the copyright notice from the
+     program or the documentation.
+     
+     You may not alter the machine-readable object files or program
+     documentation files for any purpose including but not limited to;
+     Defeating the internal key system structure for purposes of gaining an
+     unlawful registration or; Modifying the program copyright notice or any
+     other text therein.
+     
+     Those who register this program, will receive a non-transferable
+     registration number.  This number will be delivered either by personal
+     upload, electronic e-mail, or postal service.  For registrations being
+     returned by postal mail, allow up to 6 weeks for delivery to locations
+     outside the continental U.S.  For locations within the continental U.S.,
+     allow 2-3 weeks for delivery.  All registrations are processed in a
+     timely manner and usually only take a few days to deliver.  However,
+     when unforseen circumstances arise, registration turnaround times may be
+     delayed.
+     
+     John Dailey reserves the right to revoke software licenses in lieu of
+     any violation of the terms of this license agreement.
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Warranty And Disclaimer °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY EXPRESSED OR IMPLIED
+     WARRANTY OF ANY KIND.  JOHN DAILEY DOES NOT WARRANT, GUARANTEE, OR MAKE
+     ANY REPRESENTATIONS REGARDING THE USE OF, RESULTS OF, MERCHANTABILITY OR
+     FITNESS FOR A PARTICULAR USE OF THE SOFTWARE.  SHOULD THE SOFTWARE PROVE
+     DEFECTIVE, YOU (AND NOT JOHN DAILEY) ASSUME THE ENTIRE COST OF ALL
+     NECESSARY SERVICING, REPAIR OR CORRECTION.  FURTHER, JOHN DAILEY DOES
+     NOT WARRANT, GUARANTEE, OR MAKE ANY REPRESENTATIONS REGARDING THE USE
+     OF, OR THE RESULTS OF THE USE OF THE SOFTWARE IN TERMS OF CORRECTNESS,
+     ACCURACY, RELIABILITY, CURRENTNESS, OR OTHERWISE; AND YOU RELY ON THE
+     SOFTWARE AND RESULTS SOLELY AT YOUR OWN RISK.  JOHN DAILEY WILL NOT BE
+     LIABLE FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO SYSTEM DAMAGE,
+     SERVICE, REPAIR, CORRECTION, LOSS OF PROFIT, LOSS OF SAVINGS, OR ANY
+     OTHER INCIDENTAL, CONSEQUENTIAL, OR SPECIAL DAMAGES OF ANY NATURE
+     WHATSOEVER RESULTING FROM THE USE OR INABILITY TO USE THIS SOFTWARE.
+     
+     THE ENTIRE RISK AS TO THE RESULTS AND PERFORMANCE OF THE PROGRAM IS
+     ASSUMED BY YOU.  
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Archive Information °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Barren Realms Elite is being distributed in a secured archive form
+     utilizing the ARJ archiving software (Copyright (c) Robert Jung) for
+     maximum compression and ease of portability.
+     
+          ARJ Security Envelope
+     
+          Due to the unsecured distribution method of shareware, the Barren
+          Realms Elite self-extracting archive has been archived with the ARJ
+          security envelope feature.  The security envelope makes it nearly
+          impossible for anyone, other than the original creator of the
+          archive, to modify the archive in any manner, thus somewhat
+          ensuring that no files will be missing, modified, or infected with
+          a virus.
+     
+          Upon extraction of the archive, you should see the following
+          message displayed:
+     
+          *** Valid ARJ-SECURITY envelope signature:
+          *** John Dailey R#2890
+     
+          If you do not see this message displayed, DO NOT execute the
+          software enclosed, as the archive has most-likely been tampered
+          with or is not an archive created by the author.  You may acquire
+          a valid and secured archive of the current version of this software
+          by contacting John Dailey at any of the addresses and/or sites
+          listed at the end of this documentation.
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Distribution Of Barren Realms Elite °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     The Barren Realms Elite archive may be distributed freely in its
+     unmodified, security-sealed, archived form.  You may freely use, copy,
+     and distribute BREV988.EXE provided that no fee is charged for such use,
+     copying or distribution.  It is recommended and highly encouraged that
+     you upload the Barren Realms Elite archive to all of your favorite
+     bulletin boards and on-line services.
+     
+     The Barren Realms Elite software, and the associated files are copyright
+     (c) 1999 John Dailey, all rights reserved.
+     
+     The distribution archive MUST be distributed in the format originally
+     released as BREV988.EXE with the ARJ security envelope as created by the
+     author.  If you should desire to distribute the Barren Realms Elite
+     archive in another archive format, please archive the BREV988.EXE as one
+     file inside the other archive.  Re-archival of the software as separate
+     files will not include the ARJ security envelope and invalidates your 
+     license agreement to use this software.
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Table Of Contents °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     File Information . . . . . . . . . . . . . . . . . . . . . . . . .   1
+     
+     Introduction/What Is Barren Realms Elite . . . . . . . . . . . . .   3
+     
+     Game Rating. . . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     
+     System Requirements. . . . . . . . . . . . . . . . . . . . . . . .   5
+     
+     Quick Installation . . . . . . . . . . . . . . . . . . . . . . . .   6
+     
+     Upgrading From Previous Versions . . . . . . . . . . . . . . . . .   8
+     
+     Tips For Running On-line . . . . . . . . . . . . . . . . . . . . .   9
+     
+     Installing Barren Realms Elite For The First Time  . . . . . . . .  10
+     
+     Sysop Operating Information. . . . . . . . . . . . . . . . . . . .  12
+     
+     Multinode Notes. . . . . . . . . . . . . . . . . . . . . . . . . .  14
+     
+     Command-Line Options . . . . . . . . . . . . . . . . . . . . . . .  16
+     
+     Starting The Game. . . . . . . . . . . . . . . . . . . . . . . . .  19
+     
+     Playing Barren Realms Elite. . . . . . . . . . . . . . . . . . . .  21
+     
+     Advanced Configurations  . . . . . . . . . . . . . . . . . . . . .  38
+          The Dropfile Reader SRDOOR.EXE. . . . . . . . . . . . . . . .  38
+          The RESOURCE.DAT File . . . . . . . . . . . . . . . . . . . .  41
+          Additional ANSI Files . . . . . . . . . . . . . . . . . . . .  47
+     
+     InterBBS League Configuration  . . . . . . . . . . . . . . . . . .  48
+          Becoming a League Coordinator . . . . . . . . . . . . . . . .  50
+          Sample InterBBS Configuration Files . . . . . . . . . . . . .  51
+          Local InterBBS Setup. . . . . . . . . . . . . . . . . . . . .  59
+     
+     Barren Realms Elite Support Information. . . . . . . . . . . . . .  64
+               E-Mail Addresses . . . . . . . . . . . . . . . . . . . .  64
+               Postal Mailing Address . . . . . . . . . . . . . . . . .  64
+               Bulletin Board System. . . . . . . . . . . . . . . . . .  64
+               Echoed Message Areas . . . . . . . . . . . . . . . . . .  64
+     
+     Registration Information . . . . . . . . . . . . . . . . . . . . .  65
+     
+     Author's Notes And Credits . . . . . . . . . . . . . . . . . . . .  67
+     
+     Appendix A - Important Notes . . . . . . . . . . . . . . . . . . .  68
+          ANSI Driver . . . . . . . . . . . . . . . . . . . . . . . . .  68
+          Maintenance Related Issues. . . . . . . . . . . . . . . . . .  68
+     
+     Appendix B - Trouble Shooting. . . . . . . . . . . . . . . . . . .  69
+     
+     Appendix C - Developer Information . . . . . . . . . . . . . . . .  72
+     
+     Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  74
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° File Information °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Upon unarchiving the Barren Realms Elite distribution archive, the
+     following files will be present:
+     
+         README  .1ST   Important installation and archive information
+         BRE     .EXE   Barren Realms Elite game executable
+         BRE     .OVR   Barren Realms Elite game overlay
+         BREDATA .EXE   Program files
+         INSTALL .CFG   Install configuration file
+         INSTALL .EXE   Installation software
+         SRDOOR  .EXE   Door dropfile reader software
+         UNPACK  .BAT   Installation batch file
+         FILE_ID .DIZ   BBS archive description file
+     
+         9 files total
+     
+     Again, please be aware of the ARJ-SECURITY ENVELOPE, and that it is in
+     place when you unarchive the Barren Realms Elite files from the
+     distribution archive.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 1
+     
+     After installation is complete and once game play has began, the
+     following additional files will be present in the Barren Realms Elite
+     directory:
+     
+         BRE.BAT             BRE batch file created by INSTALL.EXE
+         BREREG.DAT          BRE Registration data file
+         RESOURCE.DAT        Configuration file created by INSTALL.EXE
+         SETUP.SR            Config file for SRDOOR by INSTALL.EXE
+     
+         \BACKUP             Backup directory for GAME.DAT
+     
+         \DATA\REPORTS       Directory for various report text files
+         \DATA\BRE.LOC       Barren Realms Elite log file
+         \DATA\GAME.DAT      Game data file
+     
+         \DOCS\BBS.SAM       Sample BBS.CFG InterBBS config file
+         \DOCS\BRE.DOC       Barren Realms Elite documentation
+         \DOCS\BRNODES.SAM   Sample BRNODES.DAT InterBBS config file
+         \DOCS\REGISTER.DOC  Registration information and form
+         \DOCS\ROUTE.SAM     Sample ROUTE.CFG InterBBS config file
+         \DOCS\WHATSNEW.DOC  Revision history file
+     
+         \GAME\ATTACK.HLP    Barren Realms Elite help database file
+         \GAME\BRE.ANS       Splash screen for ANSI terminals
+         \GAME\BRE.TXT       Splash screen for non-ANSI terminals
+         \GAME\BREEND.ANS    Exit screen for ANSI terminals
+         \GAME\BREINS.TXT    Barren Realms Elite instruction text file
+         \GAME\BULLETIN.LST  Bulletin text file
+         \GAME\EVENTS.DAT    Built-in events configuration file
+         \GAME\GAMEVER.DAT   Game version data file
+         \GAME\IPNEWS.DAT    
+         \GAME\IPREPORT.DAT
+         \GAME\NEWPLAY.TXT
+         \GAME\INATTACK.HLP  Barren Realms Elite help database file
+         \GAME\MAGIC.DAT     Magic text display database file
+         \GAME\MAGIC.HLP     Barren Realms Elite help database file
+         \GAME\NEWPLAY.TXT   New player welcome text
+         \GAME\NEWS.DAT      News reporting data file
+         \GAME\NODEDAT       Barren Realms Elite data file IBBS related
+         \GAME\PEOPLE.HLP    Barren Realms Elite help database file
+         \GAME\RACE.HLP      Barren Realms Elite help database file
+         \GAME\REQS1.TXT     Building requirements text - ASCII 1 of 2
+         \GAME\REQS1.ANS     Building requirements text - ANSI 1 of 2
+         \GAME\REQS2.ANS     Building requirements text - ANSI 2 of 2
+         \GAME\REQS2.TXT     Building requirements text - ASCII 2 of 2
+         \GAME\RESET.HLP     Barren Realms Elite help database file
+         \GAME\TREATY.HLP    Barren Realms Elite help database file
+         \GAME\WAR.HLP       Barren Realms Elite help database file
+     
+         \OUTBOUND           Directory for outbound InterBBS packets
+
+
+
+
+                                        Page 2
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Introduction/What Is Barren Realms Elite °°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Barren Realms Elite is a 25-player strategic war-game.  The setting is
+     in the future - nuclear destruction has spread throughout the planet,
+     and now only a vast barren void exists.  You, as a baron under a great
+     king, must expand your barony throughout the planet, taking advantage of
+     natural resources such as rivers and mountains to become the ultimate
+     baron.  This task is not easy though -- you must keep your population
+     content, while maintaining a military large enough to defend your empire
+     against other barons.  You must balance size and strength, attack, trade
+     with, and make alliances with other barons.  Pirates throughout the
+     planet will constantly plunder the great leaders -- making your job even
+     harder.
+     
+     But there's one more enemy you may face.  Barren Realms Elite's
+     Inter-BBS capabilities allow you to hook up with up to 254 other BBS's
+     for head-to-head competition.  Expand alliances throughout the world -
+     the real world - and work as a team fighting for your king and planet.
+     
+     Barren Realms Elite is a simple to play and learn game, and is very
+     configurable so the sysop can make his/her game unique.  We have tried
+     to make Barren Realms Elite as simple to install and maintain as
+     possible, and neither the InterÄBBS or Local play really requires much
+     maintainence by the sysop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 3
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Game Rating °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     As a service to parents, and because I feel that there is a great need
+     for parents to know what their children are doing in cyberspace, I've
+     included my own "rating" as to the content of this game.  Please keep in
+     mind that this rating is STRICTLY my own opinion, and serves ONLY as a
+     guide for choosing whether or not your children should be allowed to
+     play this game.  This rating may or may not apply to all children.  In
+     my opinion, any individual that has been taught the difference between
+     fantasy and reality should enjoy this game, while at the same time NOT
+     going crazy with the minute amount of violence portrayed.
+     
+     I have given this game a rating of "PG" for Parental Guidance.  Game
+     play in Barren Realms Elite is highly strategic and combatitive.  During
+     the course of a game period, players build armies and perform a range of
+     teamwork organized destruction against other players.
+     
+     The software as written by myself contains no vulgar language or sexual
+     connotations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 4
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° System Requirements °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     In order to run properly, Barren Realms Elite requires the following:
+     
+         IBM PC compatible computer
+         280KB minimum conventional RAM
+         A hard or floppy disk with at least 820KB available
+         MS-DOS v3.23 or greater or equivalent
+     
+     To utilize the Barren Realms Elite software with your BBS system will
+     require the following in addition to the above:
+     
+         A Hayes compatible modem
+         Bulletin Board System software
+     
+     To play Barren Realms Elite in a inter-BBS league, you will require the
+     following in addition to ALL of the above:
+     
+         Front-end mailer software or some means of transferring inter-BBS
+         packets.
+     
+     Optional suggested system features to get the most out of Barren Realms
+     Elite include the following:
+     
+         A hard disk with cache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 5
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Quick Installation °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Although I feel that, as a sysop, you should read the Barren Realms
+     Elite documentation from start to finish, I realize that by now, you're
+     eager to get Barren Realms Elite up and running.  If you are upgrading
+     from a previous version of Barren Realms Elite, please refer to the
+     section below on upgrading.
+     
+     Whatever the case, the Barren Realms Elite documentation files have been
+     laid out so as to be excellent reference tools when you encounter
+     problems.
+     
+     
+     This quick installation assumes that:
+     
+         o    You have a basic knowledge and understanding about DOS and
+              batch files.
+     
+         o    You have an understanding about your bulletin board software,
+              and how to call on-line software from it.
+     
+         o    You are installing Barren Realms Elite on a single-line system.
+     
+     If you do not meet all of the above requirements, please refer to the
+     section "Installing Barren Realms Elite For The First Time" for a
+     complete walkthrough of the installation process.
+     
+     For sysops who will be utilizing Barren Realms Elite in multi-node, it
+     is recommended that you at least install and try out the software with
+     one node first before attempting a multi-node setup.
+     
+     Barren Realms Elite must be executed in its own subdirectory.  Your BBS
+     ideally should call a batch file which should change to this
+     subdirectory, execute the game, change back to your BBS subdirectory,
+     and return to your BBS.  If your BBS can't execute a batch file, you may
+     have to run the game from your main BBS subdirectory.
+     
+     
+     To install the Barren Realms Elite software follow these easy steps:
+     
+         1.   Make a subdirectory anywhere on your hard disk to contain the
+              Barren Realms Elite game (C:\BBS\BRE for example).  Place the
+              main Barren Realms Elite self-extracting archive into this
+              directory and run it.  Again, make sure the ARJ-SECURITY
+              ENVELOPE is present and valid.
+     
+         2.   Type UNPACK to run the unpack batch file which unarchives all
+              of the Barren Realms Elite game files and places them in the
+              proper subdirectories.
+
+
+
+                                        Page 6
+     
+         3.   Run INSTALL.EXE from your main Barren Realms Elite directory
+              (C:\BBS\BRE for example).  This program will assist in setting
+              up the doorfile information, door configuration and creating a
+              runtime batch file.
+     
+              The doorfile information allows BRE to interpret the doorfile
+              created by the BBS every time it runs a door.  Currently there
+              is support for a myriad of BBS tpes and configurations.  If
+              yours is not listed, you will need to setup the software
+              specifically for your system.
+     
+              Further information for other doorfiles is covered in the
+              section regarding SRDOOR.
+     
+         4.   Now install the door into your BBS by having it run the batch
+              file that you had created with the help of INSTALL.EXE.
+     
+         5.   Add the following menu option to your on-line software menu:
+     
+                   Barren Realms Elite v0.988
+     
+         6.   Reset the game by running the command line:
+     
+                   BRE RESET
+     
+              You *MUST* do this prior to running the software or it will not
+              function at all.
+     
+         7.   Test out the software to make sure everything is working
+              properly, and you're all set!  You can run Barren Realms Elite
+              at this point from the DOS command line in local mode (without
+              a BBS dropfile) by utilizing the included LOCAL.BAT batch file:
+     
+                   LOCAL.BAT
+     
+              at the DOS prompt.  The software will prompt you for a player
+              name.
+     
+         Installation of the Barren Realms Elite software is now complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 7
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Upgrading From Previous Versions °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     To upgrade from a previous version of Barren Realms Elite, follow these
+     easy to follow steps below.  Upgrading from version 0.98* of the
+     software will leave your existing games uninterrupted:
+     
+         1.   Backup your current Barren Realms Elite setup.
+     
+         2.   Move the self-extracting Barren Realms Elite archive into your
+              existing BRE directory and run it, overwriting your existing
+              files.
+     
+         3.   Run the UNPACK.BAT file to unpack the new distribution archive
+              completely.
+     
+         4.   It is recommended that whenever possible, the game be reset
+              after an upgrade, however not all version upgrades require a
+              game reset.
+     
+              Upgrading from the v0.97* series will require you to reset the
+              game.  Also note that *ALL* members of the league MUST upgrade.
+     
+              Upgrading from the v0.98* series will NOT require a reset, but
+              it is highly recommended that *ALL* members of the league
+              upgrade *AND* a configuration update be sent out.
+     
+     
+     Your upgrade is complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 8
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Tips For Running On-line °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Although I can't guarantee that Barren Realms Elite will be an instant
+     success on your system, I honestly believe that in time it will become
+     popular if your users just take a moment to check it out.  Here are just
+     a few tips for getting Barren Realms Elite more active, in order of
+     importance:
+     
+         o    Join an already existing and active Barren Realms Elite
+              InterBBS league.  A league is a group of systems that compete
+              against each other, bringing a huge amount of activity to your
+              system.
+     
+         o    State in your "news" file that you are now running Barren
+              Realms Elite on-line.  If your players don't know you have the
+              game on-line, they may never check it out.
+     
+         o    Make Barren Realms Elite easy to get to on your BBS.  In other
+              words, try to keep getting to the door more simple than having
+              to shuffle through 6 menus to get to it.  An even better option
+              is to setup Barren Realms Elite to be ran from your main menu.
+     
+         o    Hundreds of players in one on-line game is much better than
+              hundreds of on-line games with one player in each.  In other
+              words, avoid installing too many on-line games on your system. 
+              This goes with all on-line software, and not just Barren Realms
+              Elite.
+     
+         o    If you're a local player, try to keep from playing the game. 
+              Sysops that play their own on-line games tend to become
+              powerful players simply because they can take their turn each
+              day with little opposition.  Users on your system may become
+              upset and quit if they find out you are playing.
+     
+              If you insist on playing, don't let anyone know you are
+              playing, and most of all, don't cheat!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 9
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Installing Barren Realms Elite For The First Time °°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     I have attempted, through experience with setting up many on-line
+     software packages, to make the Barren Realms Elite software install as
+     easily, as understandably, in as short amount of time, and with as
+     little help or input from the sysop as possible.
+     
+     The sample configuration files that I've included with the archive
+     should be sufficient for most systems, but you are more than welcome and
+     able to modify it in any way you see fit.
+     
+     This installation documentation assumes that:
+     
+         o    You have a basic knowledge and understanding about DOS and
+              batch files.
+     
+         o    You have an understanding about your bulletin board software,
+              and how to call on-line software from it.
+     
+     Before beginning the installation process, I suggest that you print out
+     this documentation in its entirety.  The documentation file itself has
+     been formatted to print out on standard letter sized paper.  To print
+     the documentation from the DOS prompt, setup your printer and issue the
+     following command:
+     
+         COPY BRE.DOC PRN
+     
+     
+     Barren Realms Elite must be executed in its own subdirectory.  Your BBS
+     ideally should call a batch file which should change to this
+     subdirectory, execute the game, change back to your BBS subdirectory,
+     and return to your BBS.  If your BBS can't execute a batch file, you may
+     have to run the game from your main BBS subdirectory.
+     
+     
+     To install the Barren Realms Elite software, follow these easy steps:
+     
+         1.   Make a subdirectory anywhere on your hard disk to contain the
+              Barren Realms Elite game (C:\BBS\BRE for example).  Place the
+              main Barren Realms Elite self-extracting archive into this
+              directory and run it.  Again, make sure the ARJ-SECURITY
+              ENVELOPE is present and valid.
+     
+              Assuming you have a directory C:\BBS\BRE, and the Barren Realms
+              Elite archive is in C:\DOWNLOADS, the following commands will
+              accomplish this step:
+     
+              C:
+              CD\BBS\BRE
+              C:\DOWNLOADS\BREV988.EXE
+     
+              Or
+                                        Page 10
+     
+              C:
+              COPY C:\DOWNLODAS\BREV988.EXE C:\BBS\BRE
+              CD\TEMP
+              BREV988.EXE
+     
+         2.   Type UNPACK to run the unpack batch file which unarchives all
+              of the Barren Realms Elite game files and places them in the
+              proper subdirectories.
+     
+         3.   Run INSTALL.EXE from your main Barren Realms Elite directory
+              (C:\BBS\BRE for example).  This program will assist in setting
+              up the doorfile information, door configuration and creating a
+              runtime batch file.
+     
+              The doorfile information allows BRE to interpret the doorfile
+              created by the BBS every time it runs a door.  Currently there
+              is support for a myriad of BBS tpes and configurations.  If
+              yours is not listed, you will need to setup the software
+              specifically for your system.
+     
+              SRDOOR.EXE is a small program that reads BBS dropfiles and
+              creates a file DOORFILE.SR that Barren Realms Elite reads for
+              information about the current player entering the software.  By
+              picking a specific dropfile, INSTALL.EXE automatically
+              configures SRDOOR.EXE for that dropfile.
+     
+              Further information for configuring SRDOOR for use with other
+              dropfiles is covered in the section regarding SRDOOR.
+     
+         4.   Now install the door into your BBS by having it run the batch
+              file that you had created with the help of INSTALL.EXE.
+     
+         5.   Add the following menu option to your on-line software menu:
+     
+              Barren Realms Elite v0.988
+     
+         5.   Reset the game by running the command line:
+     
+                   BRE RESET
+     
+              You *MUST* do this prior to running the software or it will not
+              function at all.
+     
+         6.   Test out the software to make sure everything is working
+              properly, and you're all set!  You can run Barren Realms Elite
+              at this point from the DOS command line in local mode (without
+              a BBS dropfile) by utilizing the included LOCAL.BAT batch file:
+     
+                   LOCAL.BAT
+     
+              at the DOS prompt.  The software will prompt you for a player
+              name.
+     
+     
+         Installation of the Barren Realms Elite software is now complete.
+                                        Page 11
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Sysop Operating Information °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     The Statusline
+     
+     The top and bottom lines on your screen will display several important
+     bits of information about the current player in the game.  The bottom
+     line of the screen displays the following information:
+     
+        JOHN DOE    | A | SomeWeirdName    | F2=Extra Information
+             1        2        3                       4
+     
+     The information is:
+     
+         1.   The player's name exactly as it was passed to Barren Realms
+              Elite from the BBS.
+     
+         2.   The corresponding nation letter.  When a player joins the game,
+              they are assigned this letter (beggining with "A") for their
+              team.
+     
+         3.   The player's country name.
+     
+         4.   Keyboard command to invoke extended information about the
+              player.  When expanded, the following information is displayed
+              about the player:
+     
+                   Efficiency     A numeric value representing the overall
+                                  efficiency of the current player.
+     
+                   Regions        How many regions the player currently
+                                  possesses.
+     
+                   Time           Time, in minutes, the player has remaining
+                                  this day.
+     
+                   Score          The player's current score.
+     
+                   Networth       The current networth of the player.
+     
+                   Turns          How many turns the player has remaining
+                                  this day.
+     
+
+
+
+
+
+
+
+
+
+
+                                        Page 12
+     
+     In the top-screen status bar, the following information is displayed:
+     
+         1.   Left-hand side:
+     
+              Local     The door is operating in Local Mode - no
+                        communications I/O.
+     
+              COMx      The door is operating on Com1, Com2, Com3, or Com4
+     
+              Fossil    A FOSSIL driver is being used for all comm I/O.
+     
+              Digiboard A Digiboard driver is being used for all comm I/O.
+     
+              Uart      All comm I/O is being performed directly through the
+                        UART.
+     
+         2.   The middle of the screen displays the program name.
+     
+         3.   Next is the multi-tasker currently running, if any.
+     
+         4.   Finally, the full release version number is listed on the top-
+              right-hand corner of the screen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 13
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Multinode Notes °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Barren Realms Elite will give up time slices for better performance if
+     any of the following multi-taskers are detected:
+     
+         DESQview   DESQview
+         Win-Enh    Windows in 386 enhanced mode
+         Win-Std    Windows in Standard mode
+         Win-NT     Windows NT
+         OS2        OS/2
+         DoubleDOS  DoubleDOS
+         MultiDos   MultiDos
+         VMiX       VMiX
+         TopView    TopView
+         TaskView   TaskView
+         DOS-TS     DOS 5 Task Switcher (Dos Shell)
+     
+     
+         DESQview User Notes
+     
+         On a 286 or XT class machine, set "Writes Directly to Screen",
+         "Displays Graphics", and "Virtualize text/graphics" all to "N" and
+         Barren Realms Elite will multitask in a small window.
+     
+     
+     Multi-Node support
+     
+     At this time, Barren Realms Elite cannot run on more than one node at a
+     time, but it will detect if it is currently being ran on a node
+     automatically, so that you do not have to use external utilities or
+     semaphore files to do manage this fact.
+     
+     To set up Barren Realms Elite for a multinode board, first install BRE
+     normally, for just node 1.  Then, look in your BRE directory for a file
+     called SETUP.SR.  This file contains the path to the door file.  You can
+     make copies of this file for each node (SETUP.1, SETUP.2, SETUP.3,
+     etc.).
+     
+     In the batch file that your BBS calls to run Barren Realms Elite
+     (BRE.BAT), next find a line that runs the SRDOOR.EXE program.  It should
+     look something like this:
+     
+         SRDOOR
+     
+     If your BBS supplies an environment variable "NODE" that contains the
+     node number currently running, change this line to:
+     
+         SRDOOR -f SETUP.%NODE%
+     
+     If not, and you are able to pass the node number from your BBS to the
+     Barren Realms Elite batch file, change the line to:
+     
+         SRDOOR -f SETUP.%1
+                                        Page 14
+     
+     The %1 in the above example will get replaced by the proper node number. 
+     Be sure to tell your BBS to pass the node number to your batch file.
+     
+     In addition, your nodes may not have the same locked baud rate.  If this
+     is the case, one solution is to make a RESOURCE.1, RESOURCE.2, and so
+     on.  Then, in each one, you can set a different locked baud rate.
+     
+     Again, in the batch file, before BRE runs, add the line:
+     
+         COPY RESOURCE.%NODE% RESOURCE.DAT
+     
+         or
+     
+         COPY RESOURCE.%1 RESOURCE.DAT
+     
+     
+     In addition to these setups, Barren Realms Elite will create a temporary
+     file named INUSE.FLG to indicate that a game is in use by another node.
+     Other nodes will not be able to play in the same game while another
+     player is in it.  Because of this, and because computers can and often
+     crash, some sysops add an extra line to their Barren Realms Elite batch
+     file to ensure that the INUSE.FLG file is deleted after each player
+     exits the game.  To do so, simply add the following to your BRE batch
+     file:
+     
+         DEL INUSE.FLG
+     
+     For more information on SRDOOR.EXE and the SETUP.SR file, see the
+     section on SRDOOR.  For more information on the RESOURCE.DAT file, see
+     the section regarding the RESOURCE.DAT.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 15
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Command-Line Options °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Among the various configuration settings for Barren Realms Elite, there
+     are a few command-line options that also may be specified at runtime. 
+     Please note that using these options will override whatever is
+     configured in the RESOURCE.DAT file outlined later in this
+     documentation.
+     
+     To use these options, simply add them to the end of the "BRE.EXE" in
+     your Barren Realms Elite batch file that is called from your BBS.  For
+     example:
+     
+         BRE /LOCAL
+     
+     
+         RESET
+         Resets BRE Game - This MUST be done when the game is first
+         installed.
+     
+     
+         TEST
+         This does a basic self-diagnostic test on your setup of BRE.  It may
+         help find basic problems in your setup of the game.
+     
+     
+         VIEW
+         Allows you to View and delete players, as well as change their
+         UserNames.
+     
+     
+         REGISTER
+         After you recieve your registration code, run this to register your
+         copy.
+     
+     
+         SCORE or SCORES
+         For InterBBS Leagues.  This option will create InterBBS Scores
+         listings to be viewed in the game.
+     
+     
+         EDITOR
+         For League Coordinators or Single-BBS Games This allows you to
+         change the settings that were defined for the game at reset.
+     
+     
+         /LOCKED=#####
+         This will set a Locked Baud Rate to #####.  This option may also by
+         set in RESOURCE.DAT
+     
+     
+         /LOCAL
+         Runs game LOCAL Only - Not necessary for local play.
+                                        Page 16
+     
+         IPSETUP or SETUPINTERBBS
+         This will automatically set up your BBS.CFG file if you'd like.  You
+         can also use a text editor to create this file.  This file is
+         necessary for InterBBS play.
+     
+     
+         PLANETARY
+         Daily Maintainence for Inter-BBS Warfare - This can be multiple
+         times during the day to speed gameplay up by reading inbound and
+         creating outbound datafiles.
+     
+     
+         INBOUND
+         Runs only INBOUND section of BRE PLANETARY.  If you want to run BRE
+         PLANETARY after each play, run BRE INBOUND before BRE.EXE.  NOTE: 
+         This will also ROUTE outbound files.  The INBOUND command can be
+         used with any mailer system.
+     
+     
+         OUTBOUND
+         Same as Inbound, except run AFTER BRE.EXE.  Only processes OUTBOUND
+         files.
+     
+     
+         FULL
+         Runs a full game of InterBBS BRE, combining BRE INBOUND, a player,
+         and BRE OUTBOUND into one step.  Equivalent to running:
+     
+              BRE INBOUND
+              BRE
+              BRE OUTBOUND
+     
+     
+         UPDATE
+         In an Inter-BBS Game, sends Configuration Updates to all nodes to
+         make sure all nodes have the same config.  Automatically done
+         internally.  Only can be done by BBS #1.  This is no longer
+         necessary, but can be run if necessary in special circumstances.
+     
+     
+         PLAYERLIST
+         This option, for League Coordinators only, will create a list of all
+         the players on all the BBSes in the game.
+     
+     
+         GOOIEERMOVE
+         This removes a Gooie Kablooie being created on your system.  This is
+         used if the Gooie is created by a "bad" user or because of target
+         changes, etc.
+     
+     
+         ALLIES
+         Allows you to modify the current alliance status with other planets.
+
+                                        Page 17
+     
+         REQUEST
+         Creates Global Recon Updates and Requests.
+     
+     
+         RECON
+         Creates Global Recon Updates only.
+     
+     
+         ROUTEINFO
+         For Coordinator BBSes Analyzes routing paths producing files
+         containing information on all file paths and bad/circular routing.
+     
+     
+         /DETAILED
+         This will allow you to see compression and information on individual
+         data packets that are sent out.  Used with PLANETARY, OUTBOUND, and
+         INBOUND options. (ie, BRE PLANETARY /DETAILED)
+     
+     
+         BBSINFO
+         This will create a text file listing all BBS's, their BRE versions,
+         and the date of their last recon.
+     
+         EDITOR
+         This will bring up a configuration editor allowing you to change the
+         current setup of the game.  In InterBBS games, this option is only
+         available to the League Coordinator.
+     
+     
+         LASTPACKET
+         This creates a text file listing the last date you processed a
+         packet from every other BBS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 18
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Starting The Game °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     When you begin the Barren Realms Elite game for the first time after a
+     reset, you are presented with a welcome screen, a few playing tips, and
+     prompted for a name of your realm.  This is essentially your player name
+     throughout game play.  Once you've entered a name that is valid, the BRE
+     splash screen is displayed and you are presented with the main game
+     menu.  This menu consists of:
+     
+         The current version of Barren Realms Elite that is running.
+     
+         The date that the game began on (last reset).
+     
+         Play Game
+         This option allows a player to begin playing their turns for the
+         day.  If they've already played some, the software picks up at the
+         turn they left off on.
+     
+         See Status
+         Displays basic information about the current player.  This is
+         basically the same information displayed from within the game from
+         the status menu.
+     
+         See Scores
+         This menu selection shows the scores for the BBS only. 
+         Interplanetary scores are shown from within the game.
+     
+         See Today's News
+         Displays the news for the current day.  Note that unlike the main
+         menu scoring option, the news can also contain interplanetary news
+         in IBBS leagues.
+     
+         See Yesterday's News
+         Shows the news for the previous day.
+     
+         Read Messages
+         Allows the player to read their private e-mail within the game
+         without entering the game and wasting turns.
+     
+         Send Messages
+         In addition to reading messages, a player may use this option to
+         send a message to any local nation that lies on the same BBS.
+     
+         Game Bulletins
+         Bulletins that the sysop has created, or the ones included with the
+         distribution archive, can be read by selecting this option.
+     
+         Game Instructions
+         Although the game is a vast and intricate strategy game, a brief
+         overview of the game and simple instructions for getting started is
+         included here for new players.
+
+                                        Page 19
+     
+         Help Database
+         Barren Realms Elite contains a sophisticated help system that can be
+         viewed at any time simply by visiting this option.  Help topics on
+         nearly all functions of the game is included here and players may
+         peruse them simply by selecting them from the menu.
+     
+         Preferences
+         The preferences menu option contains some user-defined settings to
+         make game play proceed as quickly and efficiently as possible.
+     
+         Quit
+         The quit option exits the software and returns the player to the
+         BBS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 20
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Playing Barren Realms Elite °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     BRE is a game based on strategy and thought.  As a baron in a vast
+     kingdom, your goal is to, ultimately, become supreme to all others. 
+     Using everything from diplomacy to war, you must build an empire both
+     economically and militarily, all while facing stiff competition from
+     your opponents.
+     
+     The best way of learning Barren Realms Elite is to experiment - visit
+     different menus, try different options.  Below, you will find basic
+     information on how to get a good start and not crumble right away as
+     well as information on some different topics not covered in any specific
+     help section.  We recommend after learning a little bit about the basics
+     of this game, you come back and read the latter part of these
+     instructions again, as they will make more sense once you understand the
+     game.
+     
+     The premier feature of the game is the ability to link over 200 systems
+     throughout the world and bring anywhere up to more than 6,000 players
+     together in a single game.  No longer is your goal to become the
+     strongest barony, but instead, the strongest world.  Your BBS must come
+     together, facing competition from other planets instead of local barons. 
+     Teamwork is the only way to win this type of war.
+     
+         The Game Itself
+     
+         Barren Realms Elite is divided into a series of menus which appear
+         during each turn of play.  The following are the major sections:
+     
+         Diplomacy (appears only on first turn of the day)
+         Status Screen
+         Payment / Food Market
+         Covert Operations
+         Bank
+         Spending Menu
+         Attacks
+         Trading
+         Interplanetary Operations (For InterBBS Games)
+         Messages
+         System Menu
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 21
+     
+     Diplomacy
+     
+     The art of diplomacy is a major factor in a successful empire.  Defense
+     pacts for local attacks (non-InterBBS) are vital for challenging and
+     defeating larger enemies.  Intelligence alliances can multiply the total
+     power of Intelligence agencies.  Trade agreements provide tanglible
+     benefits in the form of extra cash - if you have a large population.
+     
+     
+         Tariff Trade Agreement
+         This is an agreement allowing trade between two realms with
+         government taxation of all goods passing boundaries.  It brings an
+         extra income to each empire involved based on population.  This
+         agreement is promising for those empires with large numbers of
+         people.
+     
+         Protective Trade
+         This agreement installs guards along trade routes between the two
+         realms, preventing bombing of trade deals and making trade deals
+         cheaper to send and maintain.
+     
+         Free Trade Agreement
+         This pact declares that people are free to travel between boundaries
+         and trade goods without taxation.  Large amounts of income are
+         gained through income taxes, but due to the contact of peasants
+         between empires, bad morale and support will spread throughout other
+         realms if not controlled quickly.
+     
+         Terrorist Prevention
+         The terrorist prevention plan is an alliance between two powers'
+         intelligence agencies to aid each other in finding and preventing
+         terrorist and covert actions against the two realms.
+     
+         Intelligence Alliance
+         This is an agreement between Realms giving covert aid in terrorist
+         and covert operations to other empires on the planet and in
+         Inter-planetary conflict.
+     
+         Technology Agreement
+         An agreement to cooperate in the sciences, this treaty allows an
+         empire to gain some of the technological advances of its partner.
+     
+         Full Defense Alliance
+         This plan, the most balanced and powerful alliance, puts forth a
+         large amount of all of your forces in defending an ally in need. 
+         NOTE:  This is effective only in Local Games
+     
+         Declaration Of War
+         This is used to break an agreement with another empire without
+         causing internal troubles in your realm.  The treaty is not
+         officially broken until the other realm is notified.
+     
+         View Treaties
+         This option allows you to view relations with the other empires in
+         the game.
+                                        Page 22
+     
+     Status Screen
+     
+     At the beginning of each turn, you will be shown your production for the
+     year, including gold, food, and industrial output.  After this, you will
+     see the current status of your barony, including military, regions, your
+     support throughout the realm, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 23
+     
+     Payment/Food Market
+     
+     Paying to maintain your empire is a critical expenditure for any
+     government.  You must support your military, maintain your land, and pay
+     taxes.  Often, you will also need to use money to increase your popular
+     support or military morale, lest you risk civil disorder.
+     
+     Feeding your empire is also critical.  In order to ensure the health of
+     your entire populace, the government controls all food supplies,
+     providing to the people as necessary.  To aid your empire, there is also
+     a food market managed by the entire planet from which you can buy and
+     sell food.  However, the supply is limited, and dependence upon the
+     market is dangerous.  Coordinated attacks can destroy your reserves and
+     the general market, leaving you in a dangerous situation.  Without food,
+     morale and public support will quickly fall and may lead to internal
+     revolts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 24
+     
+     Covert Operations
+     
+     Covert Operations are the heart of any successful campaign.  Attacking
+     an empire requires only military supremacy.  However, to successfully
+     wage war and minimize damage, one must be able to strike at the heart of
+     the enemy and remove the opponent's ability to fight back.  Well timed
+     and coordinated covert operations can immensely help in this task.  By
+     weakening an enemy internally, one takes less losses fighting
+     externally.
+     
+         Send Spy
+         Allows you to attempt to get military information on another realm. 
+         This operation takes place immediately.
+     
+         Stir Revolts
+         Through propaganda, your intelligence agency can create doubts in
+         your opponent's populace, causing rioting and revolting, reducing
+         popular support and placing the enemy government in jeopardy.
+     
+         Set Up
+         This will work to make two empires believe they have declared war on
+         each other, possibly leading to combat.  If successful, any treaty
+         between the two empires is void.  Used against empires with defense
+         pacts could make attacking one notably easier.
+     
+         Support Dissensions
+         Using extremely strong propaganda, your agents may be capable of
+         internally sabotaging an opponent's military, causing a portion of
+         Troopers to flee.
+     
+         Demoralize Forces
+         This covert operation infiltrates an enemy's military camps with
+         agents set out to reduce the effectiveness of his or her forces.
+     
+         Spy On Relations
+         Your agents will work to learn of all treaties of a particular
+         empire.  This is useful pre-war intelligence, in that you can learn
+         of vast alliance networks and/or trade partners.
+     
+         Bomb Enemy Targets
+         Using terrorist methods, your intelligence agency will randomly bomb
+         targets, causing widespread destruction in your opponent's barony.
+     
+         Bribery
+         Bribing an enemy agent gives you the benefit of learning information
+         on the tactics of an opposing intelligence center, allowing your
+         forces to more effectively prevent incoming covert operations.
+     
+         Expose Enemy Ops
+         This operation takes full advantage of your bribed agent.  By
+         relaying all known information, your bribed agent effectively gives
+         you almost 100% immunity from incoming covert operations from his
+         home empire.  However, because of the level of risk to your agent,
+         this operation is only effective for 24 hours.
+                                        Page 25
+     
+     The Bank
+     
+     The bank provides both a safe storage of money and an interest-gaining
+     environment.  In addition, you can get cash relief loans from the
+     planetary leadership as well as make investments for the future. 
+     Investments provide their own interest rates, which often fluctuate
+     depending on the amount of investing at any particular time.
+     
+     NOTE:  Interest, Loans, and Investments are only accessible in the
+     registered version of this game.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 26
+     
+     Spending Menu
+     
+     The heart of your empire is centered upon having a strong defense and
+     large amount of land.  At this menu, you can buy and sell both,
+     depending on the setup of the game.  In many setups, the amount of
+     military you can purchase is limited or even non-existant, in which case
+     Industrial production is your primary or sole option (Industrial
+     production is explained below).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 27
+     
+     Buy/Sell
+     
+     This lets to switch between selling and buying.  Depending on your
+     immediate goals, it may be in your best interests to sell off excess
+     equipment, although it can only be sold at a fraction of the buying
+     price.
+     
+         Troopers
+         Troopers serve as both offensive and defensive battle units.  While
+         not very strong on either end, they are fairly cheap both to buy and
+         maintain.  One drawback is the added need for food, as compared to
+         other units.
+     
+         Jets
+         These units serve as offensive-only military units.  About twice as
+         powerful as a soldier on offense, they make a formidable attack
+         weapon.  However, they cannot defend and, while cheap to buy, can be
+         relatively expensive to maintain.
+     
+         Turrets
+         The counterpart to Jets, Turrets are defensive-only weapons about
+         twice as powerful as the Trooper.  Like Jets, however, they are
+         relatively expensive to maintain.  Nevertheless, Turrets can make a
+         strong, full-time defense and are impossible to destroy through
+         terrorist operations.
+     
+         Bombers
+         Bombers are special attack forces.  They have no offensive or
+         defensive strength, but can be used in special missions.
+         Interplanetary bombings require bombers to drop the payload, and in
+         attacks, they can be used to target and destroy grounded enemy jets.
+     
+         Headquarters
+         Your command headquarters is essential in coordinating your military
+         attacks.  A strong HQ gives tanks better coordination and can
+         improve the effectiveness of tanks drastically.
+     
+         Region Buying
+         You can buy the following types of regions:
+     
+              Coastal
+              Coastal lands are excellent for the tourism and resort
+              industry.  In good conditions, they are an extremely effective
+              money generator.  However, with low public support, your
+              populace loses interest and Coastal territory production slumps
+              drastically.
+     
+              Mountains
+              The mountains are an excellent source for mining natural
+              resources.  Because there are few factors affecting production,
+              mountains provide the most stable source of income, but at the
+              same time, they do not average as much as other regions. 
+              Because mountains are a source of good raw materials, a large
+              number of mountains also tends to boost productivity of your
+              Industrial regions.
+                                        Page 28
+     
+              Desert
+              Dry desert land supports the development of solar power
+              generation extremely well.  Profiting from these generates
+              fluctuates greatly due to climate conditions, but, on the
+              average, produce more gold than do mountains, but less than
+              Coastals in good conditions.
+     
+              Industry
+              Industry is the basis of a strong economy.  While in some
+              setups you can buy any and all military goods you will need
+              during war, others do not allow purchasing at all.  In those
+              cases, Industry is your only source of military power. 
+              Industry, forced into free-market competition, is also more
+              efficient at producing military than you buying from the
+              market.  With a good base of Mountain regions, industrials can
+              produce even more goods.
+     
+              Rivers
+              Rivers are both an excellent source of revenue through
+              hydroelectric power and a source of food through fishing. 
+              While most years the rivers produce vast supplies of gold, more
+              so than any other region, they are often wrought with problems
+              and used instead for fishing to bring extra food into the
+              empire.  The people of the land determine what will be produced
+              yearly, without your input.
+     
+              Agriculture
+              Self-sufficiency in terms of food production is almost a
+              necessity in a world wracked by constant conflict.  Without a
+              stable global market to buy and sell food, you may often find
+              yourself with no source of food outside of your barony. 
+              Agricultural regions provide you with a solution to that
+              problem, and in times of global food shortages, could give you
+              bargaining power in selling off surpluses.
+     
+              Urban
+              By building strong urban centers, you vastly increase the
+              number of people able to live in your empire.  These people
+              bring in more tax revenue, and with strong trade agreements,
+              provide empires with vast new markets from which to produce
+              even more cash.
+     
+              Technology
+              Technology regions are a powerful source of longterm
+              enhancements.  Maintaining these research centers early may
+              prove costly, but with time, they allow you to vastly increase
+              the productivity of your empire economically and militarily. 
+              Technology regions lead to the following improvements:
+     
+              - Increased military efficiency
+              - Increased region output
+              - Decreased maintenance costs on regions, military, and SDI
+              - Decreased Food spoilage
+              - Increased Tax income
+                                        Page 29
+     
+              As the game progresses, your costs will slowly decrease and
+              efficiency will increase (there will not be specific
+              discoveries).
+     
+              Waste
+              Enemies can use various technological weapons (such as Nuclear
+              Missiles) to reduce your once productive regions to waste. 
+              These regions, while still requiring maintenance, produce
+              nothing for your empire.  They can, however, be decontaminated
+              at a much lower cost than buying new regions.
+     
+              Covert Agents
+              A strong Intelligence Agency is based upon having a large
+              supply of agents.  In general, the larger number of agents you
+              are armed with relative to an opponent, the more successful
+              your covert operations will be and the less successful enemies
+              will be against you.
+     
+              Tanks
+              The tank is the most advanced general purpose military weapon
+              of your army.  About the equivalent of four Troopers, tanks be
+              used both on offense and defense.  Their low yearly maintenance
+              costs make them a strong long term investment.
+     
+              Carriers
+              Carriers are a necessity only in the support role. In order to
+              trade with other realms, often carriers must be sent for
+              transport.  In combat, Jets have to be transported to the
+              battle field as well, and one carrier serves to transport 100
+              jets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 30
+     
+     Attacks
+     
+     The strength of an empire is often determined by its ability to wage
+     war.  The final blow in waging war is the actual combat between two
+     militaries, and here is where you get that opportunity.  All of the
+     building and developing to create the most powerful empire is tested in
+     war.
+     
+         Regular Attack
+         This is the only true military battle between two realms.  A
+         successful assault an opposing empire brings you extra regions which
+         you can then recolonize to build as you wish.
+     
+         Nuclear Attack
+         Nuclear weapons are a good source of crippling an opponent.  While
+         costly, the nuclear missile transforms a percentage of an enemy's
+         regions into waste, which then must either be dropped or slowly
+         repaired.
+     
+         Chemical Attack
+         Similar to nuclear strikes, these missiles affect less actual land,
+         but also infect millions of people with deadly chemical gases,
+         significantly reducing an opponent's population.
+     
+         Biological Attack
+         Biological attacks are similar to the other special attacks, except
+         that they do not damage the land itself.  Instead, they are
+         effective against both the general populace and military Troopers.
+     
+         Attack Pirates
+         Pirates often steal military equipment from your empire.  Pirate
+         Raids provide you the opportunity to strike back,stealing away
+         military equipment as well as land from them.
+     
+         Alliance Strength
+         This option allows you to see the amount of aid military alliances
+         will provide you if attacked.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 31
+     
+     Trading
+     
+     Trade between nations is a centerpiece of growth.  In addition to
+     helping those in need, many realms with specialized industries coming
+     together and trading their goods can build a network of power
+     unattainable individually.  Besides normal trade between empires, you
+     also can put items for sale on a general market at any price you choose.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 32
+     
+     Interplanetary Operations
+     
+     In Interplanetary Games (Games setup to run between several BBSes) you
+     experience the most exciting and challenging aspects of BRE.  Instead of
+     playing against up to 25 local players, you are now immersed into a
+     universe filled with anywhere up to more than 6000 players scattered
+     throughout the world.  Instead of being a single entity, you are now
+     part of your BBS, your team, working with them to become the most
+     powerful BBS in the league.
+     
+         View IPScores
+         This option allows you to view the top players and BBSes throughout
+         the league ranked by various statistics.
+     
+         Terrorist Ops
+         These can be highly beneficial in any assault.  Combining the forces
+         of espionage and terrorism, you can do heavy damages to your enemy
+         right before sending the final devastating attack.  As in local
+         covert operations, these operations are vital in destroying an
+         enemy's ability to wage war.
+     
+         Send Trade Deal
+         As in local play, you may send trade deals to other empires on other
+         planets.  However, unlike local trade deals, you may not make any
+         demands in return for the goods you provide, and the target always
+         has to accept that which is sent.
+     
+         Create Group Attack
+         This will set up a new attack force to be sent to either an entire
+         planet or a single Barony.  You can set when the attack leaves and
+         before that time, anybody on your planet can join in the attack. 
+         Returns will be divided according to the amount of forces you each
+         put in.
+     
+         Join Group Attack
+         This lets to join any of the attack parties waiting to leave.
+     
+         Indiv. Attack Force
+         This allows you to send your own strike force to a single player on
+         another planet.  You get twice as many returns if you send the
+         attack yourself, but you can't attack an entire planet.
+     
+         Send Message
+         As in the local messages (mentioned below), this option allows you
+         to send messages to other systems involved in the game.
+
+
+
+
+
+
+
+
+
+                                        Page 33
+     
+     Special Operations
+     
+     The special operations menu allows you access blah blah blah...
+     
+         Bomb Enemy Food Market
+         This operation gives you a chance to bomb the central food market of
+         another planet.  Many of these, combined with other effective
+         operations, have the potential to put enemies through civil war.
+     
+         Undermine Investments
+         This option allows your forces to covertly weaken an enemy planet's
+         basic economy, reducing returns on investments due back in the next
+         few days.  Note that only registered systems offer investments.
+     
+         Bomb Enemy Trade Market
+         If successful, this operation destroys a portion of all goods stored
+         in an opposing planet's trading market.
+     
+         Bomb Enemy Trade Routes
+         This operation attempts to destroy portions of all trade deals in
+         transmit throughout an opposing planet.
+     
+         Nuclear/Chemical/S3-Sabre
+         These attacks launch powerful missiles against their targets
+         damaging a variety of areas of the realm.
+     
+         Spy Guy
+         This option will send a spy to another BBS.  He(she) will report
+         information on all incoming group attacks and Gooie Kablooies
+         allowing realms to prepare for the incoming onslaughts.
+     
+         Gooie Kablooie Ops
+         The Gooie Kablooie is the ultimate weapon of destruction.  Only one
+         can be created at a time, and it takes a great deal of funding by
+         all members of the BBS.
+     
+         Once funded (funding depends on the size of the target), the Gooie
+         Kablooie will begin construction.  Once construction is complete (a
+         few days), it will be launched to meet it's target.  Immediately
+         upon arrival, 10% of the regions on the planet will be destroyed
+         instantaneously.  Every day of it's existance after the first day,
+         another 5% will be destroyed, up to a max of 5 days at which time it
+         will self-destruct.
+     
+         The only way to destroy this "thing", is to keep battling it with
+         Jets until destroyed.  The destruction of this weapon requires the
+         cooperation of the entire planet, as the amount of jets required is
+         enormous, and the damage irreversible.
+
+
+
+
+
+
+                                        Page 34
+     
+         SDI Program
+         Technology has developed space-based protection against a great deal
+         of enemy forces in the form of a Strategic Defense Initiative
+         program.  Building an SDI, however, is fairly expensive and
+         maintaining it will only cost more.  The more territory you control,
+         the larger your program will need to be as well.
+     
+         The potential benefits of an SDI including destroying up to 50% of
+         incoming enemy missiles as well as reducing the effectiveness of
+         enemy jets and bombers attacking your realm by up to 30% and 20%
+         respectively.
+     
+         Spy Database
+         Because your planet is working as a team, any spy reports obtained
+         about an empire on another planet is stored in a global database,
+         which can be accessed by this option.
+     
+         Travel Times
+         This option lists the approximated time for data to travel to
+         another BBS and back.  Generally, most operations you do will take
+         about this long.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 35
+     
+     Messages
+     
+     Communication is often a centerpiece of cooperation, whether between
+     individual empires or between planets.  Use the messages to coordinate,
+     plan, and organize your offenses, alliances, and general plans.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 36
+     
+     System Menu
+     
+     The system menu is a special menu accessible from the Spending menu.  It
+     supports a variety of options that aren't accessed frequently, such as
+     controlling the tax rate in your empire and setting industrial
+     production levels.  In addition, it allows you to access a variety of
+     other menus such as the Covert Ops and Trading out of sequence.  The
+     Preferences submenu also allows you to normally skip a variety of menus
+     that aren't used often.  The option to abdicate will immediately delete
+     your empire from the game so you may start over the next day.  This menu
+     is constantly changing in each version, so various options may appear as
+     time goes by.
+     
+     Barren Realms Elite is a game which has been designed to be simple to
+     learn initially, but success is based a great deal on experience and
+     cooperation.  Much information has been left out of the documentation so
+     that you can learn by experience rather than reading instructions.  Used
+     in InterBBS mode, BRE is a much more competitive and enjoyable game,
+     requiring a great deal of cooperation and organization between players. 
+     We hope you enjoy the game, and good luck!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 37
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Advanced Configurations °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     The Dropfile Reader SRDOOR.EXE
+     
+     In order for Barren Realms Elite to interact with your BBS and the
+     current user online, it must be able to "connect" to the communications
+     port, get the user's name, and do other various behind-the-scenes
+     information.  Most doors do this by reading a BBS dropfile - a file that
+     contains all of the information about the user online.
+     
+     The program SRDOOR.EXE included with Barren Realms Elite does nothing
+     more than read the BBS dropfile and creates from it, a small file
+     containing the information that Barren Realms Elite needs to start-up. 
+     In this section, we'll discuss in detail how to use it effectively.
+     
+     SRDOOR.EXE reads a BBS door file and converts it into a standard format
+     file called DOORFILE.SR.  This one program will work with other John
+     Dailey Software products such as Falcon's Eye, Falcon's Honor and The
+     Arcadian Legends.  The purpose of an external door conversion is to
+     allow sysops of BBSes not supported by SRDOOR to use another program to
+     convert to the DOORFILE.SR file.  For example, if you were running a BBS
+     that produced USER.DAT as a door file, and SRDOOR did not support it,
+     you could write a program to replace SRDOOR that would read USER.DAT and
+     convert it to DOORFILE.SR.  See the section, "File Format" for more.
+     
+     Calling procedure:
+     
+         SRDOOR [<specialbbstype> [<comport>]]
+     
+         or
+     
+         SRDOOR -f <filename>
+     
+     The parameters "specialbbstype" and "comport" are required for certain
+     BBS types.
+     
+     The -f option allows you to choose a setup file other than SETUP.SR.
+     
+     
+     You may bypass using SRDOOR.EXE and write the DOORFILE.SR file manually
+     using a batch file like so:
+     
+         ECHO ®username¯ >DOORFILE.SR
+         ECHO ®ansi-status¯ >>DOORFILE.SR
+         ECHO ®ibm-char-status¯ >>DOORFILE.SR
+         ECHO ®page-length¯ >>DOORFILE.SR
+         ECHO ®baud-rate¯ >>DOORFILE.SR
+         ECHO ®com-port¯ >>DOORFILE.SR
+         ECHO ®time-limit¯ >>DOORFILE.SR
+
+
+
+                                        Page 38
+     
+     As a further example, if your BBS passes as command line parameters the
+     username in %1, the com port in %2, the baud rate in %3, and the time
+     limit in %4, but doesn't pass the others, you could write into your
+     batch file (instead of SRDOOR):
+     
+         ECHO %1 >DOORFILE.SR
+         ECHO -1 >>DOORFILE.SR
+         ECHO -1 >>DOORFILE.SR
+         ECHO -1 >>DOORFILE.SR
+         ECHO %3 >>DOORFILE.SR
+         ECHO %2 >>DOORFILE.SR
+         ECHO %4 >>DOORFILE.SR
+     
+     (The -1 above means "I don't know this value"; you can use this for
+     ANSI, pagelength, IBM character status, and Time Limit.)
+     
+     
+     Setup
+     
+     Use the INSTALL program to set up a batch file.  It will automatically
+     run SRDOOR.
+     
+     If you have a non-supported BBS, these are some options:
+     
+         1.   Use a doorfile converter to convert to a supported format
+              (DOOR.SYS or DORINFO1.DEF preferred)
+     
+         2.   Write a program to read your doorfile and write DOORFILE.SR; if
+              you do this, please send us your program so that we may
+              incorporate it into future versions of SRDOOR. (see below)
+     
+         3.   Use command-line parameters to write directly to DOORFILE.SR. 
+              (See the above example.)
+     
+     
+     Compatibility:
+     
+     The SRDOOR software has been tested by John Dailey Software with
+     DOOR.SYS (Remote Access/Telegard) and DORINFO1.DEF; we have not tested
+     it with the other door types listed.  If you have any useful
+     information, please send it to us.
+     
+     
+     File Format:
+     
+     SRDOOR reads text files in which one piece of information is on each
+     line.  Unfortunately, some BBS programs do not create these types of
+     door files.  For standard door files, view SETUP.SR for more
+     information.  For a non-standard door file, SRDOOR currently has
+     experimental GTUSER and PCBOARD modes:
+     
+         SRDOOR PCBOARD1
+         Converts PCBoard 14.x type PCBOARD.SYS files to DOORFILE.SR.
+
+                                        Page 39
+     
+         SRDOOR PCBOARD2 ®comport¯
+         Converts PCBoard 12.1 type PCBOARD.SYS files to DOORFILE.SR.
+     
+         SRDOOR GTUSER ®comport¯
+         Converts GT type GTUSER.BBS files to DOORFILE.SR.
+     
+     Notice that the parameter ®comport¯ is needed in the Old PC-Board and
+     GT-USER files.  Use the COM port that the modem is attached to (1, 2, 3,
+     or 4).
+     
+     You can also write your own program to convert your favorite door file
+     to DOORFILE.SR.  The DOORFILE.SR format is:
+     
+         <line 1):   Complete name of user
+         (line 2):   ANSI status:  1 = yes, 0 = no, -1 = don't know
+         (line 3):   IBM Graphic characters:  1 = yes, 0 = no, -1 = unknown
+         (line 4):   Page length of screen, in lines.  Assume 25 if unknown
+         (line 5):   Baud Rate:  300, 1200, 2400, 9600, 19200, etc.
+         (line 6):   Com Port:  1, 2, 3, or 4.
+         (line 7):   Time Limit:  (in minutes); -1 if unknown.
+     
+     There is a program called GENPC that does this for Genesis Deluxe BBS
+     software.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 40
+     
+     The RESOURCE.DAT File
+     
+     The RESOURCE.DAT configuration file is a file located in your main
+     Barren Realms Elite directory (the one with BRE.EXE in it) which can be
+     used in replacement of many of the standard command line parameters, as
+     well as for extended features.  Command Line parameters will override
+     any RESOURCE.DAT settings.
+     
+     The Format of the RESOURCE.DAT file is on configuration item per line,
+     left margin flush.  For example:
+     
+         item setting
+         item setting
+         ...
+     
+     Where item refers to the config option such as "LockedBaud" and setting
+     refers to the parameter such as "19200".  If any strings with multiple
+     words are used, they must be enclosed in double quotes("hello all").  
+     
+     Valid Boolean Values include:
+     
+         FALSE        TRUE
+         OFF          ON
+         0            1
+         F            T
+         NO           YES
+     
+     Any of these may be used for any boolean flags on parameters.
+     
+     Comments in the file are used by including a ; at the beginning of the
+     line.  For example:
+     
+         ; This line is a comment.
+     
+     
+     Configurable Options
+     
+     The following are options that may be included in the RESOURCE.DAT
+     configuration file.  Each one is shown the the configuration keyword
+     followed by it's type (BOOLEAN, value, etc.)  The default setting and
+     descriptions are also displayed.
+     
+     
+         BIOS : Boolean                  DEFAULT: FALSE
+     
+         If you're having problems with multitasking due to screen bleeding
+     or other problems, turn this option to true.
+
+
+
+
+
+
+
+                                        Page 41
+     
+         VGA : Boolean                  DEFAULT: TRUE
+     
+         The VGA Option, when set to true, will adjust the colors on your
+         monitor if you have a VGA to be a little nicer looking.  If Barren
+         Realms Elite detects DESQview running, this option will
+         automatically disable.
+     
+     
+         LockedBaud : Number             DEFAULT: 0
+     
+         If you use a Locked Baud rate, set this value to the locked baud
+         rate; otherwise, this option is unnecessary.  Value of 0 is also
+         treated as no locked baud rate.
+     
+     
+         Fossil : Boolean               DEFAULT: FALSE
+     
+         The Fossil option allows you to enable the fossil driver com
+         routines.  BRE will default to use its own internal com routines,
+         unless the FOSSIL option is set to true.  The installer should have
+         asked you this question and already inserted a value into the
+         RESOURCE.DAT file.
+     
+     
+         Local : Boolean                 DEFAULT: FALSE
+     
+         If you wish to force local play at all times, set this to TRUE.
+     
+     
+         Multitasker : String            DEFAULT: "DETECT"
+     
+         This option will allow you to override the default BRE multitasking
+         setting.  By default, BRE will automatically attempt to figure out
+         what multitasking program you are running.  The following options
+         will set BRE to use timeslicing for the given multitaskers:
+     
+              "NONE"       Ä No Multitasker
+              "OS2"        Ä For OS/2
+              "WINDOWS"    Ä For Windows
+              "DESQVIEW"   Ä For DESQview
+     
+     
+         ComN : Comport Description      DEFAULT: none
+     
+         You can set COM1 Ä COM8's parameters (base address and IRQ level)
+         with these resources.  For example,
+     
+              Com5          $3E8,5
+     
+         would set up COM5 to run on IRQ 5 at base address hex 3E8.  Be sure
+         not to put a space before or after the comma.
+     
+
+
+                                        Page 42
+     
+         NoTimeCheck: String             DEFAULT: FALSE
+     
+         This option will allow you to turn off the Time Checking within the
+         game.  If this option is set to true, users will not get kicked out
+         of Barren Realms Elite even if their time alloted on the BBS has run
+         out.
+     
+     
+         GameName : String               DEFAULT: "Barren Realms Elite"
+     
+         This can be used to change the title of the game on the status bar. 
+         This is useful if you are running multiple games and would like to
+         know which one the user is currently in.
+     
+     
+         PurgeNetmail : Boolean          DEFAULT: FALSE
+     
+         This function will scan your Netmail directory removing all
+         "extraneous" netmail left by the BRE Game from other systems when
+         running BRE INBOUND or BRE PLANETARY.  This feature should remove
+         the need to delete all your BRE mail manually.
+     
+     
+         AnsiScores : String             DEFAULT: "BULLETIN\SCORES.ANS"
+         AsciiScores : String            DEFAULT: "BULLETIN\SCORES.TXT"
+     
+         This can be used to change the default ANSI/ASCII paths and file
+         names of the Scores Files created by BRE.  To not create one or the
+         other, leave the string BLANK.
+     
+     
+         TodayNewsAnsi : String          DEFAULT: "BULLETIN\TDYNEWS.ANS"
+         YesterdayNewsAnsi : String      DEFAULT: "BULLETIN\YESNEWS.ANS"
+         TodayNewsAscii : String         DEFAULT: "BULLETIN\TDYNEWS.TXT"
+         YesterdayNewsAscii : String     DEFAULT: "BULLETIN\YESNEWS.TXT"
+     
+         This can be used to change the default ANSI/ASCII paths and file
+         names of the News Files created by BRE...BRE will automatically and
+         immediately write to this file so copying of the files is
+         unnecessary.
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 43
+     
+         BBSScore : String               DEFAULT: "BULLETIN\BBSScore"
+         BBSWorth : String               DEFAULT: "BULLETIN\BBSWorth"
+         BBSLand : String                DEFAULT: "BULLETIN\BBSLand"
+         BBSWorthLand : String           DEFAULT: "BULLETIN\BBSWLand"
+         PlayerScore : String            DEFAULT: "BULLETIN\PLYScore"
+         PlayerWorth : String            DEFAULT: "BULLETIN\PLYWorth"
+         PlayerLand : String             DEFAULT: "BULLETIN\PLYLand"
+         PlayerWorthLand : String        DEFAULT: "BULLETIN\PLYWLand"
+         ANSIExtension : String          DEFAULT: "ANS"
+         ASCIIExtension : String         DEFAULT: "TXT"
+     
+         These settings allow you to specify where the InterBBS Scores files
+         are created.  You must specify a filename WITHOUT an extension - the
+         .ANS and .TXT extensions are automatically added by Barren Realms
+         Elite.  You may modify those extensions using the
+         ANSI/ASCIIExtension options.
+     
+     
+         BBSAmt : Integer                DEFAULT: 50
+         PlayerAmt : Integer             DEFAULT: 50
+     
+         These settings allow you to change the amount of players or BBSes
+         shown in the top rankings.  By default, BRE SCORES will display the
+         top 50 BBSes and players in each of the categories.  You may change
+         this to any value BELOW 255.
+     
+     
+         DeletionDays : Integer          DEFAULT: 7
+     
+         This parameter allows you to set the # of days before deleting an
+         inactive player.
+     
+     
+         Status.BackGround : Integer     DEFAULT: 1
+         Status.Title : Integer          DEFAULT: 15
+         Status.TopInfo : Integer        DEFAULT: 9
+         Status.BottomInfo : Integer     DEFAULT: 7
+         Status.Line : Integer           DEFAULT: 9
+         Status.Extra : Boolean          DEFAULT: FALSE
+     
+         These options allow you to customize your status bar.
+     
+         Background:  Color of Background on windows                   (0Ä7)
+         Title:       Color of Game Title [Centered, Top Line          (0Ä15)
+         TopInfo:     Color of all other info on Top Line              (0Ä15)
+         BottomInfo:  Color of all info on Bottom Line                 (0Ä15)
+         Line:        Color of intermittent "³" lines on Bottom Line   (0Ä15)
+         Extra:       Default Setting of Bar Size [Extra information "F2"
+     
+
+
+
+
+
+                                        Page 44
+     
+         ReconUpdate : Integer           DEFAULT: 3
+         OldestRecon : Integer           DEFAULT: 5
+     
+         By default, BRE will look for all recons 5 days old, every 3 days,
+         and send requests for updates from those BBS's.  The "3" can be
+         changed if you want reconning more or less often (monetary
+         considerations) by the ReconUpdate option.  The "5" can be changed
+         if you want reconning more or less often (monetary considerations)
+         through the OldestRecon option.
+     
+     
+         TimingCheck : Integer           DEFAULT: 4
+     
+         Every [TimingCheck] days, BRE will request information from all
+         BBSes to determine the total turnÄaround time to any BBS.  This
+         information can be viewed through the InterBBS Menu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 45
+     
+     Sample RESOURCE.DAT File (with Default Settings)
+     
+     BIOS                False
+     VGA                 True
+     LockedBaud          0
+     Fossil              False
+     Local               False
+     Multitasker         "Detect"
+     NoTimeCheck         False
+     GameName            "Barren Realms Elite"
+     PurgeNetmail        False
+     AnsiScores          "BULLETIN\SCORES.ANS"
+     AsciiScores         "BULLETIN\SCORES.TXT"
+     TodayNewsAnsi       "BULLETIN\TDYNEWS.ANS"
+     YesterdayNewsAnsi   "BULLETIN\YESNEWS.ANS"
+     TodayNewsAscii      "BULLETIN\TDYNEWS.TXT"
+     YesterdayNewsAscii  "BULLETIN\YESNEWS.TXT"
+     DeletionDays        7
+     Status.BackGround   1
+     Status.Title        15
+     Status.TopInfo      9
+     Status.BottomInfo   7
+     Status.Line         9
+     Status.Extra        False
+     ReconUpdate         3
+     OldestRecon         5
+     TimingCheck         4
+     BBSScore            "BULLETIN\BBSScore"
+     BBSWorth            "BULLETIN\BBSWorth"
+     BBSLand             "BULLETIN\BBSLand"
+     BBSWorthLand        "BULLETIN\BBSWLand"
+     PlayerScore         "BULLETIN\PLYScore"
+     PlayerWorth         "BULLETIN\PLYWorth"
+     PlayerLand          "BULLETIN\PLYLand"
+     PlayerWorthLand     "BULLETIN\PLYWLand"
+     ANSIExtension       "ANS"
+     ASCIIExtension      "TXT"
+     BBSAmt              50
+     PlayerAmt           50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 46
+     
+     Additional ANSI Files
+     
+     If they exist, the Following ANSI files are displayed at key points
+     during the game, although not all of the time.
+     
+     NOTE: Notice the extension of user created Ansi Files.  All of these
+     files should be in the BRE\GAME\ subdirectory.
+     
+         BREFAST.ANS    Opening Screen for callers at speeds above 2400
+         BRESLOW.ANS    Opening screen for callers at speeds 2400 or below
+         BREEND.ANS     Closing Screen
+         BRPIRATE.DSP   Pirates Attacking Player
+         BRRAID.DSP     Pirate Raids
+         BRNUKE.DSP     When Nuking enemy
+         BRCHEM.DSP     When using Chem Weapon
+         BRBIO.DSP      When using Bio Weapon
+         BRCRUSH.DSP    When Enemy completely Crushed
+         BRWIN.DSP      If Local Attack Won
+         BRLOSE.DSP     If Local Attack Lost
+         BRBRIBE.DSP    If a bribed agent is found
+         ADVISOR.DSP    Advisor Advertisement Screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 47
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° InterBBS League Configuration °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     InterBBS play adds a whole new dimension to Barren Realms Elite.  By
+     creating a "league" of bulletin board systems all playing the same game,
+     you can "connect" them together to allow play inter-BBS.  This allows
+     players to compete against each other on a global scale.
+     
+     Setting up InterÄBBS warfare in Barren Realms Elite involves a very
+     simple process.  In general (with exceptions), it requires an external
+     netmail system such as Frontdoor, Binkley, or Dbridge.  However, other
+     types of packet transfer have been used such as e-mail and FTP via the
+     internet.
+     
+     Following these steps should make the process of becoming a part of an
+     InterBBS Interactive Barren Realms Elite game as easy as possible.
+     
+     
+         1.   Decide whether you would like to create your own league or join
+              another.  If you have not had any experience with InterBBS
+              games, it is a good idea to consider first joining another.
+     
+              A "League" is a set of systems which are all linked together,
+              with a "League Coordinator" being the sysop of the system in
+              charge.  It is that person that you should contact about
+              joining a game.  They are always BBS #1 in a List of BBSes in
+              the game.
+     
+              Once you have contacted the central BBS, you will receive a
+              BRNODES.DAT file.  Check to make sure your BBS is in it with
+              the correct node number.
+     
+              IF YOU CHOOSE TO CREATE YOUR OWN LEAGUE, THERE IS ADDITIONAL
+              INFORMATION BELOW.  Please see the section on becoming a league
+              coordinator.
+     
+     
+         2.   At this point you should have, or be expecting, to get an
+              BRNODES.DAT file.  You need to create a BBS.CFG file in one of
+              the following ways:
+     
+                   Method #1 - Run "BRE SETUPINTERBBS" and input all of the
+                   necessary information.  If you do not know the League
+                   Number yet, you will need to modify this to join the game
+                   (find out from your League Coordinator)
+     
+                   Method #2 - Create it yourself.  Look at SAMPLES\BBS.SAM
+                   for more details about the format - it is extremely
+                   simple.
+
+
+
+
+                                        Page 48
+     
+         3.   You now have an BRNODES.DAT and BBS.CFG file.  You should find
+              out from your League Coordinator whether or not you need to
+              create a ROUTE.CFG file.  Your league may already take care of
+              routing in the BRNODES.DAT through a HOST routing system, in
+              which case you may skip this step.
+     
+              Otherwise, look at the SAMPLES\ROUTE.SAM for more information
+              about how to set up your own routing information.  Note that
+              even if you are letting the League Coordinator set up the
+              proper routing, if you want mail to be placed CRASH or HOLD,
+              you will need to set that in your ROUTE.CFG file.
+     
+         4.   Run "BRE PLANETARY" to your daily maintenance.  You may also
+              run this more often in order to process data several times a
+              day.  Alternatively, you may run "BRE FULL" instead of "BRE"
+              when users play and the game will process data when the user is
+              playing.
+     
+              Run "BRE SCORES" in your daily maintenance to ensure the daily
+              creation of the InterBBS scores files.
+     
+     
+         5.   You're almost done.  You should have the BRNODES.DAT, BBS.CFG,
+              and ROUTE.CFG (optional) files now.  Run "BRE TEST" and make
+              sure everything looks OK.  If so, you should be all set.  Enjoy
+              the game!  If not, you'll need to backtrack to see what
+              happened.  Here are some possible problems:
+     
+              Problem: 
+     
+              Not a member of InterBBS League
+     
+     
+              Solutions:
+     
+              Check to make sure BBS.CFG and BRNODES.DAT are properly named
+              and in the main Barren Realms Elite directory
+              
+              Check to make sure your Node Number in each of those files
+              matches exactly
+     
+     
+              Problem:
+     
+              The routing from BRE TEST is not what I want
+     
+     
+              Solutions:
+     
+              If you're using the HOST system defined by your League
+              Coordinator, contact him or her and let him know
+     
+              If you're using the ROUTE.CFG file, check to make sure you
+              typed everything in properly.
+                                        Page 49
+     
+     Becoming a League Coordinator
+     
+     In addition to the above steps, as League Coordinator, you will be
+     responsible for creating and maintaining the BRNODES.DAT file and the
+     league in general.
+     
+     This involves adding new systems, deleting old ones, checking the
+     routing, and ensuring fairness.  For information on the format of the
+     BRNODES.DAT file, see SAMPLES\NODEFORM.INF.  We highly recommend you use
+     the HOST routing method so that other systems do not need to worry about
+     their own routing.
+     
+     You will also need to be sure to select a League Number between 1 and
+     999.  This number identifies your league so BBSes running multiple games
+     can be kept separated.  It is OK to have 2 leagues with the same number,
+     but no single system can be a member of both of those leagues.
+     
+     
+     Transferring Coordinatorship
+     
+     If you would like to hand over the job of coordinatorship in your league
+     to another BBS, you must copy the COORD.KEY file to the BRE directory of
+     the new BBS and make him BBS #1 in the BRNODES.DAT file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 50
+     
+     Sample InterBBS Configuration Files
+     
+     The following pages outline the various configuration files required for
+     InterBBS play.  Each section also includes a sample file that may be
+     exported as text for editing.
+     
+     Refer to the section on setting up InterBBS game play for information on
+     how to begin setting up an InterBBS league.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 51
+     
+     BBS.CFG
+     
+     This file holds basic information about your BBS while it is in the
+     league.  BBS.CFG should be located in your main Barren Realms Elite
+     directory:
+     
+     
+         Line 1
+         Sysop Name
+     
+         Line 2
+         BBS or Nation Name - This is used only to identify your system in
+         the game, so use whatever you like - to make others see the selected
+         name, request that it be placed in the Nodelist in place of the BBS
+         name.
+     
+         Line 3
+         NodeNumber with Zone:Net/Node.
+     
+         Line 4
+         Your Front End Incoming FILE Directory
+     
+         Line 5
+         Your NetMail Directory
+     
+         Line 6
+         League number - Must be the same throughout the league.  This can be
+         any number between 1 and 999.  If a BBS chooses to be involved in
+         two leagues, they must use different League Numbers, or Barren
+         Realms Elite won't know which data packets are for which game.
+     
+         Line 7
+         Your Front End Mailer.  This should be one of the following:
+         FRONTDOOR, BINKLEY, DBRIDGE, INTERMAIL, DBRIDGEOLD, OTHER or NONE. 
+         
+         If you wish to run BRE PLANETARY more than once a day, you MUST be
+         running Front Door, Binkleyterm, D'Bridge, or Intermail.
+     
+         D'Bridge 1.51 and below do not support the necessary features for
+         BRE to allow multiple files per day to be transferred, and you must
+         therefore use the "DBRIDGEOLD" setting.  If you run D'Bridge 1.51-
+         or OTHER, then you will only be able to run BRE PLANETARY once a
+         day.
+     
+         Also, many systems are running BRE *without* a mail system
+         completely (no idea how, but they have succeeded!).  You can use the
+         NONE setting if you delete files after they are sent.  Selecting
+         NONE will *not* create a .MSG file.
+
+
+
+
+
+
+                                        Page 52
+     
+     John Doe
+     My BBS
+     1:222/333
+     C:\FD\FILES
+     C:\FD\NETMAIL
+     999
+     FRONTDOOR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 53
+     
+     BRNODES.DAT
+     
+     This file outlines all of the nodes in a particular league.  IF YOU ARE
+     NOT THE LEAGUE COORDINATOR, YOU SHOULD NOT BE MODIFYING THE BRNODES.DAT
+     FILE IN ANY CASE.  This file should also be stored in your main Barren
+     Realms Elite directory.
+     
+     
+         BBS 1 Line 1
+         BBS Number with optional HOST routing system.  Number assigned to
+         any BBS in the game.  BBS #1 is the manager of the game and will
+         automatically send out BRNODES.DAT update to the BBS's.  The HOST
+         routing system is explained below.
+     
+         BBS 1 Line 2
+         BBS or Nation Name.  The Name of the BBS or Nation.  To make the
+         game more enjoyable for the players, we recommend that BBSes create
+         "nation" names such as "USA" or "Canada" or "Solaria" instead of
+         their BBS name to create a game atmosphere.  Each BBS, of course,
+         should choose a different name.
+     
+         BBS 1 Line 3
+         Zone:Net/Node Number.  Your FrontEnd Zone:Net/Node Number.  This
+         game should work on any fido-net compatible network.
+     
+         BBS 1 Line 4
+         City
+     
+         BBS 1 Line 5
+         Two Letter State Code
+     
+         BBS 1 Line 6
+         Country
+     
+     A blank Line separates entries in the node list
+     
+         BBS 2 Line 1
+         BBS Number with optional HOST routing system
+     
+         BBS 2 Line 2
+         BBS or Nation Name
+     
+         BBS 2 Line 3
+         Zone:Net/Node Number
+     
+         BBS 2 Line 4
+         City
+     
+         BBS 2 Line 5
+         Two Letter State Code
+     
+         BBS 2 Line 6
+         Country2
+     
+         ...
+                                        Page 54
+     
+     Host Routing System
+     
+     If your league uses a centralized routing system with Hubs, the safest
+     and simplest way of maintaining this routing is by having the League
+     Coordinator manage it.
+     
+     If BBS 2 has systems 3,4, and 8 sending all of their data to it, you
+     should have, for BBS #2, the following for its first line:
+     
+     2 HOST 3 4 8
+     My BBS
+     1:222/333
+     etc.
+     
+     
+     Suppose this is the routing structure:
+     
+                                    BBS #1
+                                  /        \
+                               BBS #2     BBS #4
+                             / |  |  \    |  |  \
+                            3  5  7  8    6  9  11
+                                                 |
+                                                 10
+     
+     BBSes 3, 5, 7, 8, 6, 9, and 10 would not be HOSTs and would therefore
+     not have any routing information.
+     
+     BBS #2 would list 3, 5, 7, and 8 after it.
+     
+     BBS #4 would list 6, 9, and 10 only.  BBS #11 would list only 10.
+     
+     BBS #1 would list only 2 and 4.
+     
+     So the entire nodelist would have [Line #1 shown only for each BBS]:
+     
+     1 HOST 2 4
+     2 HOST 3 5 7 8
+     3
+     4 HOST 6 9 11
+     5
+     6
+     7
+     8
+     9
+     10
+     11 HOST 10
+     
+     Barren Realms Elite will then determine the necessary data routing for
+     each BBS.
+
+
+
+
+                                        Page 55
+     
+     1
+     My BBS
+     1:222/333
+     Some City
+     ST
+     USA
+     
+     2
+     Another BBS
+     1:444/555
+     A Big City
+     ST
+     USA
+     
+     3
+     Yet Another BBS
+     1:999/111
+     Somewhere
+     ST
+     CAN
+     
+     ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 56
+     
+     ROUTE.CFG
+     
+     This file holds information regarding the routing of interBBS packets. 
+     If your League Coordinator is managing your routing through HOST routing
+     system in the nodelist, you do not need a ROUTE.CFG file.  However, any
+     information in this file will override anything else assumed by the
+     BRNODES.DAT file.  You may put these lines in this file at any location
+     and in any order.
+     
+     Again, ROUTE.CFG must be stored in the main BRE Directory  The following
+     may be used in the routing configuration file.
+     
+     
+         ROUTE
+     
+         If you wish to route data destined to a particular node to another
+         node, use the following format:
+     
+              ROUTE 5 10
+     
+         This will route all mail for BBS #5 in your BRNODES.DAT to BBS #10
+         ROUTE also supports "*" as the first parameter to represent "ALL":
+     
+              ROUTE * 8
+     
+         This will route ALL mail for ANY BBS through BBS #8.  Using ROUTE 5
+         5 after a "Route * #" command will restore BBS #5 to Direct
+     
+     
+         CRASH PRIORITY MAIL
+     
+         By default, all BRE mail is set to "Normal Priority" in your mailer. 
+         If you wish for BRE to set mail up to CRASH Priority, use the
+         following format:
+     
+              CRASH 5
+     
+         This will put all mail to BBS #5 as CRASH Mail CRASH * with set
+         crash priority to ALL nodes
+     
+     
+         HOLD MAIL
+     
+         The format to put mail on HOLD is the same as CRASH.
+     
+              HOLD 5
+     
+              HOLD * with put mail on hold to ALL nodes
+
+
+
+
+
+
+                                        Page 57
+     
+         NORMAL MAIL
+     
+         The format to put mail on NORMAL mode, cancelling crash & hold
+         priorities.
+     
+              NORMAL 5
+              NORMAL * with put mail on NORMAL for ALL nodes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 58
+     
+     Local InterBBS Setup
+     
+     Many sysops are unwilling to setup the InterBBS Gaming System, are
+     unsure of its workings, or are unwilling to connect to another system. 
+     This file explains how to set up several local games to be
+     interconnected so you may essentially run an "InterBBS Local Game".
+     
+     This can be especially interesting if you have a large number of players
+     on the board who wish to form "teams" and fight, etc.
+     
+     See the INTERBBS.DOC for basic information on how to set up your
+     BRNODES.DAT and BBS.CFG files.
+     
+     
+         Setting up BRNODES.DAT
+     
+         Each game should have a different Nodelist number and name.  For
+         simplicity, it is recommended that you use 1:1/1 for the first game,
+         1:1/2 for the second, and so forth.
+     
+     
+         Setting up BBS.CFG
+     
+         For all games (2..n), the INBOUND FILES directory should be:
+     
+              [GAME(N-1)]\OUTBOUND
+     
+         For game #1, the INBOUND FILES directory should be:
+     
+              [GAME(N)]\OUTBOUND
+     
+         For example: Suppose you have a 4-game setup in directories C:\BRE1,
+         C:\BRE2, C:\BRE3, and C:\BRE4.
+     
+              Game            Inbound File Directory
+     
+              1               C:\BRE4\OUTBOUND
+              2               C:\BRE1\OUTBOUND
+              3               C:\BRE2\OUTBOUND
+              4               C:\BRE3\OUTBOUND
+     
+     
+         Setting up ROUTE.CFG
+     
+         All systems should route data to the next system, with the last
+         routing all data to game #1.  For a 4-game system, you should have
+         the following:
+     
+              Game 1 should have a route.cfg with: "ROUTE * 2"
+              Game 2 should have a route.cfg with: "ROUTE * 3"
+              Game 3 should have a route.cfg with: "ROUTE * 4"
+              Game 4 should have a route.cfg with: "ROUTE * 1"
+
+
+                                        Page 59
+     
+         This basically produces a file circle.  Run BRE PLANETARY on each
+         system 1Äx in order, and all the necessary information will be
+         properly transmitted between systems.  Running this cycle twice will
+         produce immediate results of all attacks, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 60
+     
+     Sample Files (For a 4-Game System)
+     
+     This assumes a 4-game system, with a league number of 900.  The four
+     games are contained in C:\BRE1, C:\BRE2, C:\BRE3, and C:\BRE4.
+     
+     
+     BRNODES.DAT (for all 4 games)
+     
+     1
+     Game Setup One
+     1:1/1
+     Some City
+     ST
+     USA
+     
+     2
+     Game Setup Two
+     1:1/2
+     Some City
+     ST
+     USA
+     
+     3
+     Game Setup Three
+     1:1/3
+     Some City
+     ST
+     USA
+     
+     4
+     Game Setup Four
+     1:1/4
+     Some City
+     ST
+     USA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 61
+     
+     Sample BBS.CFG
+     
+     Game-1            Game-2             Game-3           Game-4
+     
+     John Doe          John Doe           John Doe         John Doe
+     Some BBS          Some BBS           Some BBS         Some BBS
+     1:1/1             1:1/2              1:1/3            1:1/4
+     C:\BRE2\OUTBOUND   C:\BRE3\OUTBOUND    C:\BRE4\OUTBOUND 
+     C:\BRE1\OUTBOUND
+     C:\BRE2\OUTBOUND   C:\BRE3\OUTBOUND    C:\BRE4\OUTBOUND 
+     C:\BRE1\OUTBOUND
+     900               900                900              900
+     NONE              NONE               NONE             NONE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 62
+     
+     Sample ROUTE.CFG
+     
+     Game-1            Game-2             Game-3           Game-4
+     
+     ROUTE * 2         ROUTE * 3          ROUTE * 4        ROUTE * 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 63
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Barren Realms Elite Support Information °°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Questions, comments, complaints, or suggestions can be directed to
+     myself at any of the following addresses or locations.
+     
+     
+         E-Mail Addresses
+     
+         73124,2612                      [Compuserve]
+         jd@johndaileysoftware.com       [Internet]
+         1:363/277                       [FIDONet]
+         1@4706                          [TerraNET]
+     
+     
+         Postal Mailing Address
+     
+         John Dailey Software
+         P. O. Box 17
+         Windermere, FL  34786-0017
+     
+     
+         Bulletin Board System
+     
+         BBS Avalon
+         (407) 654-9705
+         24 hours
+         1200 - 33.6, N81, ANSI Required
+         FIDONet   1:363/277
+         Alliance  @4701
+         TerraNET  @4706
+     
+         You may always FREQ the latest version of Barren Realms Elite via
+         FidoNET with the magic name "BRE."
+     
+     
+         Echoed Message Areas
+     
+         Network    Areatag/Subtype  Moderator/Host
+         ------------------------------------------
+         FidoNET       JDSSOFT          1:363/277
+         TerraNET      JDSSOFT          @4701
+         WWIVNet       JDSSOFT          @2522
+         Alliance      JDSSOFT          @1
+         *Moderated by author
+     
+     
+         Internet WWW Site
+     
+         www.johndaileysoftware.com
+
+
+
+                                        Page 64
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Registration Information °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     As a software developer, I take pride in my efforts to produce high
+     quality shareware.  In order to do so, some of my software requires a
+     small registration fee.
+     
+     Barren Realms Elite has been developed and tested for many years, and is
+     being released under the Shareware concept, which encourages the users
+     of a program to register that software after a trial period of
+     approximately 60 days and continued use thereafter.
+     
+     To encourage registration, some basic elements of the game not required
+     for it to work properly have been disabled.  Upon registering Barren
+     Realms Elite you will receive the following benefits:
+     
+         o    Special bank features including:
+                   Investments
+                   Bank Interest
+                   Bank Loans (Cash Relief)
+     
+         o    SDI Defense in interplanetary games
+     
+     By registering and supporting quality shareware such as this, you are
+     making the Barren Realms Elite software bigger, better, and more
+     enjoyable for you and your users.
+     
+     Upon receipt of your registration for the Barren Realms Elite software,
+     you will receive a unique, individual registration code (with
+     instructions), which is easily used to make the game executable
+     registered.  Registration of the Barren Realms Elite software will
+     entitle you to FREE UPDATES.  All you'll need to do is acquire the
+     update software package and incorporate your registration code.
+     
+     Registration will also activate all registered-only features of the
+     program and remove all unregistered delays and nag screens.  Your name
+     and registration number will also appear to you and your users as the
+     game is executed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 65
+     
+     If you are unhappy with any part of the Barren Realms Elite software,
+     either with it's operation, or the software itself, please do not send
+     in your registration expecting it to function more to your liking. 
+     Remember that the great concept of shareware is "try before you buy." 
+     You know exactly what you will receive before you pay for it.
+     
+     If you are having problems, please don't hesitate to contact me before
+     giving up or registering the software.  I fully support the software for
+     anyone whether they have or have not registered the Barren Realms Elite
+     software.
+     
+     The Barren Realms Elite software can be registered for both sysop BBS
+     and personal use.  If you don't operate a BBS, you can still register
+     the Barren Realms Elite software for your personal use.
+     
+     You may currently register John Dailey's Barren Realms Elite via pre-
+     paid check, money order or cash in US funds only.  In addition, you may
+     register via your Visa, Mastercard, Discover, or American Express credit
+     card either by mail or online registration.
+     
+     For further information and instructions on registration of of Barren
+     Realms Elite, please refer to the file "REGISTER.DOC" located in the
+     documentation directory after installation.
+     
+     Upon receipt of your registration, it will be processed as soon as
+     possible, and a registration keycode, with instructions on how to
+     register your copy of Barren Realms Elite, will be sent along with it.
+     
+     If by postal mail, please allow at least two to three weeks from the
+     time you mail your registration to the time you receive your
+     registration information back.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 66
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Author's Notes And Credits °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Recently, Barren Realms Elite was acquired by myself from Mehul Patel. 
+     Due to this change-over, I have released this version of Barren Realms
+     Elite as simply a maintenance release with a few revisions.  Please
+     refer to the WHATSNEW.DOC file for more information on revision history.
+     
+     Keeping in touch with update information via my web site, message echo,
+     BBS or e-mail will bring more detailed information to you as these
+     projects progress further
+     
+     
+           WWIV BBS Software (c) Wayne Bell And WWIV Software Services
+       RemoteAccess BBS Software (c) Andrew Milner And Wantree Development
+                          ARJ Software (c) Robert Jung
+     
+     All other products mentioned are copyright or trademarked by their
+     respective owners.
+     
+     
+     I'd like to thank Mehul Patel for starting this wonderful product which
+     has given me, and thousands of other individuals, years of great BBS
+     gaming.  I hope to continue Barren Realms Elite's development for years
+     to come.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 67
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Appendix A - Important Notes °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Although not necessarily important for sysops to know, I feel that there
+     are a few points of the Barren Realms Elite operating specifies that may
+     need to be brought to your attention.  These notes may help troubleshoot
+     any problems that you may encounter and aren't listed in Appendix C.
+     
+     
+         ANSI Driver
+     
+         Please note that the ANSI driver is *NOT* needed to be installed on
+         your system in order to enjoy the full-blown ANSI graphics provided
+         by Barren Realms Elite.  The software contains its own ANSI
+         capabilities.
+     
+     
+         Maintenance Related Issues
+     
+         Barren Realms Elite requires no maintenance or Sysop intervention. 
+         Set it up once and forget about it.  Some minor maintenance issues
+         come into play only when engaging in interBBS league play.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 68
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Appendix B - Trouble Shooting °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Barren Realms Elite was created with years of experience in both
+     installing and playing on-line software and running BBS software.  I
+     surely hope that you have no major problems with installing and/or
+     running this great software package.  In this section, I will attempt to
+     address common problems or errors that you may encounter while utilizing
+     this software with your system.  If your problem is not listed, feel
+     free to contact me in any way for more assistance.
+     
+     
+         Q.   My game just isn't running properly.
+     
+         A.   Try running BRE TEST and viewing the file it creates
+              (RESULTS.TXT) for more information.
+     
+     
+         Q.   BRE shows up fine locally but not remotely.
+     
+         A.   Be sure, for high speed modems, to specify a locked baud rate
+              parameter in BRE's RESOURCE.DAT file.  For example, if your
+              modem is locked at 19200, enter:
+     
+                   LockedBaud     19200
+     
+              in the RESOURCE.DAT file.  Also, try changing the Fossil driver
+              setting in RESOURCE.DAT:
+     
+                   Fossil         Yes
+     
+                   or
+     
+                   Fossil         No
+     
+              Some systems may work better when BRE uses the Fossil, and some
+              may work better when BRE uses its own communication routines.
+     
+              If you are using a non-standard COM port, and you are not using
+              a Fossil driver, you may wish to tell BRE what the COM port
+              parameters are.  Check RESOURCE.DOC for details on how to do
+              this.
+     
+     
+         Q.   My game is running fairly slow and choppy.  Why?
+     
+         A.   The BRE multitasking routines are still being worked on.  They
+              work well on some systems, but not others.  Try adding
+              "Multitasker NONE" to your RESOURCE.DAT file.
+     
+
+
+
+                                        Page 69
+     
+         Q.   I keep getting a message saying "Not a member of a league" when
+              I run BRE PLANETARY or OUTBOUND or INBOUND.  Why?
+     
+         A.   Two possible reasons.  One, you're really not a member of
+              league and shouldn't be running those options.  More likely,
+              you have an error in your setup.  Make sure your node number in
+              the BRNODES.DAT matches exactly the one in BBS.CFG.
+     
+     
+         Q.   I keep getting a Run Time Error.  What do I do?
+     
+         A.   First, carefully check your setup and make sure all
+              configuration information is correct.  If everything checks
+              out, write down the error number and memory address (which
+              looks something like Runtime Error 201 at 2145:2F32) and send
+              it to John Dailey at any of the addresses listed in the support
+              section of this documentation.
+     
+              If your game seems dead, you can try copying the
+              BACKUP\GAME.DAT over your DATA\GAME.DAT and see if that fixes
+              the problem.
+     
+     
+         Q.   I am currently the coordinator of a league.  I wish to make
+              another board into the new coordinator.  How do I go about
+              this?
+     
+         A.   First, you must change the BRNODES.DAT to make the new BBS into
+              system #1.  Additionally, you must copy your COORD.KEY file
+              from your main BRE directory to the other system's main BRE
+              directory.  Do *NOT* allow anyone to access this file, as it
+              prevents systems from becoming "fake" coordinators and messing
+              up a league.
+     
+     
+         Q.   I keep receiving all my attacks back as Lost In Transit.  Why?
+     
+         A.   Either the routing between you and your opponent is too long
+              (making BRE think the attack was lost forever) or there is a
+              routing problem.  In the case of the first, either find a new,
+              more efficient method of routing or ask the coordinator to
+              increase the number of days before assuming an attack is lost. 
+              In the latter case, ask your coordinator to run "BRE ROUTEINFO"
+              to produce a list of the current routing setup and find and
+              help solve any problems in the current routing scheme.
+     
+     
+         Q.   As a coordinator for a BRE League, I keep getting complaints of
+              people cheating.  What should I do?
+     
+         A.   Most cheat-complaints are false alarms, but the occasional one
+              may be true.  Depending on the set up of a game, empires may or
+              may not be able to grow at unbelievable rates, and so it is
+              very difficult to tell whether or not an empire really is
+              cheating.  It's a judgement call you must make.
+                                        Page 70
+     
+         Q.   I sent my registration quite a while ago, but have received
+              nothing back.  What does this mean?
+     
+         A.   Make sure that you sent the registration and payment to the
+              correct address.  Because ownership of Barren Realms Elite has
+              changed, your registration must be sent to a new address and
+              payment made to a new individual.  Double check the
+              registration form included in the distribution archive for more
+              information.
+     
+     
+         Q.   My BBS doesn't create any of the dropfiles that Barren Realms
+              Elite supports.  What can I do?
+     
+         A.   You have a couple of options in this case.  You may either
+              modify a SETUP.SR file to read in from your dropfile the
+              information it needs, or simply use a door-file convertor (many
+              are available) to create a dropfile supported by Barren Realms
+              Elite.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Page 71
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Appendix C - Developer Information °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     The following information is made available to those software developers
+     that would like to produce tools to aid in game play.  For security
+     purposes -- to prevent cheating -- only unimportant data file structures
+     are released.  Tampering with these files will not aid a BBS, as they do
+     not affect the game except by providing information.
+     
+     {Barren Realms Elite v0.970 Public Pascal Structure Files
+      --------------------------------------------------------
+     
+     Note: For security purposes (to prevent cheating), only unimportant data
+     file structures are released.  Tampering with these files will not aid
+     a BBS, as they do not affect the game except by providing information.
+     }
+     
+     {FILE: DATA\SPY.BR
+      ---------------------------------------------------------------------
+      This file stores 255 "SpyList"s.  It contains all the known spy
+      information available in the Spy Database.
+     }
+     
+     Type
+       SpyInfo = Record
+         Id,
+         Troopers,
+         Jets,
+         MissileBases,
+         Tanks,
+         Regions : LongInt;
+         Morale : Integer;
+         Date : Real;
+       End;
+     
+       SpyList = Array['A'..'Y'] Of SpyInfo;
+     {-------------------------------------------------------------------}
+     
+     {FILE: DATA\PLANET.BR
+      -------------------------------------------------------------------
+      This file stores all the known recon information from each BBS in the
+      game stored as 255 "PlanetInfo"s.
+     }
+     
+     DateRecord = record
+       Year, Month, Day,
+       Hour, Minute, Second, Hundredths : Word;
+     End;
+     
+     PlanetInfo = Record
+       PlanNum : Integer;
+       Names : Array['A'..'Y'] Of String[30];
+       Scores : Array['A'..'Y'] Of LongInt;
+       Regions : Array['A'..'Y'] Of LongInt;
+       NetWorth : Array['A'..'Y'] Of LongInt;
+       Ids : Array['A'..'Y'] Of LongInt;
+       Date : DateRecord;
+       Recon : Boolean;
+       Version : String[9];
+       Empty : Array[1..246] of Char;
+     End;
+     
+     {---------------------------------------------------------------------}
+                                        Page 72
+     
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+      ° Index °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+     Agriculture  29
+     Alliance Strength  31
+     ANSI  47
+         ANSI Driver  68
+         ANSI.SYS  68
+     Archive
+         ARJ-SECURITY ENVELOPE  1
+         Files after installation  2
+         Files Included  1
+     Attack Pirates  31
+     Attacks  31
+         Biological  31
+         Chemical  31
+         Nuclear  31
+         Pirates  31
+         Regular  31
+     Bank  26
+     Barren Realms Elite
+         Game Rating  4
+         Installing  10
+         Introduction  3
+         Maintenance  68
+         Playing  21
+         Registration  65
+         Starting Game  19
+         Status Bar  12
+         Support Information  64
+         Sysop Bar  12
+         System Requirements  5
+     BBS.CFG  52
+     Biological Attack  31
+     Bomb Enemy Food Market  34
+     Bomb Enemy Targets  25
+     Bomb Enemy Trade Market  34
+     Bomb Enemy Trade Routes  34
+     Bombers  28
+     Bribery  25
+     BRNODES.DAT  54
+     Buy/Sell  28
+     Carriers  30
+     Chemical Attack  31
+     Coastal  28
+     Command-Line  16
+     Configuration
+         Advanced  38
+         Command-Line  16
+         InterBBS  48
+         RESOURCE.DAT  41
+         SRDOOR  38
+     Covert Agents  30
+     Covert Operations  25
+                                        Page 73
+     
+     Create Group Attack  33
+     Credits  67
+     Declaration Of War  22
+     Demoralize Forces  25
+     Desert  29
+     DESQview  14
+     Diplomacy  22
+     Expose Enemy Ops  25
+     Free Trade Agreement  22
+     Full Defense Alliance  22
+     Gooie Kablooie Ops  34
+     Headquarters  28
+     Host Routing System  55
+     Individual Attack Force  33
+     Industry  29
+     Installation
+         First time  10
+         Quick  6
+         Tips  9
+         Upgrading  8
+     Intelligence Alliance  22
+     InterBBS  48
+         Local  59
+     Interplanetary Operations  33
+         Create Group Attack  33
+         Individual Attack Force  33
+         Join Group Attack  33
+         Send Message  33
+         Send Trade Deal  33
+         Terrorist Ops  33
+         View IPScores  33
+     Jets  28
+     Join Group Attack  33
+     League  48
+     Local InterBBS  59
+     Maintenance Issues  68
+     Messages  36
+     Mountains  28
+     Multinode Notes  14
+         DESQview  14
+     Nuclear Attack  31
+     Nuclear/Chemical/S3-Sabre  34
+     Payment/Food Market  24
+     Protective Trade  22
+     Region Buying  28
+     Registration  65
+     Regular Attack  31
+     RESOURCE.DAT  41
+     Rivers  29
+     ROUTE.CFG  57
+     SDI Program  35
+     Send Message  33
+     Send Spy  25
+     Send Trade Deal  33
+     Set Up  25
+                                        Page 74
+     
+     Special Operations  34
+         Bomb Enemy Food Market  34
+         Bomb Enemy Trade Market  34
+         Bomb Enemy Trade Routes  34
+         Gooie Kablooie Ops  34
+         Nuclear/Chemical/S3-Sabre  34
+         SDI Program  35
+         Spy Database  35
+         Spy Guy  34
+         Travel Times  35
+         Undermine Investments  34
+     Spending Menu  27
+     Spy Database  35
+     Spy Guy  34
+     Spy On Relations  25
+     SRDOOR  38
+     Status Screen  23
+     Stir Revolts  25
+     Support
+         BBS  64
+         E-Mail  64
+         Message Echo  64
+         Postal Mail  64
+     Support Dissensions  25
+     Support Information  64
+     Sysop bar  12
+     System Menu  37
+     System requirements  5
+     Tanks  30
+     Tariff Trade Agreement  22
+     Technology  29
+     Technology Agreement  22
+     Terrorist Ops  33
+     Terrorist Prevention  22
+     The Bank  26
+     Trading  32
+     Travel Times  35
+     Troopers  28
+     Turrets  28
+     Undermine Investments  34
+     Upgrading  8
+     Urban  29
+     View IPScores  33
+     View Treaties  22
+     Waste  30
+
+
+
+
+
+
+
+
+
+                                        Page 75
+     

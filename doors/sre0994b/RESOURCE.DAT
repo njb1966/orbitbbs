@@ -1,0 +1,7 @@
+Install.BBSDirectory                    C:\
+Install.DoorFileDir                     C:\
+Install.BatchFile                       C:\SRE.BAT
+System.Fossil                           yes
+LockBaudRate                            
+Scores.File.ANSI                        
+Scores.File.Text                        

@@ -1,0 +1,8 @@
+Hey peeps.. This would be an attempt at logging the stuff I do
+to the game.. bug fixes, additions, comments, yadda. This file would
+be longer, but there wasnt one in Seth's last release..
+
+2.02
+----
+- Not much has been done. This is just a cosmetic release to acknowledge
+  the new owners.. Ive started cleaning up the code..
