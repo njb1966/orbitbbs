@@ -171,6 +171,47 @@ Single-char commands (like `U` = user list) execute immediately; `//` is require
 
 ---
 
+## 🚀 Remaining Work (pre-VPS)
+
+### Phase 9 — ANSI Screens
+Design in Moebius or PabloDraw (CP437), inject via guestfish into `C:\ORBIT\GFILES\`.
+No recompile needed.
+
+| File | Notes |
+|------|-------|
+| `MAINMENU.ANS` | Main menu — replaces hardcoded orbit_menu() fallback |
+| `MAINMENU.MSG` | Plain terminal fallback |
+| `WELCOME.ANS` | Pre-login screen |
+| `LOGON.ANS` | Post-login screen |
+| `LOGOFF.ANS` | Logout screen |
+| `NEWUSER.ANS` | New user registration screen |
+
+### Phase 10 — Feature Validation
+Test every menu command end-to-end via telnet:
+- [ ] Messages: P, S, N, Q, Z, R, E, M, K, F
+- [ ] Feed reader: G → browse feeds
+- [ ] User list: U
+- [ ] Sub navigation: ], [, H, J
+- [ ] Settings: D, Y, I, X
+- [ ] Last callers: L
+- [ ] Logoff: O, /O
+- [ ] Sysop commands: //UE, //BE, //CE, //DOS
+- [ ] New user registration flow
+- [ ] VER command (verify no WWIV artifacts)
+
+### Phase 11 — VPS Migration
+VPS: Debian 12, bbs.deadparrotbbs.com (ready)
+- Copy qcow2, feeds.img, run_bbs.sh, scripts/, tcpser to VPS
+- Update paths in run_bbs.sh (PROJ dir)
+- Open ports: 2323 (telnet), 24554 (binkp/FidoNet future)
+- Configure systemd service for auto-start
+- Test telnet from outside
+
+### Phase 12 — FidoNet (after VPS)
+- Install binkd + HPT on VPS
+- Apply for node number (bbs.deadparrotbbs.com, port 24554)
+- Configure echomail areas
+
 ## 💬 Resuming Next Session
 
-Say: **"Continuing OrbitBBS. Phase 6.5 complete. See SESSION-HANDOFF.md."**
+Say: **"Continuing OrbitBBS. Phase 8.5 complete. See SESSION-HANDOFF.md."**
