@@ -220,19 +220,20 @@ EOF
 ### Manual refresh
 
 ```bash
-# Fetch new content and deploy to feeds.img
 python3 scripts/fetch_feeds.py && bash scripts/deploy_feeds.sh
 ```
+
+`deploy_feeds.sh` stops the VM (~5s), injects files directly into `base-dos.qcow2`
+via guestfish, then restarts. Files land in:
+- `C:\ORBIT\GFILES\FEEDS\` — the ANS display files
+- `C:\ORBIT\DATA\FEEDS.GFL` — the file index the BBS reads
 
 ### Cron schedule (active)
 
 ```
 0 */6 * * *   fetch_feeds.py   — fetch every 6 hours
-5 */6 * * *   deploy_feeds.sh  — deploy 5 min after fetch
+5 */6 * * *   deploy_feeds.sh  — stop VM, inject, restart (~30s downtime)
 ```
-
-Feeds copy from `feeds.img` (D:) to `C:\ORBIT\GFILES\FEEDS\` on each DOS boot
-via the `IF EXIST` lines in AUTOEXEC.BAT.
 
 ### Adding or changing feeds
 
@@ -251,7 +252,7 @@ Edit `scripts/fetch_feeds.py` — the `FEEDS` list at the top. Each entry:
 ```
 
 After editing, run `python3 scripts/fetch_feeds.py` to test, then
-`bash scripts/deploy_feeds.sh` to push to the image.
+`bash scripts/deploy_feeds.sh` to deploy.
 
 ---
 
