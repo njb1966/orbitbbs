@@ -231,6 +231,8 @@ void input_callsign(void)
   pl(get_string(525));
   ansic(3);
   pl(get_string(526));
+  ansic(3);
+  pl("(Optional -- press Enter to skip)");
   prt(2,":");
   mpl(6);
   input(thisuser.callsign,6);
@@ -396,18 +398,11 @@ void input_age(userrec *u)
     } while ((!hangup) && ((d>31) || (d<1)));
     do {
       nl();
-      prt(2,get_string(544));
-      mpl(2);
-      input(ag,2);
-      y=atoi(ag)+1900;
-      if (y==1919) {
-        nl();
-        prt(5,get_string(545));
-        if (!yn()) {
-          y=0;
-        }
-      }
-    } while ((!hangup) && (y<1905));
+      prt(2,"Year you were born (YYYY): ");
+      mpl(4);
+      input(ag,4);
+      y=atoi(ag);
+    } while ((!hangup) && ((y<1900) || (y>2025)));
     ok=1;
     if (((m==2) || (m==9) || (m==4) || (m==6) || (m==11)) && (d==31))
       ok=0;
@@ -815,7 +810,6 @@ void newuser(void)
     input_callsign();
     input_sex();
     input_age(&thisuser);
-    input_comptype();
     input_screensize();
 
     if (numed && (thisuser.sysstatus & sysstatus_ansi)) {
@@ -826,15 +820,6 @@ void newuser(void)
       nl();
     }
 
-    prt(5,get_string(569));
-    if (yn()) {
-      nl();
-      pl(get_string(570));
-      nl();
-      i=get_protocol(xf_down);
-      if (i)
-        thisuser.defprot=i;
-    }
     nl();
     outstr(get_string(571)); pl(thisuser.pw);
     nl();
@@ -878,9 +863,8 @@ void newuser(void)
       outstr(get_string(575)); pl(thisuser.callsign);
       outstr(get_string(576)); pl(thisuser.phone);
       outstr(get_string(577)); npr("%c\r\n",thisuser.sex);
-      outstr(get_string(578)); npr("%02d/%02d/%02d\r\n",
-        (int) thisuser.month, (int) thisuser.day, (int) thisuser.year);
-      outstr(get_string(579)); pl(ctypes[thisuser.comp_type]);
+      outstr(get_string(578)); npr("%02d/%02d/%d\r\n",
+        (int) thisuser.month, (int) thisuser.day, (int) thisuser.year+1900);
       outstr(get_string(580)); npr("%d X %d\r\n",
         thisuser.screenchars, thisuser.screenlines);
       outstr(get_string(581)); pl(thisuser.pw);
@@ -916,7 +900,6 @@ void newuser(void)
         break;
         case '5': input_sex(); break;
         case '6': input_age(&thisuser); break;
-        case '7': input_comptype(); break;
         case '8': input_screensize(); break;
         case '9': input_pw(); break;
         case 'A': input_street(); break;
