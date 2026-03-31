@@ -27,3 +27,4 @@ feeds/
 
 # Logs
 *.log
+.aider*

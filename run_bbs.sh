@@ -27,18 +27,19 @@ case "$cmd" in
     fi
 
     if [ "$cmd" = "setup" ]; then
-      echo "Starting OrbitBBS VM in SETUP mode (GTK display — run with DISPLAY=:1)..."
+      echo "Starting OrbitBBS VM in SETUP mode (VNC on :5901)..."
+      echo "Connect with: vncviewer localhost:5901  (or SSH tunnel + Remmina)"
       QEMU_ARGS=(
         -hda "$HDA"
         -m 16
-        -serial null
-        -display gtk
+        -serial pty
+        -display vnc=:1
       )
       INSTALL_IMG="$PROJ/install.img"
       if [ -f "$INSTALL_IMG" ]; then
         QEMU_ARGS+=(-hdb "$INSTALL_IMG")
       fi
-      echo "Close the SDL window when done."
+      echo "Press Ctrl+C or kill the process when done."
       qemu-system-i386 "${QEMU_ARGS[@]}"
       exit 0
     fi

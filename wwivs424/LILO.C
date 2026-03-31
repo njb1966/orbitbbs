@@ -127,6 +127,7 @@ void getuser(void)
       } else
         printfile("WELCOME.MSG");
     }
+    pausescr();
   }
   if (curatr!=7)
     reset_colors();
@@ -426,9 +427,8 @@ void logon(void)
 	  ripcode = 0;
 	}
 	play_sdf("LOGON",0);
-	i=printfile("LOGON");
-	if ((!i) && (!(thisuser.sysstatus & sysstatus_pause_on_page)))
-	  pausescr();
+	printfile("LOGON");
+	pausescr();
   }
   strcpy(xdate,date());
   if (strcmp(xdate,thisuser.laston)==0)
