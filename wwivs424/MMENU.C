@@ -590,6 +590,9 @@ void mainmenu(void)
     if (strcmp(s,"/?")==0) {
       printmenu(5);
     }
+    if (strcmp(s,"SYSOP")==0) {
+      printmenu(5);
+    }
   }
 
 /*************************************************/
@@ -885,6 +888,7 @@ void mainmenu(void)
           rd_coff();
 #endif
           existprint(get_string(1036));
+          pausescr();
           hangup=1;
         }
         break;
