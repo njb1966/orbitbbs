@@ -834,6 +834,7 @@ void mainmenu(void)
         nl();
         existprint(get_string(1033));
         existprint(get_string(1034));
+        pausescr();
         break;
       case 'J':
         if (okconf(&thisuser))
@@ -845,21 +846,19 @@ void mainmenu(void)
         kill_old_email();
         break;
       case 'L':
-        if (status.callstoday>0) {
-          if (okansi()) outstr("\x1b[1;33m");
-          if ((sysinfo.flags & OP_FLAGS_SHOW_CITY_ST) &&
-              (syscfg.sysconfig & sysconfig_extended_info))
-            pl("#      Name                      Time  Date  City            St  Speed   #T");
-          else
-            pl("#      Name                      Lang       Time  Date  Speed                #T");
-          if (okansi()) outstr("\x1b[0m");
-          i=okansi()?205:'=';
-          npr(charstr(79,i));
-        }
+        if (okansi()) outstr("\x1b[1;33m");
+        if ((sysinfo.flags & OP_FLAGS_SHOW_CITY_ST) &&
+            (syscfg.sysconfig & sysconfig_extended_info))
+          pl("#      Name                      Time  Date  City            St  Speed   #T");
+        else
+          pl("#      Name                      Lang       Time  Date  Speed                #T");
+        if (okansi()) outstr("\x1b[0m");
+        i=okansi()?205:'=';
+        npr(charstr(79,i));
 #ifdef RIPDRIVE
         rd_coff();
 #endif
-        existprint(get_string(1035));
+        printfile("LASTON.TXT");
 #ifdef RIPDRIVE
         rd_con();
 #endif
@@ -960,6 +959,7 @@ void mainmenu(void)
           }
         }
         yourinfo();
+        pausescr();
         break;
       case 'Z':
         express=1;
