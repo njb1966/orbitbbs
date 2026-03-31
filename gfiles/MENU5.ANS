@@ -1,0 +1,27 @@
+
+[1;36m==============================================================================[0m
+[1;33m  OrbitBBS  --  Sysop Functions[0m
+[1;36m==============================================================================[0m
+
+[1;32m  USER MANAGEMENT[0m
+  [1;33mUEDIT / UE[0m  User editor               [1;33mCHUSER / CU[0m  Change active user
+  [1;33mIVOTES[0m  Add/edit vote questions   [1;33mVOTEPRINT[0m  Print vote tallies
+
+[1;32m  MESSAGE BOARDS[0m
+  [1;33mBOARDEDIT / BE[0m  Sub-board editor          [1;33mCONFEDIT / JE[0m  Conference editor
+  [1;33mTEDIT[0m  Text file editor          [1;33mGFILEEDIT / GE[0m  G-Files editor
+  [1;33mMAILR[0m  Read all mail             [1;33mCHAINEDIT / CE[0m  Chain/door editor
+
+[1;32m  SYSTEM[0m
+  [1;33mSTATUS[0m  System status             [1;33mSTAT[0m  Memory / cache stats
+  [1;33mLOG[0m  Todays activity log       [1;33mYLOG[0m  Yesterdays log
+  [1;33mDOS[0m  DOS shell (pw reqd)       [1;33mRELOAD[0m  Reload config files
+  [1;33mRESETF[0m  Rebuild user index        [1;33mPACK[0m  Pack message bases
+  [1;33mINSTEDIT / IE[0m  Instance editor           [1;33mREADINI / RI[0m  Re-read INI file
+
+[1;32m  OTHER[0m
+  [1;33mWHO[0m  Who is online             [1;33mNET[0m  Network listing
+  [1;33mVER[0m  Version info              [1;33mCLS[0m  Clear screen
+  [1;33mREBOOT[0m  Reboot system         
+
+[1;36m==============================================================================[0m

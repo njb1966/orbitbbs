@@ -3,7 +3,7 @@
 A fork of WWIV BBS v4.24a targeting MS-DOS 6.22, designed for the small web
 and Geminispace community. Single-instance, retro feel, no file transfers.
 
-**Live at:** `telnet bbs.deadparrotbbs.com 2323` (after VPS migration)
+**Live at:** `telnet orbitbbs.njb1966.com 2324`
 **Dev:** `telnet localhost 2323`
 
 ---
@@ -91,28 +91,27 @@ inject via guestfish. No recompile needed.
 
 ---
 
-## How to Build
+## How to Build and Deploy
 
-Requires DOSBox and xvfb (headless display for CLI):
+**Build** (requires DOSBox with a display — TigerVNC on `:1` or xvfb):
 
 ```bash
-sudo apt install xvfb   # one-time
-xvfb-run dosbox -conf build-auto.conf -exit
+DISPLAY=:1 dosbox -conf build-auto.conf -exit
 grep -c "Error" wwivs424/BUILD.LOG   # should be 0
 ```
 
 Output: `wwivs424/exe/BBS.EXE`
 
-Deploy to VM (stop first):
+**Deploy** BBS.EXE + all screen files to the production VM:
+
 ```bash
-./run_bbs.sh stop
-guestfish -a base-dos.qcow2 <<'EOF'
-run
-mount /dev/sda1 /
-copy-in wwivs424/exe/BBS.EXE /ORBIT/
-EOF
-./run_bbs.sh start
+./deploy.sh
+# Override host: ORBIT_HOST=192.168.0.231 ./deploy.sh
 ```
+
+`deploy.sh` stops the service, injects `BBS.EXE` and everything in `gfiles/`
+into the QEMU disk image via guestfish, then restarts. SSH key access to
+`ORBIT_HOST` (default: `100.118.30.47`) is required.
 
 See `OPERATIONS.md` for the full operations reference.
 
